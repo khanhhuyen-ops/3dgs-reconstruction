@@ -1,0 +1,84 @@
+{
+  "date_local": "2026-11-10",
+  "timezone": "Asia/Saigon",
+  "status": "BLOCKED_GPU_BA",
+  "code_hash": "fc20f8696f58d1f4b376189d1b0f9e32a0d4cdb75b18170151f52e8db18c64a0",
+  "source_video_sha256": "244802e503a003b212b2da2e7e2265cc15a97b19ec1933487096f94417132017",
+  "source_metadata": {
+    "codec": "h264",
+    "width": 3840,
+    "height": 2160,
+    "duration_seconds": 261.7615,
+    "nominal_fps": "30000/1001",
+    "average_fps": "30000/1001",
+    "time_base": "1/30000",
+    "start_time": 0.0,
+    "frame_count": "7845",
+    "rotation_degrees": 0.0
+  },
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.6",
+    "Pillow": "12.1.1",
+    "PyYAML": "6.0.3",
+    "pytest": "8.4.2"
+  },
+  "ffmpeg_version": "ffmpeg version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "colmap_version": "COLMAP 4.2.1 (Commit bd1fcf6 on 2026-09-29 with CUDA, boost hash maps)",
+  "candidate_frames": 524,
+  "selected_frames": 96,
+  "unique_selected_sha256_count": 96,
+  "max_selected_temporal_gap_seconds": 5.005000000000024,
+  "selection_algorithm": "quality_temporal_bins",
+  "selection_gpu": {
+    "status": "SUCCESS",
+    "device": "cuda:0",
+    "backend": "PyTorch CUDA convolution/reductions",
+    "peak_allocated_bytes": 14971392,
+    "peak_reserved_bytes": 25165824,
+    "runtime_seconds": 10.958509799998865
+  },
+  "database": {
+    "images": 96,
+    "keypoints_rows": 495006,
+    "descriptors_rows": 495006,
+    "feature_signature": "e9894870ca7741cda14551fa4c5a730a05e0ce492fe2e8f21b8004f5961b9688",
+    "verified_pairs": 317,
+    "verified_inliers": 108426,
+    "verified_geometry_signature": "1aa19bb5a27d40cbf2e0718e3e1302e7f838772c7c4642b8d3b70f2020e32e35"
+  },
+  "runtime_seconds": {
+    "extraction": 114.75496570000178,
+    "selection": 19.689611799998602,
+    "features": 4.169870200001242,
+    "matching": 7.798925999999483
+  },
+  "sampled_peak_device_memory_used_mib": {
+    "features": 968.0,
+    "matching": 408.0
+  },
+  "vram_scope": "CUDA selection: PyTorch allocator peak. COLMAP: device-wide 0.5s sampling, may miss short peaks, includes other processes.",
+  "gpu_ba": {
+    "status": "BLOCKED_GPU_BA",
+    "verified": false,
+    "probe_exit_code_decimal": 3221226505,
+    "backend_requested": "CASPAR",
+    "reason": "standalone diagnostic BA process crashed; no GPU BA runtime verification"
+  },
+  "reconstruction": {
+    "registered_images": null,
+    "registration_ratio": null,
+    "points3d_count": null,
+    "mean_track_length": null,
+    "mean_reprojection_error_px": null,
+    "median_reprojection_error_px": null
+  },
+  "resume_verification": true,
+  "test_results": {
+    "pytest": "17 passed in 7.54s",
+    "ruff": "All checks passed",
+    "compileall": "exit 0",
+    "powershell_wrapper_dry_run": "exit 0"
+  },
+  "custom_v1": "not implemented: prerequisite real video V0 GPU-strict reconstruction not satisfied"
+}

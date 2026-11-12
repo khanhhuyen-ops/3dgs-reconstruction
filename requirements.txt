@@ -1,0 +1,7 @@
+# Install a CUDA-enabled torch build separately using the PyTorch CUDA index.
+PyYAML>=6.0
+Pillow>=10.0
+numpy>=1.26
+torch>=2.2
+pytest>=8.0
+
