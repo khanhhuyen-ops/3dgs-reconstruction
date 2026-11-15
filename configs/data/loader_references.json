@@ -1,0 +1,56 @@
+{
+  "3dgs": {
+    "repository": "graphdeco-inria/gaussian-splatting",
+    "revision": "54c035f7834b564019656c3e3fcc3646292f727d",
+    "files": {
+      "scene/colmap_loader.py": {
+        "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/54c035f7834b564019656c3e3fcc3646292f727d/scene/colmap_loader.py",
+        "sha256": "6948ce06366e1f727ddffc39a445bf4b6873824f02abc39df63eb0c8f0fb3f36"
+      },
+      "scene/dataset_readers.py": {
+        "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/54c035f7834b564019656c3e3fcc3646292f727d/scene/dataset_readers.py",
+        "sha256": "b06f01648fee893c4785ed38eeb934f91b79817b9dcbb694291c9162b0b6ba94"
+      },
+      "LICENSE.md": {
+        "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/54c035f7834b564019656c3e3fcc3646292f727d/LICENSE.md",
+        "sha256": "c5ba70a2194af2aefe85dfe3da68608dcb3abd21a3aa53b55aa297c2f0b60eb3"
+      }
+    }
+  },
+  "2dgs": {
+    "repository": "hbb1/2d-gaussian-splatting",
+    "revision": "f3e3b9fa67bbd1c75e05167ff37391d8dab2a678",
+    "files": {
+      "scene/colmap_loader.py": {
+        "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/f3e3b9fa67bbd1c75e05167ff37391d8dab2a678/scene/colmap_loader.py",
+        "sha256": "6948ce06366e1f727ddffc39a445bf4b6873824f02abc39df63eb0c8f0fb3f36"
+      },
+      "scene/dataset_readers.py": {
+        "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/f3e3b9fa67bbd1c75e05167ff37391d8dab2a678/scene/dataset_readers.py",
+        "sha256": "ae78091c6864c3c8bd66764546b41083052128f9cc7a33c6c3acc1104fb0ab87"
+      },
+      "LICENSE.md": {
+        "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/f3e3b9fa67bbd1c75e05167ff37391d8dab2a678/LICENSE.md",
+        "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
+      }
+    }
+  },
+  "pgsr": {
+    "repository": "zju3dv/PGSR",
+    "revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+    "files": {
+      "scene/colmap_loader.py": {
+        "url": "https://raw.githubusercontent.com/zju3dv/PGSR/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/scene/colmap_loader.py",
+        "sha256": "be7b74a00ce5c45b787193d28b893a8012a225ca664f93c97fff545cba0aae61"
+      },
+      "scene/dataset_readers.py": {
+        "url": "https://raw.githubusercontent.com/zju3dv/PGSR/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/scene/dataset_readers.py",
+        "sha256": "65af79d4de7c06197aab32a2c5ef35de4a7e1c1d43d7597aaedc0df88830b7d9"
+      },
+      "LICENSE.md": {
+        "url": "https://raw.githubusercontent.com/zju3dv/PGSR/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/LICENSE.md",
+        "sha256": "c7ec1a2c15c1cacf02452c8f2265dc1a4106bb21a42bf5c38ebe91306f764c93"
+      }
+    }
+  }
+}

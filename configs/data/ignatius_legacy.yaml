@@ -1,0 +1,40 @@
+# Separate experiment explicitly authorized by the user, 2026-11-15.
+# This is not the video/GPU-strict SfM branch; no mapper is executed.
+schema_version: prepared-v1
+dataset_name: ignatius-legacy-v1
+source:
+  mode: image_set
+  image_root: datasets/tanks_and_temples/Ignatius/raw/image_set
+  model_dir: outputs/tanks_and_temples/Ignatius/sfm_colmap/sparse/0
+  comparison_model_dir: outputs/tanks_and_temples/Ignatius/sfm_colmap/txt
+  format: bin
+  manifest: null
+  ba_history: legacy project.ini ba_use_gpu=false; CERES; historical feature backend unverified
+  discovery_roots:
+    - outputs/tanks_and_temples/Ignatius/sfm_colmap
+output:
+  dataset_root: datasets/tanks_and_temples/Ignatius/prepared/legacy_v1
+  report_root: outputs/tanks_and_temples/Ignatius/data_preparation/legacy_v1
+  file_mode: copy
+images:
+  undistort: auto
+  max_width: null
+  format: png
+  jpeg_quality: 95
+split:
+  strategy: interleaved
+  seed: 42
+  ratios: [0.75, 0.125, 0.125]
+  period: 8
+  test_offset: 0
+  val_offset: 4
+  protocol: fixed_pose_transductive
+filter:
+  duplicate_tracks: drop_track
+  outside_image_tracks: drop_track
+  max_point_error_px: null
+normalization:
+  enabled: true
+training_points:
+  min_train_views: 2
+  min_parallax_degrees: 0.0

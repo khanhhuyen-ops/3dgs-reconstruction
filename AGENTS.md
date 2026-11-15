@@ -14,7 +14,9 @@ Thứ tự ưu tiên:
 3. Tối ưu VRAM, thời gian chạy và tài nguyên máy cá nhân.
 4. Source code dễ đọc, module độc lập, cấu hình rõ ràng.
 
-**Mốc hiện tại: triển khai SfM trước.** Ưu tiên `Ignatius.mp4 -> extracted frames -> selected keyframes -> COLMAP SfM V0 -> camera poses + sparse point cloud`. Chỉ chuyển sang custom SfM V1, VGGT, 2DGS, TSDF khi mốc trước đã được kiểm chứng hoặc khi người dùng yêu cầu đổi phạm vi.
+**Mốc hiện tại (14/11/2026): Documentation-first / Research-first cho các phase sau COLMAP, theo yêu cầu mới của user.** Không triển khai mô hình, cài dependency, train, chạy benchmark GPU hoặc viết pipeline thực thi trong task tài liệu. Bộ hướng dẫn trung tâm: [docs/README.md](docs/README.md); trạng thái/roadmap: [master plan](docs/plans/master_plan.md).
+
+**SfM có hai nguồn khác nhau:** legacy `raw/image_set/` đã có model 263 ảnh/85.656 điểm nhưng cần qualification, `project.ini` ghi `ba_use_gpu=false`; video mặc định có preprocessing/features/matches nhưng vẫn `BLOCKED_GPU_BA`, chưa có sparse model. Xem [repository audit](docs/repository_audit.md). Không tự lấy legacy model thay cho video, không gọi SfM GPU-strict hoàn tất. Giữ nguyên code/config/raw/output SfM; không xây lại COLMAP, chuyển VGGT/SLAM/custom SfM để né blocker. Sau request implementation tiếp theo, bước trực tiếp là Phase01 data preparation; full execution cần qualified source/model.
 
 ## 2. Môi trường phát triển
 
@@ -43,11 +45,11 @@ Giữ nguyên các thành phần đã có. Chỉ tạo thêm thư mục khi th�
 ```text
 3dgs-mesh-reconstruction/
 ├── AGENTS.md                       # quy tắc chung của Codex
-├── .agents/skills/                 # các skill Codex theo tác vụ
-│   └── video-sfm/
-│       ├── SKILL.md
-│       ├── plan.md
-│       └── tech.md
+├── .agent/skills/preprocessing/    # bộ video-sfm cũ, giữ nguyên
+│   ├── SKILL-video-sfm.md
+│   ├── plan-video-sfm.md
+│   └── tech-video-sfm.md
+├── .agents/skills/                 # skills hậu COLMAP/research mới, xem mục 10
 ├── configs/                        # cấu hình versioned YAML/JSON
 ├── datasets/
 │   └── tanks_and_temples/Ignatius/
@@ -61,18 +63,18 @@ Giữ nguyên các thành phần đã có. Chỉ tạo thêm thư mục khi th�
 ├── src/
 │   ├── preprocessing/
 │   ├── geometry/sfm/
-│   ├── geometry/vggt/               # giai đoạn sau
-│   ├── gaussian_splatting/          # giai đoạn sau
-│   ├── mesh_reconstruction/         # giai đoạn sau
-│   └── evaluation/
-├── cache/                           # intermediate files có thể tạo lại
+│   ├── common/
+│   └── pipeline.py
+├── paper/                          # 14 PDF local, không sửa/chép lại toàn văn
 ├── outputs/                         # logs, checkpoints, meshes, metrics
 ├── scripts/                         # CLI / PowerShell entry points
 ├── tests/
-└── docs/                            # kiến trúc, protocol, nghiên cứu
+└── docs/                           # research, architecture, tech, plans + tài liệu SfM cũ
 ```
 
 Code của thư viện bên thứ ba phải tách biệt và lưu version/commit. Không copy nguyên nhiều repository vào `src/` nếu có thể dùng dependency hoặc wrapper.
+
+`src/data/`, `src/gaussian_splatting/`, `src/mesh_reconstruction/`, `src/evaluation/` và cache mới chỉ được tạo khi phase implementation tương ứng được yêu cầu; sơ đồ trong docs là thiết kế, không bằng chứng code đã tồn tại. Tạo thư mục tài liệu/skills có nội dung thực theo yêu cầu documentation-first được phép.
 
 ## 4. Quy định về dataset
 
@@ -87,7 +89,7 @@ Code của thư viện bên thứ ba phải tách biệt và lưu version/commit
 ## 5. Quy trình nghiên cứu và baseline
 
 - Các phương pháp so sánh phải dùng **cùng input frames, resolution, test split, evaluation mask và metric definition**, trừ biến đang được nghiên cứu.
-- Chuẩn bị config riêng cho B0, B1, B2, Ours khi đến giai đoạn evaluation. **Không tự đặt định nghĩa cho các baseline**; phải dựa vào protocol được phê duyệt.
+- User đã chỉ định B0 Original3DGS, B1 2DGS, B2 PGSR, B3 GOF optional, Ours geometry-aware PGSR. [Method comparison](docs/research/method_comparison.md) và [evaluation spec](docs/tech/evaluation_specification.md) thiết kế protocol; chưa thực thi. B0 không có native mesh; B0+TSDF là diagnostic extension. Không giả checkpoints các method tương thích. Numerical profiles/splits/thresholds được ghi là đề xuất, không paper result hoặc protocol official đã kiểm chứng.
 - Không dùng ground truth làm input ngầm. Đánh giá novel-view rendering trên ảnh held-out, không báo metric training set như metric test.
 - Với SfM, ghi: số ảnh đầu vào, registered images và tỷ lệ, sparse 3D points, track lengths, mean/median reprojection error (px), runtime từng stage, peak VRAM đo được, phiên bản tool và CUDA backend.
 - Khi đến giai đoạn rendering: PSNR, SSIM, LPIPS. Khi đến giai đoạn mesh: Chamfer Distance, Precision/Recall/F-score, completeness theo dataset protocol thực tế.
@@ -108,7 +110,7 @@ Code của thư viện bên thứ ba phải tách biệt và lưu version/commit
 ## 7. Workflow bắt buộc cho Codex
 
 1. **Inspect first:** kiểm tra repo, cấu hình, code và môi trường đã có; không ghi đè file chỉ vì tên giống.
-2. **Read task guidance:** khi làm video/SfM, đọc `.agents/skills/video-sfm/SKILL.md`, `plan.md`, `tech.md`. Thư mục `.agent/skills/` cũ (nếu có) có thể chứa ghi chú; không xóa hoặc di chuyển tự động.
+2. **Read task guidance:** khi làm video/SfM, đọc bộ thực tế `.agent/skills/preprocessing/{SKILL-video-sfm.md,plan-video-sfm.md,tech-video-sfm.md}` và `docs/video_sfm.md`. Không có `.agents/skills/video-sfm/` ở checkout audit; không tạo bản sao hoặc xóa/di chuyển bộ cũ. Khi làm hậu COLMAP/research, theo thứ tự đọc và routing ở mục 10.
 3. Xác nhận phạm vi user yêu cầu, lập kế hoạch ngắn theo checkpoint; không tự triển khai stage tương lai.
 4. Viết code có thể chạy được theo từng stage nhỏ, lưu cấu hình, log và artifact để debug.
 5. Chạy unit tests và smoke tests khi môi trường cho phép. **Không ghi “passed” cho test chưa chạy**.
@@ -129,3 +131,27 @@ Code của thư viện bên thứ ba phải tách biệt và lưu version/commit
 - Nêu rõ giả định kỹ thuật, giới hạn GPU, khả năng tái lập và lỗi còn tồn tại.
 - Nếu thiếu CUDA backend: có thể viết code cấu hình/tests không cần GPU, nhưng không thực thi GPU-required model trên CPU để lách quy định.
 - Yêu cầu cụ thể của người dùng quyết định phạm vi công việc; tuyệt đối không tự hạ chính sách GPU-strict hoặc làm thay đổi protocol đánh giá.
+
+## 10. Documentation precedence, routing và research workflow
+
+Thứ tự tham khảo: **AGENTS → research → architecture → tech specifications → current phase plan → relevant skill → existing implementation**. [Docs index](docs/README.md) dẫn tới toàn bộ tài liệu và mô tả từng file. Source code/logs thực tế là evidence về trạng thái, không được mô tả theo một sơ đồ tương lai. Nếu có mâu thuẫn, ghi vào report/decision registry, ưu tiên căn cứ kỹ thuật đã xác minh và user scope; không tự đổi quyết định nghiên cứu để làm code dễ chạy.
+
+Mỗi task: đọc AGENTS; xác định phase và user scope; đọc plan/spec/skill liên quan; đọc primary paper khi thay thuật toán; inspect code/callers/existing changes; thực hiện đúng scope; chạy required checks khi được phép; cập nhật progress và decision có evidence. Task tài liệu hiện tại dừng sau documentation audit, không tự thực thi Phase01.
+
+| Task | Skill / context |
+| --- | --- |
+| SfM/video execution | [Bộ cũ](.agent/skills/preprocessing/SKILL-video-sfm.md), [plan cũ](.agent/skills/preprocessing/plan-video-sfm.md), [tech cũ](.agent/skills/preprocessing/tech-video-sfm.md) |
+| COLMAP output/data preparation | [colmap-data](.agents/skills/colmap-data/SKILL.md), [Phase01](docs/plans/phase_01_data_preparation.md) |
+| Gaussian optimizer/renderer/checkpoint | [gaussian-training](.agents/skills/gaussian-training/SKILL.md), Phase02/03/06 trong index |
+| Geometry/depth/normal/confidence losses | [geometry-regularization](.agents/skills/geometry-regularization/SKILL.md), [loss spec](docs/tech/loss_specification.md) |
+| Surface extraction/mesh/export | [mesh-reconstruction](.agents/skills/mesh-reconstruction/SKILL.md), [Phase04](docs/plans/phase_04_mesh_extraction.md) |
+| Baselines/ablation/metrics/report | [experiment-evaluation](.agents/skills/experiment-evaluation/SKILL.md), [evaluation spec](docs/tech/evaluation_specification.md) |
+| Paper review/novelty/spec design | [paper-research](.agents/skills/paper-research/SKILL.md), [inventory](docs/research/paper_inventory.md) |
+
+Research references: P02 Original3DGS, P01 2DGS, P14 PGSR là core; P03/P05/P09 và CDGS là novelty controls theo [literature review](docs/research/literature_review.md). **Sparse SfM anchors, confidence depth và edge-aware supervision không mặc định mới.** [Ours](docs/research/proposed_method.md) vẫn là proposed modification/hypothesis, chưa có experimentally validated result.
+
+Không bịa training/metrics/SOTA; không thay benchmark bằng mocks/synthetic fixtures; không thay split/camera poses tùy tiện; không fit test exposure; không dùng pretrained model thiếu nguồn/hash; không chép dài nguyên văn paper; không gắn proposed formula cho existing method. Các kết quả paper, heuristic presets và số đo local phải có label khác nhau. GT chỉ ở evaluator theo protocol được công bố, không truyền ngược vào training/selection/confidence.
+
+Protected components gồm toàn bộ SfM implementation/scripts/tests/configurations, raw datasets, original databases/reconstructions/poses/PLY/logs và old skill/report. Cần biến đổi downstream thì tạo derived copy + provenance/validation; thay protected implementation chỉ khi user task thực sự bao gồm và có lý do cụ thể. Không thay binary/hạ policy để né `BLOCKED_GPU_BA`.
+
+Current documentation gates/progress: [master plan](docs/plans/master_plan.md), [documentation audit](docs/documentation_audit.md). Giữ reports cũ như historical evidence; 17 tests passed trong báo cáo10/11 không là kết quả test mới của task documentation.
