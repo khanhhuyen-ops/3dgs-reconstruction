@@ -1,6 +1,6 @@
 # Hướng dẫn tài liệu nghiên cứu
 
-Mốc15/11/2026: **Phase01 implementation**, theo request mới; các phase training/mesh vẫn là thiết kế chưa chạy. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; legacy image_set là thí nghiệm riêng được user cho phép. CLI/artifacts thực tế: [Phase01 usage](tech/phase_01_usage.md), [implementation report](phase_01_implementation_report.md).
+Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full-resolution uncapped đang chạy riêng; Phase03–07 chưa triển khai. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; prepared legacy là thí nghiệm riêng được user cho phép. [Phase01 report](phase_01_implementation_report.md) giữ evidence lịch sử; [Phase02 report](phase_02_implementation_report.md) ghi actual results/artifacts, [B0 usage](tech/b0_training_usage.md) mô tả commands/contracts.
 
 ## Research — sources, phương pháp và tính mới
 
@@ -37,6 +37,7 @@ Mốc15/11/2026: **Phase01 implementation**, theo request mới; các phase trai
 | [evaluation_specification.md](tech/evaluation_specification.md) | Fair rendering/mesh metrics, scale/alignment/masks/thresholds, budgets và reporting |
 | [reproducibility.md](tech/reproducibility.md) | Hashes, run manifests, version locks, seeds, cache keys, status/evidence requirements |
 | [phase_01_usage.md](tech/phase_01_usage.md) | CLI/config/schema thực thi, derived filters, train-only init, transactional resume và compatibility limits |
+| [b0_training_usage.md](tech/b0_training_usage.md) | Phase02 actual native integration/CUDA build, runnable profiles, training/resume/render/metrics và deviations |
 
 ## Plans — mỗi phase có18 mục triển khai
 
@@ -76,4 +77,4 @@ Mốc15/11/2026: **Phase01 implementation**, theo request mới; các phase trai
 | [plan-video-sfm.md](../.agent/skills/preprocessing/plan-video-sfm.md) | Legacy SfM plan; phase numbering riêng với roadmap mới |
 | [tech-video-sfm.md](../.agent/skills/preprocessing/tech-video-sfm.md) | Legacy SfM tech; không tự thay backend/policy |
 
-Các thành phần Phase02–07 và profiles training trong specs vẫn proposed/planned. Phase01 hiện có `src/data/` và `configs/data/`; không suy diễn đó là training/mesh execution. Nguồn video chưa đủ input cho complete run; legacy được giữ riêng, không vượt gate video. Không tự sửa BA hoặc bắt đầu Phase02.
+Phase01 có `src/data/`/`configs/data/`; Phase02 hiện có `src/gaussian_splatting/`, minimal RGB `src/evaluation/` và `configs/training/`. Các thành phần Phase03–07 vẫn proposed/planned, không suy diễn B0 execution thành PGSR/mesh/evaluation benchmark hoàn chỉnh. Nguồn video chưa đủ sparse model; legacy không vượt gate video. Không tự sửa BA hoặc bắt đầu phase tiếp theo.

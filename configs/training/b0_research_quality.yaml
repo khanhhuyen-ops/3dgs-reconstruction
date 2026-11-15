@@ -1,0 +1,15 @@
+# Uncapped reference schedule. Feasibility on 6GB must be measured separately.
+method: B0_Original3DGS
+profile: research_quality
+experiment: ignatius-legacy-b0-research-quality
+iterations: 30000
+resolution: 1
+sh_degree: 3
+initial_point_limit: null
+train_view_limit: null
+max_gaussians: null
+cpu_camera_cache: 64
+checkpoint_interval: 1000
+validation_interval: 1000
+validation_view_limit: 33
+log_interval: 100

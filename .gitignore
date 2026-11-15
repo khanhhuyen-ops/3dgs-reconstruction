@@ -7,4 +7,5 @@ datasets/
 cache/
 outputs/
 .tools/
+external/
 

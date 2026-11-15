@@ -1,0 +1,36 @@
+{
+  "original3dgs": {
+    "repository": "https://github.com/graphdeco-inria/gaussian-splatting",
+    "commit": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+    "submodules": {
+      "submodules/diff-gaussian-rasterization": "59f5f77e3ddbac3ed9db93ec2cfe99ed6c5d121d",
+      "submodules/simple-knn": "44f764299fa305faf6ec5ebd99939e0508331503",
+      "submodules/diff-gaussian-rasterization/third_party/glm": "5c46b9c07008ae65cb81ab79cd677ecc1934b903"
+    }
+  },
+  "runtime": {
+    "python": "3.10.20",
+    "torch": "2.4.1+cu121",
+    "torchvision": "0.19.1+cu121",
+    "numpy": "1.26.4",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "plyfile": "1.1.3",
+    "scipy": "1.15.3",
+    "ninja": "1.13.2",
+    "pytest": "8.3.5",
+    "cuda_toolkit": "12.1.66",
+    "msvc": "14.29.30133",
+    "architecture": "sm_86"
+  },
+  "lpips": {
+    "variant": "AlexNet v0.1",
+    "source": "pinned Original3DGS lpipsPyTorch",
+    "weight_sha256": {
+      "alex.pth": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+      "alexnet-owt-7be5be79.pth": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02"
+    }
+  },
+  "environment_strategy": "project-local venv --system-site-packages over compatible read-only parent; extensions installed only into venv",
+  "viewer_submodule": "not initialized; no viewer used"
+}

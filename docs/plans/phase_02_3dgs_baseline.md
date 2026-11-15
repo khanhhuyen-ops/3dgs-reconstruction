@@ -1,10 +1,10 @@
 # Phase 02 — Original 3DGS baseline
 
-Trạng thái hiện tại: **PLANNED — chưa triển khai/chạy**. User request tiếp theo quyết định việc thực thi; xem [master plan](master_plan.md). Mọi thông số preset là thiết kế, không benchmark đã đo.
+Trạng thái ngày16/11/2026: **B0 LOW-MEMORY COMPLETE / UNCAPPED REFERENCE RUNNING**. Official2023 CUDA renderer/KNN, actual native loader/init/backward/ADC, smoke1.200 iterations, full-state resume, low-memory30.000 iterations và33 held-out test metrics đã chạy. Low-memory PSNR23,3754 /SSIM0,8399 /LPIPS0,1150; final249.213 Gaussians. Full-resolution reference chưa được gọi completed. [Report/acceptance](../phase_02_implementation_report.md), [usage/config](../tech/b0_training_usage.md), [dependency lock](../../configs/training/dependency_lock.json), [master plan](master_plan.md).
 
 ## 1. Phase overview
 
-Xây B0 faithful Original 3DGS sau Phase 01; downstream code chưa có. Mesh extension không thuộc B0 native.
+Xây B0 theo pinned official2023 Original3DGS sau Phase01, bằng `src/gaussian_splatting/` và minimal RGB evaluator `src/evaluation/`. Mesh extension không thuộc B0 native. Nguồn thực tế là prepared legacy experiment riêng, không giả video sparse model đã tồn tại.
 
 ## 2. Research objective
 
@@ -30,7 +30,7 @@ B0 native checkpoints/full state; run metadata/logs; validation/test render inte
 
 ## 7. Detailed architecture
 
-Dataset adapter → native 3DGS Gaussian Store/init → CUDA tile rasterizer → RGB loss → Adam/ADC → checkpoint/renderer. Planned `src/gaussian_splatting/` adapter, shared minimal metrics ở `src/evaluation/`, không vendor cả repo vào src.
+Dataset adapter → native 3DGS Gaussian Store/init → CUDA tile rasterizer → RGB loss → native ADC/Adam → checkpoint/renderer. Đã triển khai `src/gaussian_splatting/` adapter, shared minimal RGB metrics ở `src/evaluation/`; third-party source ở `external/`, không vendor cả repo vào src.
 
 ## 8. Mathematical requirements
 
@@ -38,11 +38,11 @@ Positive covariance RSSᵀRᵀ, quaternion normalization, projected covariance, 
 
 ## 9. Implementation tasks
 
-Pin original method variant và disable newer optional depth/AA/exposure features; build renderer in separate environment; initialize scales/colors from accepted points; native optimizer/scheduler/ADC; full checkpoint/resume; no-grad validation; implement shared PSNR/SSIM/LPIPS interface với weight provenance.
+Đã pin original-code2023 SHA414b553, tách source ở `external/`, build renderer/KNN project-local trên torch2.4.1+cu121/CUDA12.1/MSVC14.29; native initialization/optimizer/scheduler/ADC, RNG+sampler checkpoints, native PLY roundtrip và no-grad metrics đã có actual tests. Newer depth/AA/exposure features không có trong selected variant. [Usage](../tech/b0_training_usage.md) tách paper math, code behavior và resource/metric engineering decisions; low-memory/canonical profiles không bị gộp.
 
 ## 10. Ordered execution steps
 
-1) Verify build/source hashes. 2) Synthetic CUDA forward/backward. 3) Small real train subset. 4) Development 500-step smoke có density event/resume. 5) Check metrics/VRAM. 6) Chỉ full research run khi gates đạt và phase request bao gồm run. Freeze outputs cho comparison về sau.
+Đã thực hiện: verify build/source hashes → isolated CUDA fixture → real native dataset/init/backward → smoke550 interruption/resume1200 →33 test metrics → low-memory30000/recovery25000 → native PLY reload/33 test metrics. Full-resolution uncapped được pilot500 rồi resume501 riêng sau khi các gates đạt. Logs/artifacts lưu immutable; không chọn profile bằng test scores.
 
 ## 11. Technical dependencies
 
@@ -50,7 +50,7 @@ PyTorch CUDA và native rasterizer/KNN extensions; build toolchain phải tươn
 
 ## 12. Hardware and resource constraints
 
-RTX3050 khoảng 6GB; development 640px/80k hard cap, research 1280px/500k cap là đề xuất chưa đo. One image/step, lazy cache; densification transient peak cần kiểm soát. Không CPU training/render fallback.
+RTX3050 khoảng6GB. Actual profiles: smoke480×270/80k cap; low-memory480×270/250k cap; reference1920×1080/no cap. Bản actual YAML supersede heuristic presets trước implementation; reference feasibility phải đo riêng. One image/step, CPU lazy cache có bound, image target chuyển CUDA theo step;5GiB Torch reserved guard/CUDA OOM fail closed. Low-memory max recorded Torch allocated378,8926MiB/reserved826MiB, là maximum của recorded process peaks qua segments, không total device peak.
 
 ## 13. Validation strategy
 
@@ -70,7 +70,7 @@ Real CUDA forward/backward passes, non finite counts 0, at least one ADC event c
 
 ## 17. Definition of Done
 
-Code/config/tests/docs cho B0 đủ chạy theo CLI sẽ được triển khai; evidence unit/CUDA/scene phân biệt rõ. Inference PLY/checkpoint not equal final mesh. Untested full-training paths ghi rõ.
+Code/config/tests/docs B0 chạy thật; low-memory training/held-out metrics/native PLY/full checkpoint recovery đủ evidence. Full suite62passed/1skipped (Windows symlink privilege),0failed. Evidence unit/CUDA/real scene và full-resolution reference được phân biệt trong report; không gọi Gaussian PLY là mesh hoặc local scores là paper benchmark. Reference run chưa kết thúc phải giữ trạng thái riêng, không báo full reference completion.
 
 ## 18. Next phase dependencies
 

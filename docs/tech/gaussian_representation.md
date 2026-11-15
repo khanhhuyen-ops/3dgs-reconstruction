@@ -2,6 +2,8 @@
 
 Nguồn: P02 §4–5; P01 §4; P14 §IV.A; P07 §3; P11 §4, theo [review](../research/literature_review.md).
 
+B0 đã tích hợp/kiểm thử trong Phase02, xem [actual usage](b0_training_usage.md). Pinned native store là `_xyz[N,3]`, `_scaling[N,3]` log, `_rotation[N,4]` normalized activation WXYZ, `_opacity[N,1]` logits, `_features_dc[N,1,3]` và `_features_rest[N,(l+1)²-1,3]`, CUDA FP32. Initial native scales dùng GPU3NN, rotations identity, opacity0.1 và RGB2SH từ Phase01 train-only colors. PLY giữ native layout/activations và được actual reload/render parity check; checkpoint native tuple cộng optimizer/ADC/RNG/sampler metadata là artifact khác. Các representation còn lại trong bảng vẫn là thiết kế cho phase sau; B0 state không tự tương thích PGSR.
+
 | Nhánh | Trainable tensors dự kiến | Semantics |
 | --- | --- | --- |
 | B0 | means[N,3], log_scales[N,3], quaternions[N,4], opacity_logits[N,1], SH[N,(l+1)²,3] | Full3D covariance, unit quaternion, opacity sigmoid |

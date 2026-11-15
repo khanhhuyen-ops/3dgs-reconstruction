@@ -1,0 +1,393 @@
+{
+  "date": "2026-11-16",
+  "timezone": "Asia/Saigon",
+  "phase_status": "B0_LOW_MEMORY_COMPLETE; UNCAPPED_REFERENCE_RUNNING",
+  "smoke": {
+    "status": "SUCCESS",
+    "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824",
+    "iterations": 1200,
+    "optimizer_step_invocations": 1199,
+    "initial_gaussians": 20000,
+    "final_gaussians": 78582,
+    "final_sampled_training_loss": 0.07768458873033524,
+    "recorded_runner_training_seconds": 37.91854739999985,
+    "observed_training_wall_seconds": 37.91854739999985,
+    "duration_is_lower_bound": false,
+    "timing_note": "Includes loop/validation/checkpoint/export, excludes dataset qualification and offline time between processes; interrupted segments include only last observed elapsed time",
+    "segments": [
+      {
+        "first_logged_iteration": 1,
+        "last_logged_iteration": 550,
+        "last_observed_elapsed_seconds": 16.497782899999947,
+        "completed_export_at_segment_end": true
+      },
+      {
+        "first_logged_iteration": 551,
+        "last_logged_iteration": 1200,
+        "last_observed_elapsed_seconds": 19.56580639999993,
+        "completed_export_at_segment_end": true
+      }
+    ],
+    "max_recorded_torch_peak_allocated_bytes": 110166016,
+    "max_recorded_torch_peak_reserved_bytes": 136314880,
+    "memory_scope": "Maximum of recorded process PyTorch peaks across segments; not exact total CUDA/process/device peak",
+    "current_segment_device_wide_sampling": {
+      "runtime_seconds": 20.591363600000022,
+      "peak_device_memory_used_mib_sampled": 251.0,
+      "vram_samples": 36,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "density": {
+      "completed_events": 8,
+      "deferred_resource_events": 4,
+      "cloned": 24932,
+      "split_parents": 40411,
+      "split_children": 80822,
+      "pruned": 6761,
+      "opacity_resets": 2
+    },
+    "metrics": {
+      "test_001200.json": {
+        "status": "SUCCESS",
+        "view_count": 33,
+        "aggregate": {
+          "psnr": 15.026311403623602,
+          "ssim": 0.4859111354206548,
+          "lpips": 0.4174079524748253
+        },
+        "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json"
+      }
+    },
+    "export": {
+      "status": "SUCCESS",
+      "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/point_cloud/iteration_001200/point_cloud.ply",
+      "sha256": "00ff329532c7b326e63738f000281f7439f09f1a84ef478e2dbe6f48feca6e29",
+      "gaussians": 78582,
+      "active_sh_degree": 1,
+      "max_sh_degree": 2,
+      "render_reload_max_abs_difference": 0.0,
+      "artifact_type": "Gaussian splats; not triangle mesh"
+    },
+    "dataset": {
+      "status": "SUCCESS",
+      "native_scene_loader": "readColmapSceneInfo (actual, unmodified)",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "source_mode": "image_set",
+      "dataset_id": "ignatius-legacy-v1-6a3308c22df11122",
+      "metadata_sha256": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split_hash": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "split_counts": {
+        "train": 12,
+        "val": 33,
+        "test": 33
+      },
+      "source_split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "initial_points": 20000,
+      "point_selection": "seeded source-point subset",
+      "native_train_extent": 6.129431867599488,
+      "native_nerf_normalization": {
+        "translate": [
+          0.06322530657052994,
+          -0.19800925254821777,
+          0.2151709944009781
+        ],
+        "radius": 6.129431867599488
+      },
+      "project_normalization_applied": false,
+      "pose_transform_applied": false,
+      "protocol": "fixed_pose_transductive; source BA accessed held-out RGB",
+      "camera_sampling": "native random-without-replacement stack over selected train IDs only"
+    },
+    "resume_checks": [
+      {
+        "status": "SUCCESS",
+        "iteration": 550,
+        "optimizer_steps": 550,
+        "native_state_restored": true,
+        "rng_and_sampler_restored": true,
+        "model": {
+          "gaussians": 78582,
+          "active_sh_degree": 0,
+          "max_sh_degree": 2,
+          "gradient_norms": {},
+          "opacity_min": 0.0009693903848528862,
+          "opacity_mean": 0.16143149137496948,
+          "opacity_max": 0.850317656993866,
+          "scale_min": 0.0017687317449599504,
+          "scale_max": 1.0234806537628174
+        }
+      }
+    ]
+  },
+  "low_memory": {
+    "status": "SUCCESS",
+    "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6",
+    "iterations": 30000,
+    "optimizer_step_invocations": 29999,
+    "initial_gaussians": 76223,
+    "final_gaussians": 249213,
+    "final_sampled_training_loss": 0.05880557373166084,
+    "recorded_runner_training_seconds": 171.40989760000002,
+    "observed_training_wall_seconds": 5955.786488700001,
+    "duration_is_lower_bound": true,
+    "timing_note": "Includes loop/validation/checkpoint/export, excludes dataset qualification and offline time between processes; interrupted segments include only last observed elapsed time",
+    "segments": [
+      {
+        "first_logged_iteration": 1,
+        "last_logged_iteration": 25000,
+        "last_observed_elapsed_seconds": 5784.376591100001,
+        "completed_export_at_segment_end": false
+      },
+      {
+        "first_logged_iteration": 25001,
+        "last_logged_iteration": 30000,
+        "last_observed_elapsed_seconds": 169.54640799999999,
+        "completed_export_at_segment_end": true
+      }
+    ],
+    "max_recorded_torch_peak_allocated_bytes": 397297664,
+    "max_recorded_torch_peak_reserved_bytes": 866123776,
+    "memory_scope": "Maximum of recorded process PyTorch peaks across segments; not exact total CUDA/process/device peak",
+    "current_segment_device_wide_sampling": {
+      "runtime_seconds": 171.41036860000003,
+      "peak_device_memory_used_mib_sampled": 524.0,
+      "vram_samples": 316,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "density": {
+      "completed_events": 6,
+      "deferred_resource_events": 138,
+      "cloned": 74908,
+      "split_parents": 100877,
+      "split_children": 201754,
+      "pruned": 2795,
+      "opacity_resets": 4
+    },
+    "metrics": {
+      "test_030000.json": {
+        "status": "SUCCESS",
+        "view_count": 33,
+        "aggregate": {
+          "psnr": 23.37539297273431,
+          "ssim": 0.8399258147586476,
+          "lpips": 0.1150172876589226
+        },
+        "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/metrics/test_030000.json"
+      }
+    },
+    "export": {
+      "status": "SUCCESS",
+      "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/point_cloud/iteration_030000/point_cloud.ply",
+      "sha256": "e92ad58640f8d6fcdca7b3d755e0faa3561b2c5f5d3a8a00623b53990447af48",
+      "gaussians": 249213,
+      "active_sh_degree": 3,
+      "max_sh_degree": 3,
+      "render_reload_max_abs_difference": 0.0,
+      "artifact_type": "Gaussian splats; not triangle mesh"
+    },
+    "dataset": {
+      "status": "SUCCESS",
+      "native_scene_loader": "readColmapSceneInfo (actual, unmodified)",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "source_mode": "image_set",
+      "dataset_id": "ignatius-legacy-v1-6a3308c22df11122",
+      "metadata_sha256": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split_hash": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "source_split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "initial_points": 76223,
+      "point_selection": "all train-only initialization points",
+      "native_train_extent": 6.318395233154297,
+      "native_nerf_normalization": {
+        "translate": [
+          0.06606871634721756,
+          0.028421901166439056,
+          -0.059518445283174515
+        ],
+        "radius": 6.318395233154297
+      },
+      "project_normalization_applied": false,
+      "pose_transform_applied": false,
+      "protocol": "fixed_pose_transductive; source BA accessed held-out RGB",
+      "camera_sampling": "native random-without-replacement stack over selected train IDs only"
+    },
+    "resume_checks": [
+      {
+        "status": "SUCCESS",
+        "iteration": 25000,
+        "optimizer_steps": 25000,
+        "native_state_restored": true,
+        "rng_and_sampler_restored": true,
+        "model": {
+          "gaussians": 249213,
+          "active_sh_degree": 3,
+          "max_sh_degree": 3,
+          "gradient_norms": {},
+          "opacity_min": 0.0002697642194107175,
+          "opacity_mean": 0.3917599022388458,
+          "opacity_max": 0.9999991655349731,
+          "scale_min": 1.0885466963372892e-06,
+          "scale_max": 150.53173828125
+        }
+      }
+    ]
+  },
+  "reference_run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa",
+  "reference_pilot": {
+    "status": "INTERRUPTED_FOR_RESUME_TEST",
+    "iterations": 500,
+    "optimizer_steps": 500,
+    "initial_gaussians": 76223,
+    "final_gaussians": 76223,
+    "final_sampled_training_loss": 0.16661055386066437,
+    "training_seconds_total": 179.5960956,
+    "memory": {
+      "allocated_bytes": 63918592,
+      "reserved_bytes": 1191182336,
+      "peak_allocated_bytes": 736288256,
+      "peak_reserved_bytes": 1191182336,
+      "device_free_bytes": 4163895296,
+      "device_total_bytes": 6441926656
+    },
+    "device_wide_memory": {
+      "runtime_seconds": 179.59645050000006,
+      "peak_device_memory_used_mib_sampled": 1412.0,
+      "vram_samples": 332,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "export": {
+      "status": "SUCCESS",
+      "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/point_cloud/iteration_000500/point_cloud.ply",
+      "sha256": "3d77fd8573e487e3b7879a578a54c909d99172078bfceed12044dbe460719f94",
+      "gaussians": 76223,
+      "active_sh_degree": 0,
+      "max_sh_degree": 3,
+      "render_reload_max_abs_difference": 0.0,
+      "artifact_type": "Gaussian splats; not triangle mesh"
+    },
+    "dataset": {
+      "status": "SUCCESS",
+      "native_scene_loader": "readColmapSceneInfo (actual, unmodified)",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "source_mode": "image_set",
+      "dataset_id": "ignatius-legacy-v1-6a3308c22df11122",
+      "metadata_sha256": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split_hash": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "source_split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "initial_points": 76223,
+      "point_selection": "all train-only initialization points",
+      "native_train_extent": 6.318395233154297,
+      "native_nerf_normalization": {
+        "translate": [
+          0.06606871634721756,
+          0.028421901166439056,
+          -0.059518445283174515
+        ],
+        "radius": 6.318395233154297
+      },
+      "project_normalization_applied": false,
+      "pose_transform_applied": false,
+      "protocol": "fixed_pose_transductive; source BA accessed held-out RGB",
+      "camera_sampling": "native random-without-replacement stack over selected train IDs only"
+    },
+    "native_final_iteration_skips_adam": true,
+    "current_segment_start_iteration": 1
+  },
+  "environment": {
+    "environment": {
+      "python": "3.10.20",
+      "torch": "2.4.1+cu121",
+      "cuda_runtime": "12.1",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "total_vram_bytes": 6441926656,
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "submodules": {
+        "submodules/diff-gaussian-rasterization": "59f5f77e3ddbac3ed9db93ec2cfe99ed6c5d121d",
+        "submodules/simple-knn": "44f764299fa305faf6ec5ebd99939e0508331503",
+        "submodules/diff-gaussian-rasterization/third_party/glm": "5c46b9c07008ae65cb81ab79cd677ecc1934b903"
+      },
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "determinism": "RNG states saved; CUDA rasterizer atomic reductions may be nondeterministic",
+      "optional_depth_exposure_antialiasing": false
+    },
+    "cuda_test": {
+      "status": "SUCCESS",
+      "scope": "CUDA_UNIT_FIXTURE (synthetic unit test, not project reconstruction)",
+      "renderer": "official diff_gaussian_rasterization CUDA",
+      "initialization_knn": "official distCUDA2 CUDA",
+      "loss": 0.538928210735321,
+      "optimizer_update_verified": true,
+      "gaussians": 6,
+      "active_sh_degree": 1,
+      "max_sh_degree": 2,
+      "gradient_norms": {
+        "xyz": 0.007746365386992693,
+        "f_dc": 0.0029676042031496763,
+        "f_rest": 0.005140041001141071,
+        "opacity": 0.0058463276363909245,
+        "scaling": 0.009415038861334324,
+        "rotation": 0.004890174604952335
+      },
+      "opacity_min": 0.10000000149011612,
+      "opacity_mean": 0.10000000894069672,
+      "opacity_max": 0.10000000149011612,
+      "scale_min": 0.18268351256847382,
+      "scale_max": 0.4065696895122528
+    },
+    "nvidia_driver": "610.88",
+    "cuda_toolkit": "12.1.66",
+    "msvc": "14.29.30133",
+    "project_parent_read_only": true,
+    "base_sfm_environment_modified": false,
+    "compiler_flags": {
+      "TORCH_CUDA_ARCH_LIST": "8.6",
+      "MAX_JOBS": 2,
+      "DISTUTILS_USE_SDK": "1"
+    }
+  },
+  "protected_integrity": {
+    "checked_files": 1603,
+    "changed_files": [],
+    "missing_files": [],
+    "ground_truth_content_read": false,
+    "scope": "Pre-existing source/tests/data configs, all pre-existing non-GT dataset files and original outputs recorded before Phase02 implementation"
+  },
+  "tests": {
+    "passed": 62,
+    "failed": 0,
+    "skipped": 1,
+    "runtime_seconds": 55.66,
+    "skip_reason": "Windows symlink privilege WinError1314",
+    "command": ".tools/b0_env/Scripts/python.exe -m pytest -q"
+  },
+  "training_started": true,
+  "pgsr_or_mesh_started": false
+}

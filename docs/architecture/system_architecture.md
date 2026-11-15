@@ -1,6 +1,6 @@
 # System architecture
 
-Thiết kế14/11/2026; cập nhật15/11: Phase01 `src/data/` đã triển khai theo request mới, xem [usage](../tech/phase_01_usage.md) và [report](../phase_01_implementation_report.md); training/mesh modules chưa triển khai. [Repository audit](../repository_audit.md) giữ evidence lịch sử. Scientific choices: [comparison](../research/method_comparison.md). Nguồn mặc định vẫn video; user cho phép legacy riêng để kiểm tra Phase01, không thay gate video.
+Thiết kế14/11/2026; cập nhật15/11: Phase01 `src/data/` và Phase02 B0 `src/gaussian_splatting/`/minimal RGB `src/evaluation/` đã triển khai theo request mới. [Phase01 report](../phase_01_implementation_report.md) giữ historical gates; [B0 usage](../tech/b0_training_usage.md) ghi actual native CUDA/training/metrics contracts. Các nhánh PGSR/2DGS/GOF/mesh chưa triển khai. [Repository audit](../repository_audit.md) giữ evidence lịch sử. Scientific choices: [comparison](../research/method_comparison.md). Nguồn mặc định vẫn video; prepared legacy là experiment riêng được user cho phép, không thay gate video.
 
 ```mermaid
 flowchart TD
@@ -52,4 +52,4 @@ GPU training/inference/rasterization/fusion đã chỉ định CUDA phải dừn
 
 ## Scope hiện tại
 
-Documentation-first đã được user yêu cầu cho toàn roadmap; đây không là authorization train. Sau yêu cầu mới chỉ Phase01 implementation là bước trực tiếp; **chạy hoàn chỉnh vẫn phụ thuộc qualified model**. Sửa GPU BA là nhiệm vụ riêng, không nằm trong việc chuyển COLMAP output sang dataset. Không chuyển VGGT/SLAM/customSfM để né blocker.
+Checkpoint documentation-first14/11 không tự cấp quyền execution; request mới15/11 đã cho phép Phase01 rồi **Phase02 B0 build/training/render/evaluation** trên prepared legacy experiment riêng. Scope hiện tại dừng sau Phase02, không PGSR/2DGS/GOF/mesh. Video vẫn thiếu qualified sparse model; sửa GPU BA là task riêng, không hidden prerequisite được thực hiện trong B0 adapter. Không chuyển VGGT/SLAM/customSfM để né blocker.

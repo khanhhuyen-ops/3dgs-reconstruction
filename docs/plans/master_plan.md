@@ -1,10 +1,12 @@
 # Master plan — research roadmap
 
-Checkpoint tài liệu ngày14/11/2026 được giữ tại [audit](../repository_audit.md) và [documentation audit](../documentation_audit.md). Request ngày15/11 chỉ cho phép **Phase01 implementation** và thí nghiệm legacy riêng; Phase02–07 vẫn `NOT_IMPLEMENTED/NOT_RUN`. [Phase01 report](../phase_01_implementation_report.md) ghi evidence mới, không sửa reports cũ.
+Checkpoint tài liệu ngày14/11/2026 được giữ tại [audit](../repository_audit.md) và [documentation audit](../documentation_audit.md). [Phase01 report](../phase_01_implementation_report.md) là evidence lịch sử. Request tiếp theo ngày15/11 đã cho phép **Phase02 Original3DGS implementation, environment build và actual training** trên prepared legacy experiment; user xác nhận tiếp tục Phase02. Phase03–07 chưa được triển khai/chạy. CLI/config/source pin hiện tại: [B0 usage](../tech/b0_training_usage.md).
 
 ## Current checkpoint
 
-Preprocessing/CUDA features+matching có evidence cũ. Video reconstruction `BLOCKED_GPU_BA`, Phase01 video `BLOCKED_INPUT`; không tự sửa SfM/thay input. `src/data/` đã triển khai BIN/TXT qualification, derived undistortion/filters, frozen splits, train-only initialization, lazy loader và readiness. Legacy riêng (`ba_use_gpu=false`) đã preparation/readiness/resume pass: 263 images, split197/33/33, 76.223 train-init points. Native readers 3DGS/2DGS pass; PGSR tự lọc thêm19.249 points và full scene reader luôn overwrite PLY, cần adapter để giữ common initialization. Full scene loaders chưa chạy. Xem [usage](../tech/phase_01_usage.md) và [report](../phase_01_implementation_report.md) trước khi handoff Phase02.
+**Phase02 B0 ngày16/11:** smoke1.200 và low-memory30.000 iterations hoàn tất, actual CUDA/native loader/backward/ADC/full checkpoint recovery/PLY roundtrip/evaluation đã kiểm chứng. Low-memory197 train views,76.223→249.213 Gaussians,33 test views PSNR23,3754 /SSIM0,8399 /LPIPS0,1150. Full-resolution uncapped đang chạy riêng. [Phase02 report](../phase_02_implementation_report.md) và [validation JSON](../phase_02_validation_summary.json) ghi artifacts/tests/resources/giới hạn; không gọi local resource variant là paper benchmark reproduction.
+
+Preprocessing/CUDA features+matching có evidence cũ. Video reconstruction `BLOCKED_GPU_BA`, Phase01 video `BLOCKED_INPUT`; không sửa SfM/thay input. Legacy riêng (`ba_use_gpu=false`) đã preparation/readiness/resume pass:263 images, split197/33/33,76.223 train-init points. Phase02 actual unmodified B0 SceneInfo loader với frozen-split adapter đã pass; canonical data/poses/normalization giữ nguyên. Phase01 PGSR diagnostic tự lọc thêm19.249 points và reader overwrite PLY vẫn là vấn đề cần method-specific adapter khi Phase03 được yêu cầu. [Phase01 usage](../tech/phase_01_usage.md), [historical report](../phase_01_implementation_report.md).
 
 ## Dependency roadmap
 
@@ -34,17 +36,21 @@ Baseline protocol phải được thiết kế/freeze trước research runs dù
 | D06 | Ours v0 chỉ sparse confidence anchors | [Proposal](../research/proposed_method.md), overlap P03/P05/P09/CDGS |
 | D07 | CUDA strict ở required workloads | Không CPU fallback; missing backend/resource thì blocker |
 | D08 | Fixed-pose transductive SfM disclosure | [Data spec](../tech/data_specification.md), holdout isolation downstream |
-| D09 | Hai profiles chỉ trong Markdown | Chưa runnable config, chưa GPU feasibility claim |
+| D09 | Historical14/11: hai profiles chỉ trong Markdown | Phase02 B0 profiles được triển khai riêng theo D14; không biến presets nhánh khác thành measured feasibility |
 | D10 | Existing `.agent/` giữ; new modular skills `.agents/` | Không duplicate/move skill SfM hoặc tạo source placeholders |
 | D11 | Legacy Phase01 riêng; drop toàn duplicate/outside-image track chỉ trên derived export | User cho phép source riêng ngày15/11; [report](../phase_01_implementation_report.md) ghi IDs/counts/hashes; default video/reject giữ nguyên |
 | D12 | Native dataset layout và split phải có adapter theo pinned source | PGSR đọc sparse/, 3DGS/2DGS sparse/0; [registry](../../configs/data/loader_references.json), [usage](../tech/phase_01_usage.md); native COLMAP reader pass không đồng nghĩa full scene loader pass |
+| D13 | B0 dùng official2023 commit414b553 và native CUDA rasterizer/KNN submodules | [Dependency lock](../../configs/training/dependency_lock.json); không depth/exposure/AA additions2024, không PGSR development |
+| D14 | Ba B0 profiles tách smoke/low-memory/uncapped research | [B0 usage](../tech/b0_training_usage.md); cap có logged deferred ADC events, không gắn low-memory score thành paper benchmark |
+| D15 | RGB evaluator theo frozen project split và AlexNet LPIPS v0.1 với weights SHA-256 | sRGB rounded PNG, SSIM native, per-view mean; khác VGG choice của native metrics.py được công bố |
+| D16 | Giữ native ADC→Adam order và final-iteration skip; checkpoint thêm RNG/sampler | Native capture/restore giữ nguyên, save immutable files, actual CUDA row-state/RNG tests và smoke resume pass |
 
 ## Risks và quality gates
 
-Ưu tiên giải quyết qualified source trước build/training: hiện video chưa có poses/points. Kế tiếp là Windows toolchain/Python-CUDA mismatch, 6GB densification peaks, depth/normal conventions, duplicate tracks và leakage. Official GT alignment/masks/threshold thiếu sẽ block final metric, không block việc soạn architecture.
+Video chưa có poses/points; legacy B0 riêng đã qualify/build/train/evaluate thực. Risk còn lại gồm uncapped densification trên6GB, camera/depth/normal conventions và method-specific loader differences của Phase03, transductive SfM disclosure, multiseed/fair-comparison protocol. Official mesh GT alignment/masks/threshold vẫn cần xác minh ở phase evaluation, không dùng RGB metrics để thay geometry metrics.
 
 G1 nguồn/quality → G2 data projection/split → G3 CUDA render/backward → G4 state/resume/density → G5 depth/mesh → G6 evaluator/protocol → G7 claims/evidence. Gate không đạt thì checkpoint/traces giữ nguyên; không progress bằng dummy artifact.
 
 ## Session handoff
 
-Phase01 implementation và report mới: [usage](../tech/phase_01_usage.md), [results](../phase_01_implementation_report.md). Không có training/mesh result mới. Chạy real video branch vẫn thiếu qualified sparse model; legacy không thay nguồn video. Handoff Phase02 cần user request mới, kiểm thử actual native SceneInfo/split adapter và môi trường CUDA riêng; không bắt đầu training trong Phase01.
+Phase02 request đã được xác nhận và B0 low-memory đã hoàn tất; [report](../phase_02_implementation_report.md), [commands](../tech/b0_training_usage.md) và frozen run artifacts là handoff hiện tại. Video branch vẫn thiếu qualified sparse model; legacy không thay nguồn video. Phase03 cần scope riêng, pin/build/verify PGSR-specific contracts; không giả native B0 checkpoint tương thích PGSR. Không mesh hoặc method khác được chạy trong Phase02.

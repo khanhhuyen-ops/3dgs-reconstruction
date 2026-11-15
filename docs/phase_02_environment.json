@@ -1,0 +1,56 @@
+{
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.4.1+cu121",
+    "cuda_runtime": "12.1",
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "total_vram_bytes": 6441926656,
+    "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+    "submodules": {
+      "submodules/diff-gaussian-rasterization": "59f5f77e3ddbac3ed9db93ec2cfe99ed6c5d121d",
+      "submodules/simple-knn": "44f764299fa305faf6ec5ebd99939e0508331503",
+      "submodules/diff-gaussian-rasterization/third_party/glm": "5c46b9c07008ae65cb81ab79cd677ecc1934b903"
+    },
+    "extension_hashes": {
+      "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+      "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+    },
+    "determinism": "RNG states saved; CUDA rasterizer atomic reductions may be nondeterministic",
+    "optional_depth_exposure_antialiasing": false
+  },
+  "cuda_test": {
+    "status": "SUCCESS",
+    "scope": "CUDA_UNIT_FIXTURE (synthetic unit test, not project reconstruction)",
+    "renderer": "official diff_gaussian_rasterization CUDA",
+    "initialization_knn": "official distCUDA2 CUDA",
+    "loss": 0.538928210735321,
+    "optimizer_update_verified": true,
+    "gaussians": 6,
+    "active_sh_degree": 1,
+    "max_sh_degree": 2,
+    "gradient_norms": {
+      "xyz": 0.007746365386992693,
+      "f_dc": 0.0029676042031496763,
+      "f_rest": 0.005140041001141071,
+      "opacity": 0.0058463276363909245,
+      "scaling": 0.009415038861334324,
+      "rotation": 0.004890174604952335
+    },
+    "opacity_min": 0.10000000149011612,
+    "opacity_mean": 0.10000000894069672,
+    "opacity_max": 0.10000000149011612,
+    "scale_min": 0.18268351256847382,
+    "scale_max": 0.4065696895122528
+  },
+  "nvidia_driver": "610.88",
+  "cuda_toolkit": "12.1.66",
+  "msvc": "14.29.30133",
+  "project_parent_read_only": true,
+  "base_sfm_environment_modified": false,
+  "compiler_flags": {
+    "TORCH_CUDA_ARCH_LIST": "8.6",
+    "MAX_JOBS": 2,
+    "DISTUTILS_USE_SDK": "1"
+  }
+}

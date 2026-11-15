@@ -1,6 +1,6 @@
 # Loss specification
 
-Chưa có loss implementation. Scientific origin: [P01/P02/P05/P07/P09/P14](../research/literature_review.md); camera/plane math tại [foundations](../research/mathematical_foundations.md); Ours tại [proposal](../research/proposed_method.md). Mọi reduction trả FP32 CUDA scalar. RGB/geometry masks hợp lệ lấy từ contract, không GT test.
+B0 RGB loss đã tích hợp từ pinned official2023 `utils.loss_utils` trong Phase02; CUDA finite-gradient checks đã chạy, xem [B0 usage](b0_training_usage.md). Các geometry/B1/B2/Ours losses chưa triển khai. Scientific origin: [P01/P02/P05/P07/P09/P14](../research/literature_review.md); camera/plane math tại [foundations](../research/mathematical_foundations.md); Ours tại [proposal](../research/proposed_method.md). Mọi training reduction trả FP32 CUDA scalar. RGB/geometry masks hợp lệ lấy từ contract, không GT test.
 
 ## Inputs và reductions
 

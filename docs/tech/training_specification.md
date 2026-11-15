@@ -1,6 +1,14 @@
 # Training specification
 
-Thiết kế chưa thực thi. [Architecture](../architecture/training_architecture.md), [data contract](data_specification.md), [representation](gaussian_representation.md) và [loss spec](loss_specification.md) là dependencies. Không thêm training keys vào `sfm_ignatius.yaml`; file đó chỉ thuộc SfM.
+B0 Phase02 đã có implementation tại `src/gaussian_splatting/` và đang thực thi theo request ngày15/11/2026; [actual usage/config/algorithm boundary](b0_training_usage.md). Các phần B1/B2/Ours và profiles nghiên cứu dưới đây vẫn là thiết kế cho phase tương ứng. [Architecture](../architecture/training_architecture.md), [data contract](data_specification.md), [representation](gaussian_representation.md) và [loss spec](loss_specification.md) là dependencies. Không thêm training keys vào `sfm_ignatius.yaml`; file đó chỉ thuộc SfM.
+
+## B0 implementation contract
+
+Pin official `414b553ef1d3032ea634b7b7a1d121173f36592c`, rasterizer `59f5f77`, KNN `44f7642`; Python3.10.20 / torch2.4.1+cu121 / CUDA12.1 / MSVC14.29 / sm86 đã có actual CUDA forward/backward evidence. Three runnable YAMLs ở `configs/training/b0_{smoke,low_memory,research_quality}.yaml` thay cho việc coi proposed profiles dưới đây là CLI đã chạy. Native `GaussianModel`, `loadCam`, `readColmapSceneInfo`, renderer, L1/SSIM và native ADC được gọi qua adapter, không port rasterizer sang Python/CPU.
+
+B0 dùng `sparse/0/points3D.ply` train-only colors, explicit Phase01 split và bounded lazy CPU cameras; poses/XYZ canonical không normalize thêm. Native train extent chỉ scale position LR/ADC thresholds. Adam/SSIM/density defaults từ pinned source; reference native ADC chạy trước optimizer step và bỏ final Adam step (30k iterations/29.999 steps). Capped profiles defer whole ADC event có count/log; native reference profile không cap. Paper resolution warmup và newer upstream features không tự thêm vào selected code variant. Loss chỉ RGB; viewer/network GUI tắt.
+
+Checkpoint native capture + RNG Python/NumPy/TorchCPU/CUDA + camera stack + source/config/native/extension/code hashes; atomic files và integrity pointer. Gaussian PLY export/reload/render parity là validation riêng, không đủ resume. Device/process VRAM peaks và sampled device-wide usage giữ scope khác nhau; resume process peak không tự là max mọi segments. Held-out evaluation sau checkpoint/config freeze; project AlexNet LPIPS weights có hash lock, không test exposure fitting. Chi tiết/report limits: [B0 usage](b0_training_usage.md).
 
 ## 1. Loop contract
 
