@@ -1,6 +1,6 @@
 # Hướng dẫn tài liệu nghiên cứu
 
-Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full-resolution uncapped đang chạy riêng; Phase03–07 chưa triển khai. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; prepared legacy là thí nghiệm riêng được user cho phép. [Phase01 report](phase_01_implementation_report.md) giữ evidence lịch sử; [Phase02 report](phase_02_implementation_report.md) ghi actual results/artifacts, [B0 usage](tech/b0_training_usage.md) mô tả commands/contracts.
+Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full-resolution dừng bởi resource guard; [Kaggle usage](tech/kaggle_phase02_usage.md) hướng dẫn tiếp tục; Phase03–07 chưa triển khai. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; prepared legacy là thí nghiệm riêng được user cho phép. [Phase01 report](phase_01_implementation_report.md) giữ evidence lịch sử; [Phase02 report](phase_02_implementation_report.md) ghi actual results/artifacts, [B0 usage](tech/b0_training_usage.md) mô tả commands/contracts.
 
 ## Research — sources, phương pháp và tính mới
 

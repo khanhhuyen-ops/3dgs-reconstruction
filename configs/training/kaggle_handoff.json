@@ -1,0 +1,13 @@
+{
+  "input_bundle": "/kaggle/input/your-private-dataset/kaggle_input",
+  "previous_output_bundle": null,
+  "workspace": "/tmp/phase02-kaggle/project",
+  "output_bundle": "/kaggle/working/phase02_results",
+  "session_target_iteration": 30000,
+  "total_iterations": 30000,
+  "device": "cuda:0",
+  "checkpoint_retention": 2,
+  "checkpoint_interval": 1000,
+  "torch_reserved_budget": "min(12GiB, 80 percent actual GPU VRAM)",
+  "evaluation": "33 frozen test views for this legacy dataset after iteration30000"
+}

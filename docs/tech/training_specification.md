@@ -1,5 +1,7 @@
 # Training specification
 
+Kaggle migration: [setup, derived-checkpoint resume, export/import guide](kaggle_phase02_usage.md). Original checkpoints remain immutable; Linux build identities and resource settings have a separate audit. Kaggle execution is unverified.
+
 B0 Phase02 đã có implementation tại `src/gaussian_splatting/` và đang thực thi theo request ngày15/11/2026; [actual usage/config/algorithm boundary](b0_training_usage.md). Các phần B1/B2/Ours và profiles nghiên cứu dưới đây vẫn là thiết kế cho phase tương ứng. [Architecture](../architecture/training_architecture.md), [data contract](data_specification.md), [representation](gaussian_representation.md) và [loss spec](loss_specification.md) là dependencies. Không thêm training keys vào `sfm_ignatius.yaml`; file đó chỉ thuộc SfM.
 
 ## B0 implementation contract

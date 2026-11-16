@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-16",
+  "status": "PREPARED_AND_LOCALLY_TESTED; KAGGLE_EXECUTION_UNVERIFIED",
+  "input_bundle": "outputs/kaggle_handoff/ignatius_phase02_input_v1",
+  "bundle_bytes": 2667148182,
+  "manifest_sha256": "94285975930ef92fd67bfab04186eeb8badf0ebc67c36590a862c083d97a10bd",
+  "files": 286,
+  "checkpoint": {
+    "status": "SUCCESS",
+    "iteration": 7000,
+    "gaussians": 2233886,
+    "optimizer_steps": 7000,
+    "active_sh_degree": 3,
+    "optimizer_and_adc_present": true,
+    "rng_and_sampler_present": true,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "sha256": "bd31ba8fb327a4d767204dd860d9102bb933be8d61edfc338ca30da6aa2911d4",
+    "scope": "CPU serialization/state validation; CUDA restore must run on Kaggle"
+  },
+  "dataset": {
+    "status": "SUCCESS",
+    "errors": [],
+    "native_scene_loaders": "NOT_TESTED",
+    "training_started": false,
+    "gpu_compute": "NOT_RUN (CPU data preparation)",
+    "phase02_training_authorized": false,
+    "dataset_id": "ignatius-legacy-v1-6a3308c22df11122",
+    "split_counts": {
+      "train": 197,
+      "val": 33,
+      "test": 33
+    },
+    "points": 76223,
+    "observations": 434720,
+    "source_integrity_verified_at_preparation": true,
+    "protocol": "fixed_pose_transductive",
+    "convention": "COLMAP Hamilton WXYZ; world-to-camera; x right/y down/z forward",
+    "canonical_geometry_preserved": true,
+    "project_cpu_loader": "VERIFIED",
+    "project_loader_samples": {
+      "train": {
+        "image_id": 2,
+        "rgb_shape": [
+          3,
+          1080,
+          1920
+        ],
+        "dtype": "float32",
+        "device": "CPU"
+      },
+      "val": {
+        "image_id": 5,
+        "rgb_shape": [
+          3,
+          1080,
+          1920
+        ],
+        "dtype": "float32",
+        "device": "CPU"
+      },
+      "test": {
+        "image_id": 1,
+        "rgb_shape": [
+          3,
+          1080,
+          1920
+        ],
+        "dtype": "float32",
+        "device": "CPU"
+      }
+    },
+    "readiness_scope": "Prepared artifact integrity/geometry only; native scene loaders reported separately"
+  },
+  "source_capsule_sha256": "a70db9a99d68029fccd3f0e0a4b95cf466abd57280b92f5e0ddd336cf5249e35",
+  "source_capsule_files_verified": 54,
+  "local_training_failure": {
+    "status": "BLOCKED_RESOURCE",
+    "iteration": 7401,
+    "reason": "Measured reserved VRAM exceeds configured budget; preserve checkpoints and use a declared retry profile",
+    "last_checkpoint": {
+      "path": "iteration_007000.pth",
+      "sha256": "bd31ba8fb327a4d767204dd860d9102bb933be8d61edfc338ca30da6aa2911d4",
+      "iteration": 7000
+    },
+    "memory": {
+      "allocated_bytes": 1809653760,
+      "reserved_bytes": 5536481280,
+      "peak_allocated_bytes": 3711142912,
+      "peak_reserved_bytes": 6125780992,
+      "device_free_bytes": 0,
+      "device_total_bytes": 6441926656
+    }
+  },
+  "checks": {
+    "input_packaging_actual_scene": "PASS",
+    "all_bundle_checksums": "PASS",
+    "full_checkpoint_cpu_state_validation": "PASS",
+    "notebook_python_syntax": "PASS",
+    "notebook_nbformat_schema": "PASS",
+    "linux_setup_bash_syntax": "PASS (Git Bash)",
+    "micromamba_pinned_download": "HTTP200 GET",
+    "ruff": "PASS",
+    "tests": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "runtime_seconds": 6.11,
+      "command": ".tools/b0_env/Scripts/python.exe -m pytest -q tests/test_kaggle_handoff.py tests/test_gaussian_baseline.py"
+    },
+    "protected_files": {
+      "checked": 1603,
+      "changed": [],
+      "missing": []
+    }
+  },
+  "not_executed": [
+    "Linux dependency solve/install and CUDA extension build",
+    "Native CUDA restore on Kaggle GPU",
+    "Kaggle training/evaluation",
+    "Actual downloaded Kaggle result import",
+    "Blender scene modification"
+  ],
+  "long_training_started_by_migration": false,
+  "original_checkpoint_modified": false,
+  "phase03_started": false
+}

@@ -1,7 +1,7 @@
 {
   "date": "2026-11-16",
   "timezone": "Asia/Saigon",
-  "phase_status": "B0_LOW_MEMORY_COMPLETE; UNCAPPED_REFERENCE_RUNNING",
+  "phase_status": "B0_LOW_MEMORY_COMPLETE; UNCAPPED_REFERENCE_BLOCKED_RESOURCE; KAGGLE_HANDOFF_PREPARED",
   "smoke": {
     "status": "SUCCESS",
     "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824",
@@ -389,5 +389,23 @@
     "command": ".tools/b0_env/Scripts/python.exe -m pytest -q"
   },
   "training_started": true,
-  "pgsr_or_mesh_started": false
+  "pgsr_or_mesh_started": false,
+  "reference_failure": {
+    "status": "BLOCKED_RESOURCE",
+    "iteration": 7401,
+    "reason": "Measured reserved VRAM exceeds configured budget; preserve checkpoints and use a declared retry profile",
+    "last_checkpoint": {
+      "path": "iteration_007000.pth",
+      "sha256": "bd31ba8fb327a4d767204dd860d9102bb933be8d61edfc338ca30da6aa2911d4",
+      "iteration": 7000
+    },
+    "memory": {
+      "allocated_bytes": 1809653760,
+      "reserved_bytes": 5536481280,
+      "peak_allocated_bytes": 3711142912,
+      "peak_reserved_bytes": 6125780992,
+      "device_free_bytes": 0,
+      "device_total_bytes": 6441926656
+    }
+  }
 }
