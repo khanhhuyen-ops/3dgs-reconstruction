@@ -168,3 +168,9 @@ Protected-file checksum baseline1603 existing source/tests/data-config/dataset/o
 B0 low-memory đã tạo đủ CUDA training/checkpoint/render/evaluation infrastructure và actual frozen artifacts cho Phase03 entry. Có thể reuse prepared dataset/split/provenance, environment audit, experiment directories, resource logging, metric definitions và evaluator khi protocol/resolution khớp. PGSR phải pin native version, verify riêng camera/initial-point filtering, plane/depth/normal/appearance conventions, renderer gradients và full optimizer state; không chuyển checkpoint bằng cách đổi filename.
 
 Phase03 chưa được bắt đầu. Không dựng mesh/TSDF hoặc train thêm baseline ngoài phạm vi Phase02.
+
+## I. Kaggle publish và runtime verification — 16/11/2026
+
+Đã upload Private Dataset version2 và notebook [Phase02 Ignatius Run All](https://www.kaggle.com/code/vthkhnhhuyn/phase02-ignatius-run-all/edit), GPU T4/Internet/Files only cấu hình sẵn. Kaggle tự giải nén ZIP lồng nhau nên đổi transport sang `.bundle` có SHA256; sealed manifest và original checkpoint không đổi. Notebook có session budget và recovery export trước timeout.
+
+Verification notebook version3 COMPLETE: Python3.10.20/Torch2.4.1+cu121, official rasterizer/simple-knn build đúng native revisions; CUDA fixture forward/backward/optimizer update PASS; actual checkpoint7000/2.233.886 Gaussians restore trên Tesla T4 PASS. Đây là verification, chưa là full-resolution training hoặc final metrics. Local handoff7 tests PASS (hai case session-budget dùng process mô phỏng), notebook schema và server source roundtrip PASS. [Publish/runtime evidence](phase_02_kaggle_publish.json) lưu hashes, environment, migration và scope; logs/JSON tải thật ở `.tools/kaggle_publish/verified_output/`. Full scene training30000, held-out Kaggle metrics và final-result import vẫn chờ thực thi.

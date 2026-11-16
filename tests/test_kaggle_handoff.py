@@ -15,6 +15,64 @@ from import_kaggle_results import import_results  # noqa: E402
 from src.gaussian_splatting.config import DEFAULTS  # noqa: E402
 
 
+@pytest.mark.parametrize("budget", [0, 1500])
+def test_notebook_session_budget_exports_published_checkpoint(tmp_path, budget):
+    """Exercise notebook orchestration with a simulated timed-out child, no training."""
+    import signal
+    import subprocess
+    from types import SimpleNamespace
+
+    notebook = json.loads(
+        (ROOT / "notebooks/kaggle/phase02_resume_3dgs.ipynb").read_text(encoding="utf-8")
+    )
+    source = "".join(notebook["cells"][12]["source"])
+    write_json(tmp_path / "checkpoints/latest.json", {"iteration": 7000})
+    signals = []
+    exports = []
+
+    class Process:
+        returncode = None
+
+        def wait(self, timeout=None):
+            if not signals:
+                raise subprocess.TimeoutExpired("fixture", timeout)
+            self.returncode = -2
+            return self.returncode
+
+        def send_signal(self, value):
+            signals.append(value)
+
+        def poll(self):
+            return self.returncode
+
+    scope = {
+        "SESSION_BUDGET_SECONDS": budget,
+        "SESSION_STARTED": 0,
+        "SESSION_TARGET": 30000,
+        "time": SimpleNamespace(monotonic=lambda: 0),
+        "RUN": tmp_path,
+        "WORK": tmp_path,
+        "PY": tmp_path / "python",
+        "INPUT": tmp_path,
+        "OUTPUT": tmp_path / "output",
+        "ENV": {},
+        "json": json,
+        "subprocess": SimpleNamespace(
+            Popen=lambda *args, **kwargs: Process(),
+            TimeoutExpired=subprocess.TimeoutExpired,
+            CalledProcessError=subprocess.CalledProcessError,
+        ),
+        "stage": lambda *args: exports.append(args),
+    }
+    exec(compile(source, "notebook-session-budget", "exec"), scope)
+    receipt = json.loads((tmp_path / "session_pause.json").read_text())
+    assert receipt["status"] == "PARTIAL_SESSION_BUDGET"
+    assert receipt["iterations"] == 7000
+    assert receipt["training_started"] == bool(budget)
+    assert exports == [("export", ["--output", tmp_path / "output"])]
+    assert signals == ([signal.SIGINT] if budget else [])
+
+
 def fixture_checkpoint(path, config):
     from workflow import torch_module
 
