@@ -1,6 +1,6 @@
 # Phase 02 — Original 3DGS baseline
 
-Trạng thái ngày16/11/2026: **B0 LOW-MEMORY COMPLETE / UNCAPPED REFERENCE RUNNING**. Official2023 CUDA renderer/KNN, actual native loader/init/backward/ADC, smoke1.200 iterations, full-state resume, low-memory30.000 iterations và33 held-out test metrics đã chạy. Low-memory PSNR23,3754 /SSIM0,8399 /LPIPS0,1150; final249.213 Gaussians. Full-resolution reference chưa được gọi completed. [Report/acceptance](../phase_02_implementation_report.md), [usage/config](../tech/b0_training_usage.md), [dependency lock](../../configs/training/dependency_lock.json), [master plan](master_plan.md).
+Trạng thái ngày16/11/2026: **B0 LOW-MEMORY COMPLETE / UNCAPPED REFERENCE BLOCKED_RESOURCE / KAGGLE HANDOFF PREPARED**. Official2023 CUDA renderer/KNN, actual native loader/init/backward/ADC, smoke1.200 iterations, full-state resume, low-memory30.000 iterations và33 held-out test metrics đã chạy. Low-memory PSNR23,3754 /SSIM0,8399 /LPIPS0,1150; final249.213 Gaussians. Run dừng ở7401 bởi resource guard; checkpoint7000 đã kiểm tra. [Kaggle usage](../tech/kaggle_phase02_usage.md), [verification](../phase_02_kaggle_verification.json). Kaggle CUDA/train chưa chạy. [Report/acceptance](../phase_02_implementation_report.md), [usage/config](../tech/b0_training_usage.md), [dependency lock](../../configs/training/dependency_lock.json), [master plan](master_plan.md).
 
 ## 1. Phase overview
 

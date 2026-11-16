@@ -1,6 +1,6 @@
 # Phase02 — Báo cáo triển khai và thực nghiệm B0 Original3DGS
 
-Ngày16/11/2026, timezone `Asia/Saigon`. **B0 low-memory đã hoàn tất training30.000 iterations và evaluation33 held-out views trên CUDA.** Smoke/resume đã đạt; run full-resolution uncapped đang được thực thi riêng, chưa được tính là kết quả hoàn chỉnh. Đây là kết quả local trên legacy experiment đã được user cho phép, không là kết quả video GPU-strict hoặc tái lập benchmark của paper. Không chạy PGSR/2DGS/GOF/meshing.
+Ngày16/11/2026, timezone `Asia/Saigon`. **B0 low-memory đã hoàn tất training30.000 iterations và evaluation33 held-out views trên CUDA.** Smoke/resume đã đạt; run full-resolution đã dừng bởi resource guard tại7401, checkpoint7000 được giữ, chưa được tính là kết quả hoàn chỉnh. Đây là kết quả local trên legacy experiment đã được user cho phép, không là kết quả video GPU-strict hoặc tái lập benchmark của paper. Không chạy PGSR/2DGS/GOF/meshing.
 
 Các số đo dưới đây lấy từ artifacts thực; [validation summary](phase_02_validation_summary.json) giữ bản JSON, [usage](tech/b0_training_usage.md) giữ contract và lệnh tái lập. Source SfM, raw, camera poses và prepared data được giữ nguyên.
 
@@ -74,7 +74,7 @@ Low-memory completed6 density events, deferred138 events theo cap đã khai báo
 
 Smoke đã stop550→resume551–1200, model/optimizer/RNG/remaining sampler restore hợp lệ. Low-memory đã khôi phục checkpoint25.000 đúng code/config/data identity. CUDA atomic reductions có thể nondeterministic; không tuyên bố bitwise parity chỉ vì RNG state đầy đủ.
 
-Full-resolution reference run `ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa`:1920×1080,197 views,76.223 initial points,SH3,no cap,30.000 planned. Pilot500 iterations đạt, checkpoint/native PLY reload đạt; resumed501 để đo actual feasibility. Kết quả cuối sẽ cập nhật khi kết thúc; hiện không có final test metrics cho run này.
+Full-resolution reference run `ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa`:1920×1080,197 views,76.223 initial points,SH3,no cap,30.000 planned. Pilot500 iterations đạt, checkpoint/native PLY reload đạt; resumed501 để đo actual feasibility. Run dừng BLOCKED_RESOURCE ở7401 theo reserved-memory guard5GiB, không phải full completion hoặc kết luận mọi GPU6GB đều không chạy được. Checkpoint7000 đã kiểm tra và đóng gói; chưa có final test metrics.
 
 ## D. Evaluation
 
@@ -150,14 +150,14 @@ Protected-file checksum baseline1603 existing source/tests/data-config/dataset/o
 | Planned low-memory training |PASS,30000 iterations/29999 Adam calls |
 | Gaussian PLY reload + held-out renders/metrics |PASS,33 test views, all three metrics measured |
 | Logs/resources/provenance |PASS, interrupted timing được đánh dấu lower bound |
-| Full-resolution uncapped reference |RUNNING, không dùng làm completed result |
+| Full-resolution uncapped reference |BLOCKED_RESOURCE ở7401; [Kaggle handoff](tech/kaggle_phase02_usage.md) chuẩn bị, chưa train Kaggle |
 | Default video sparse model/GPU BA |BLOCKED, ngoài scope Phase02 legacy |
 
 ## G. Problems và giới hạn
 
 1. Video vẫn `BLOCKED_GPU_BA`, không có sparse model; legacy source không thay thế kết quả video. Historical CPU BA và transductive geometry được công bố.
 2. Low-memory resolution/cap khác uncapped reference; không phải benchmark reproduction, không suy ra SOTA hoặc geometric quality từ PSNR. Chưa có multiseed study/comparison group của Phase06.
-3. Full-resolution uncapped feasibility còn đang đo;5GiB Torch reserved guard/CUDA OOM giữ checkpoint và báo lỗi thật, không CPU fallback. Chưa có final metrics nếu run chưa kết thúc.
+3. Full-resolution đã dừng theo resource guard tại7401;5GiB Torch reserved guard/CUDA OOM giữ checkpoint và báo lỗi thật, không CPU fallback. Chưa có final metrics nếu run chưa kết thúc.
 4. Low-memory abrupt interruption làm mất exact total duration cuối segment đầu; báo observed lower bound, không bịa timing. Device-wide sample không phải exact process peak; current-segment result không thay all-segment maximum.
 5. CUDA atomic reductions cho phép nondeterminism; checkpoint lưu đầy đủ RNG không cam kết bitwise reproducibility mọi GPU.
 6. Adapter hiện hỗ trợ scene pinhole centered principal point này. Alpha/validity masks hoặc off-center principal point cần adapter rõ ràng; pipeline từ chối thay vì bỏ qua. Không có camera refinement/exposure optimization.

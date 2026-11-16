@@ -1,5 +1,7 @@
 # B0 Original3DGS — thực thi Phase02
 
+Kaggle migration: [setup, derived-checkpoint resume, export/import guide](kaggle_phase02_usage.md). Original checkpoints remain immutable; Linux build identities and resource settings have a separate audit. Kaggle execution is unverified.
+
 Adapter nằm tại `src/gaussian_splatting/`, RGB evaluator tại `src/evaluation/`. Source chính thức tách ở ignored `external/gaussian-splatting`; phiên bản/weights được pin trong [dependency lock](../../configs/training/dependency_lock.json). Không có PGSR/2DGS/GOF training hoặc mesh extraction trong adapter này. Kết quả đo: [Phase02 report](../phase_02_implementation_report.md).
 
 ## Environment
