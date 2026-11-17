@@ -1,5 +1,7 @@
 # Hướng dẫn tài liệu nghiên cứu
 
+**Cập nhật17/11/2026:** Kaggle B0 full-resolution đã hoàn tất30000,3.381.717 Gaussians; bundle đã import và kiểm tra Blender/native CUDA Windows. [Import evidence](phase_02_kaggle_result_import.json), [Phase03 entry readiness](phase_03_entry_readiness.md). PGSR chưa train; các mô tả ngày16/11 dưới đây là checkpoint lịch sử trước khi nhận kết quả.
+
 Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full-resolution dừng bởi resource guard; [Kaggle Run All](tech/kaggle_phase02_usage.md) đã upload Private và build/restore checkpoint thật trên T4 ([evidence](phase_02_kaggle_publish.json)); full-resolution training Kaggle chưa bắt đầu. Phase03–07 chưa triển khai. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; prepared legacy là thí nghiệm riêng được user cho phép. [Phase01 report](phase_01_implementation_report.md) giữ evidence lịch sử; [Phase02 report](phase_02_implementation_report.md) ghi actual results/artifacts, [B0 usage](tech/b0_training_usage.md) mô tả commands/contracts.
 
 ## Research — sources, phương pháp và tính mới

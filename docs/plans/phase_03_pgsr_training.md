@@ -2,6 +2,8 @@
 
 Trạng thái hiện tại: **PLANNED — chưa triển khai/chạy**. User request tiếp theo quyết định việc thực thi; xem [master plan](master_plan.md). Mọi thông số preset là thiết kế, không benchmark đã đo.
 
+Entry checkpoint17/11/2026: Kaggle B0 full-resolution30000 đã import, native Windows CUDA inference và Blender review đã kiểm chứng. [Phase03 entry readiness](../phase_03_entry_readiness.md) và [result evidence](../phase_02_kaggle_result_import.json) khóa shared data/profile và liệt kê native PGSR loader/renderer/resume gates chưa thực hiện; B0 checkpoint không là PGSR resume state.
+
 ## 1. Phase overview
 
 Tạo B2 geometry branch dựa official PGSR, chưa thêm Ours. Chọn official-code variant và giữ paper-faithful option riêng nếu có.

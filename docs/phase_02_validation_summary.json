@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "timezone": "Asia/Saigon",
-  "phase_status": "B0_LOW_MEMORY_COMPLETE; UNCAPPED_REFERENCE_BLOCKED_RESOURCE; KAGGLE_HANDOFF_PREPARED",
+  "phase_status": "B0_LOW_MEMORY_COMPLETE; KAGGLE_FULL_RESOLUTION_COMPLETE_AND_IMPORTED; PHASE03_ENTRY_PREPARED",
   "smoke": {
     "status": "SUCCESS",
     "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824",
@@ -407,5 +407,25 @@
       "device_free_bytes": 0,
       "device_total_bytes": 6441926656
     }
+  },
+  "kaggle_full_resolution_result_20261117": {
+    "status": "IMPORTED_FINAL_AND_REVIEWED",
+    "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26",
+    "iterations": 30000,
+    "optimizer_steps": 29999,
+    "gaussians": 3381717,
+    "test_views": 33,
+    "psnr": 20.913032885953598,
+    "ssim": 0.6951862898739901,
+    "lpips": 0.26943410662087525,
+    "scope": "Kaggle measured held-out metrics; independent full-resolution profile",
+    "result_evidence": "docs/phase_02_kaggle_result_import.json",
+    "windows_native_cuda_one_view_png_max_difference": 0,
+    "blender_scene": "outputs/visualization/phase02_20261117/phase02_pointcloud_review.blend",
+    "phase03_entry": "docs/phase_03_entry_readiness.md"
+  },
+  "previous_checkpoint_20261116": {
+    "date": "2026-11-16",
+    "phase_status": "B0_LOW_MEMORY_COMPLETE; UNCAPPED_REFERENCE_BLOCKED_RESOURCE; KAGGLE_HANDOFF_PREPARED"
   }
 }

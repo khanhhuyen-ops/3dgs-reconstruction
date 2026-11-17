@@ -1,0 +1,523 @@
+{
+  "date": "2026-11-17",
+  "status": "IMPORTED_FINAL_AND_REVIEWED",
+  "run": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26",
+  "import_receipt": {
+    "bundle_id": "cb3ae362dca180fab672",
+    "manifest_sha256": "9d67fc9952f8c47010cf2e66a848646d3f47adeea658893642b4eaf6b8985aa9",
+    "status": "IMPORTED_FINAL",
+    "checkpoint": {
+      "status": "SUCCESS",
+      "iteration": 30000,
+      "gaussians": 3381717,
+      "optimizer_steps": 29999,
+      "active_sh_degree": 3,
+      "optimizer_and_adc_present": true,
+      "rng_and_sampler_present": true,
+      "identity": {
+        "config": "f2b68f27578f0c1b3c086f0627e58bb796768c2d8c7811e701ab542d788a0f6a",
+        "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+        "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+        "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+        "extension_hashes": {
+          "diff_gaussian_rasterization._C": "8f3c2b9af29e04dcb3e77786748adaaf5b0a16289d2e5d2315e59fb382f14fcf",
+          "simple_knn._C": "8ac8de6d8dc9570f1df83916e949b0a41bffe1316bfb202623842c14952f9176"
+        },
+        "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+      },
+      "sha256": "9c9538604d015403f355f41c4ac42ae989454b73d8bb55876843cd94ad4484d5",
+      "scope": "CPU serialization/state validation; CUDA restore must run on Kaggle"
+    }
+  },
+  "training_result": {
+    "status": "SUCCESS",
+    "iterations": 30000,
+    "optimizer_steps": 29999,
+    "initial_gaussians": 76223,
+    "final_gaussians": 3381717,
+    "final_sampled_training_loss": 0.07844285666942596,
+    "training_seconds_total": 8908.292223019,
+    "memory": {
+      "allocated_bytes": 4603083776,
+      "reserved_bytes": 8921284608,
+      "peak_allocated_bytes": 7349913088,
+      "peak_reserved_bytes": 10160701440,
+      "device_free_bytes": 6543966208,
+      "device_total_bytes": 15636037632
+    },
+    "device_wide_memory": {
+      "runtime_seconds": 8908.292955624998,
+      "peak_device_memory_used_mib_sampled": 9549.0,
+      "vram_samples": 16293,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "export": {
+      "status": "SUCCESS",
+      "path": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/point_cloud/iteration_030000/point_cloud.ply",
+      "sha256": "72e396873d5355d7fea27394ca8c6e411cc29e5a09e2b9ad27bdca1a76a485fd",
+      "gaussians": 3381717,
+      "active_sh_degree": 3,
+      "max_sh_degree": 3,
+      "render_reload_max_abs_difference": 0.0,
+      "artifact_type": "Gaussian splats; not triangle mesh"
+    },
+    "dataset": {
+      "status": "SUCCESS",
+      "native_scene_loader": "readColmapSceneInfo (actual, unmodified)",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "source_mode": "image_set",
+      "dataset_id": "ignatius-legacy-v1-6a3308c22df11122",
+      "metadata_sha256": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split_hash": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "source_split_counts": {
+        "train": 197,
+        "val": 33,
+        "test": 33
+      },
+      "initial_points": 76223,
+      "point_selection": "all train-only initialization points",
+      "native_train_extent": 6.318395233154297,
+      "native_nerf_normalization": {
+        "translate": [
+          0.06606871634721756,
+          0.028421901166439056,
+          -0.059518445283174515
+        ],
+        "radius": 6.318395233154297
+      },
+      "project_normalization_applied": false,
+      "pose_transform_applied": false,
+      "protocol": "fixed_pose_transductive; source BA accessed held-out RGB",
+      "camera_sampling": "native random-without-replacement stack over selected train IDs only"
+    },
+    "native_final_iteration_skips_adam": true,
+    "current_segment_start_iteration": 7001
+  },
+  "metrics": {
+    "status": "SUCCESS",
+    "split": "test",
+    "view_count": 33,
+    "aggregate_arithmetic_mean_per_view": {
+      "psnr": 20.913032885953598,
+      "ssim": 0.6951862898739901,
+      "lpips": 0.26943410662087525
+    },
+    "split_hash": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4"
+  },
+  "native_windows_cuda_validation": {
+    "status": "SUCCESS",
+    "scope": "One-view PLY inference only; no optimizer resume or training",
+    "environment": {
+      "python": "3.10.20",
+      "torch": "2.4.1+cu121",
+      "cuda_runtime": "12.1",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "total_vram_bytes": 6441926656,
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "submodules": {
+        "submodules/diff-gaussian-rasterization": "59f5f77e3ddbac3ed9db93ec2cfe99ed6c5d121d",
+        "submodules/simple-knn": "44f764299fa305faf6ec5ebd99939e0508331503",
+        "submodules/diff-gaussian-rasterization/third_party/glm": "5c46b9c07008ae65cb81ab79cd677ecc1934b903"
+      },
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "determinism": "RNG states saved; CUDA rasterizer atomic reductions may be nondeterministic",
+      "optional_depth_exposure_antialiasing": false
+    },
+    "model": {
+      "gaussians": 3381717,
+      "active_sh_degree": 3,
+      "max_sh_degree": 3,
+      "gradient_norms": {},
+      "opacity_min": 0.0008384158136323094,
+      "opacity_mean": 0.4489569067955017,
+      "opacity_max": 1.0,
+      "scale_min": 3.555357744322585e-11,
+      "scale_max": 28.046958923339844
+    },
+    "image_id": 1,
+    "png_difference_mean_8bit": 0.0,
+    "png_difference_max_8bit": 0,
+    "png_pixels_equal_fraction": 1.0,
+    "tensor_device": "cuda:0",
+    "source_ply_sha256": "72e396873d5355d7fea27394ca8c6e411cc29e5a09e2b9ad27bdca1a76a485fd",
+    "peak_torch_allocated_bytes": 2312371200,
+    "peak_torch_reserved_bytes": 2566914048,
+    "elapsed_seconds": 5.3327819000001,
+    "comparison_scope": "Quantized PNG from Kaggle GPU vs Windows GPU; not float bitwise parity"
+  },
+  "blender": {
+    "status": "SUCCESS",
+    "scene": "Phase02_PointCloud_Review_20261117",
+    "original_scene": "Scene",
+    "preserved_objects": [
+      "Camera",
+      "Cube",
+      "Light"
+    ],
+    "clouds": [
+      {
+        "tag": "B0_Kaggle_FullResolution",
+        "all_centers_object": "B0_Kaggle_FullResolution_ALL_XYZ",
+        "full_point_count": 3381717,
+        "splat_preview": "B0_Kaggle_FullResolution_SPLAT_PREVIEW",
+        "preview_count": 200000
+      },
+      {
+        "tag": "B0_Local_LowMemory",
+        "all_centers_object": "B0_Local_LowMemory_ALL_XYZ",
+        "full_point_count": 249213,
+        "splat_preview": "B0_Local_LowMemory_SPLAT_PREVIEW",
+        "preview_count": 200000
+      },
+      {
+        "tag": "Sparse_TrainInitialization",
+        "all_centers_object": "Sparse_TrainInitialization_ALL_XYZ",
+        "full_point_count": 76223,
+        "splat_preview": null,
+        "preview_count": 76223
+      }
+    ],
+    "camera_image_id": 1,
+    "scope": "All XYZ imported; bounded native Gaussian samples for visual inspection only",
+    "review_file": "outputs/visualization/phase02_20261117/phase02_pointcloud_review.blend",
+    "review_file_sha256": "9aa21a2c21920bf8e323c8ffafc3231a6b316757f5363647f6b5f9f7658de649",
+    "original_active_object_and_selection_preserved": true,
+    "coordinate_units": "Arbitrary monocular SfM units; no metric scale alignment",
+    "native_render_packed_image": "CUDA_FULL_MODEL_3381717_POINTS",
+    "version": "5.2.3 LTS",
+    "gaussian_addon": {
+      "id": "dgs_render_by_kiri_engine",
+      "version": "5.1.0",
+      "name": "3DGS Render by KIRI Engine"
+    }
+  },
+  "point_cloud_inspections": {
+    "B0_Kaggle_FullResolution": {
+      "status": "SUCCESS",
+      "source": "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/point_cloud/iteration_030000/point_cloud.ply",
+      "source_sha256": "72e396873d5355d7fea27394ca8c6e411cc29e5a09e2b9ad27bdca1a76a485fd",
+      "point_count": 3381717,
+      "attributes": [
+        "x",
+        "y",
+        "z",
+        "nx",
+        "ny",
+        "nz",
+        "f_dc_0",
+        "f_dc_1",
+        "f_dc_2",
+        "f_rest_0",
+        "f_rest_1",
+        "f_rest_2",
+        "f_rest_3",
+        "f_rest_4",
+        "f_rest_5",
+        "f_rest_6",
+        "f_rest_7",
+        "f_rest_8",
+        "f_rest_9",
+        "f_rest_10",
+        "f_rest_11",
+        "f_rest_12",
+        "f_rest_13",
+        "f_rest_14",
+        "f_rest_15",
+        "f_rest_16",
+        "f_rest_17",
+        "f_rest_18",
+        "f_rest_19",
+        "f_rest_20",
+        "f_rest_21",
+        "f_rest_22",
+        "f_rest_23",
+        "f_rest_24",
+        "f_rest_25",
+        "f_rest_26",
+        "f_rest_27",
+        "f_rest_28",
+        "f_rest_29",
+        "f_rest_30",
+        "f_rest_31",
+        "f_rest_32",
+        "f_rest_33",
+        "f_rest_34",
+        "f_rest_35",
+        "f_rest_36",
+        "f_rest_37",
+        "f_rest_38",
+        "f_rest_39",
+        "f_rest_40",
+        "f_rest_41",
+        "f_rest_42",
+        "f_rest_43",
+        "f_rest_44",
+        "opacity",
+        "scale_0",
+        "scale_1",
+        "scale_2",
+        "rot_0",
+        "rot_1",
+        "rot_2",
+        "rot_3"
+      ],
+      "all_attributes_finite": true,
+      "bbox_min": [
+        -128.41705322265625,
+        -61.36894607543945,
+        -109.9041976928711
+      ],
+      "bbox_max": [
+        134.99508666992188,
+        42.59404373168945,
+        128.26988220214844
+      ],
+      "xyz_percentiles_1_50_99": [
+        [
+          -70.40611999511718,
+          -24.4415518951416,
+          -46.52833526611328
+        ],
+        [
+          0.4314236044883728,
+          -0.8533157706260681,
+          1.1767544746398926
+        ],
+        [
+          49.74491989135741,
+          15.254080886840768,
+          44.921474456787095
+        ]
+      ],
+      "opacity_percentiles_0_50_100": [
+        0.0008384159300476313,
+        0.29131898283958435,
+        1.0
+      ],
+      "gaussian": true,
+      "all_centers": "outputs/visualization/phase02_20261117/B0_Kaggle_FullResolution/all_centers.npz",
+      "viewport_sample": "outputs/visualization/phase02_20261117/B0_Kaggle_FullResolution/viewport_sample.ply",
+      "sample_count": 200000,
+      "sample_seed": 20261117,
+      "sample_policy": "Uniform without replacement; visualization only, no opacity/crop filtering",
+      "coordinate_policy": "Original XYZ; identity object transform; no geometric alignment",
+      "preview_semantics": "KIRI SH-DC viewport preview, not official CUDA rendering/evaluation",
+      "log_scale_range": [
+        -24.059980392456055,
+        3.3338801860809326
+      ],
+      "quaternion_norm_min_max": [
+        0.37098169326782227,
+        3.4737448692321777
+      ]
+    },
+    "B0_Local_LowMemory": {
+      "status": "SUCCESS",
+      "source": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/point_cloud/iteration_030000/point_cloud.ply",
+      "source_sha256": "e92ad58640f8d6fcdca7b3d755e0faa3561b2c5f5d3a8a00623b53990447af48",
+      "point_count": 249213,
+      "attributes": [
+        "x",
+        "y",
+        "z",
+        "nx",
+        "ny",
+        "nz",
+        "f_dc_0",
+        "f_dc_1",
+        "f_dc_2",
+        "f_rest_0",
+        "f_rest_1",
+        "f_rest_2",
+        "f_rest_3",
+        "f_rest_4",
+        "f_rest_5",
+        "f_rest_6",
+        "f_rest_7",
+        "f_rest_8",
+        "f_rest_9",
+        "f_rest_10",
+        "f_rest_11",
+        "f_rest_12",
+        "f_rest_13",
+        "f_rest_14",
+        "f_rest_15",
+        "f_rest_16",
+        "f_rest_17",
+        "f_rest_18",
+        "f_rest_19",
+        "f_rest_20",
+        "f_rest_21",
+        "f_rest_22",
+        "f_rest_23",
+        "f_rest_24",
+        "f_rest_25",
+        "f_rest_26",
+        "f_rest_27",
+        "f_rest_28",
+        "f_rest_29",
+        "f_rest_30",
+        "f_rest_31",
+        "f_rest_32",
+        "f_rest_33",
+        "f_rest_34",
+        "f_rest_35",
+        "f_rest_36",
+        "f_rest_37",
+        "f_rest_38",
+        "f_rest_39",
+        "f_rest_40",
+        "f_rest_41",
+        "f_rest_42",
+        "f_rest_43",
+        "f_rest_44",
+        "opacity",
+        "scale_0",
+        "scale_1",
+        "scale_2",
+        "rot_0",
+        "rot_1",
+        "rot_2",
+        "rot_3"
+      ],
+      "all_attributes_finite": true,
+      "bbox_min": [
+        -207.93881225585938,
+        -162.72203063964844,
+        -249.40516662597656
+      ],
+      "bbox_max": [
+        152.9464569091797,
+        157.6912841796875,
+        143.65823364257812
+      ],
+      "xyz_percentiles_1_50_99": [
+        [
+          -64.29047882080079,
+          -21.590727920532228,
+          -47.66354125976562
+        ],
+        [
+          0.17760413885116577,
+          0.3725527822971344,
+          1.009828805923462
+        ],
+        [
+          45.55157928466799,
+          16.545612945556645,
+          41.84938919067384
+        ]
+      ],
+      "opacity_percentiles_0_50_100": [
+        0.00026976419030688703,
+        0.22882838547229767,
+        0.9999999403953552
+      ],
+      "gaussian": true,
+      "all_centers": "outputs/visualization/phase02_20261117/B0_Local_LowMemory/all_centers.npz",
+      "viewport_sample": "outputs/visualization/phase02_20261117/B0_Local_LowMemory/viewport_sample.ply",
+      "sample_count": 200000,
+      "sample_seed": 20261117,
+      "sample_policy": "Uniform without replacement; visualization only, no opacity/crop filtering",
+      "coordinate_policy": "Original XYZ; identity object transform; no geometric alignment",
+      "preview_semantics": "KIRI SH-DC viewport preview, not official CUDA rendering/evaluation",
+      "log_scale_range": [
+        -14.776846885681152,
+        5.0330047607421875
+      ],
+      "quaternion_norm_min_max": [
+        0.48664337396621704,
+        3.448110342025757
+      ]
+    },
+    "Sparse_TrainInitialization": {
+      "status": "SUCCESS",
+      "source": "datasets/tanks_and_temples/Ignatius/prepared/legacy_v1/ignatius-legacy-v1-6a3308c22df11122/sparse/0/points3D.ply",
+      "source_sha256": "0c04f42e8b6d02936892caa808aee1e8e8ce95b39f8b7cf9ba275199fc6c6a0c",
+      "point_count": 76223,
+      "attributes": [
+        "x",
+        "y",
+        "z",
+        "nx",
+        "ny",
+        "nz",
+        "red",
+        "green",
+        "blue"
+      ],
+      "all_attributes_finite": true,
+      "bbox_min": [
+        -121.41751861572266,
+        -70.13955688476562,
+        -95.64630126953125
+      ],
+      "bbox_max": [
+        153.0530242919922,
+        32.126705169677734,
+        100.04927825927734
+      ],
+      "xyz_percentiles_1_50_99": [
+        [
+          -54.70485603332519,
+          -18.719036598205566,
+          -39.223476028442384
+        ],
+        [
+          0.4642300009727478,
+          0.8047381043434143,
+          0.7466351389884949
+        ],
+        [
+          26.96922634124754,
+          13.58691261291504,
+          31.49060440063475
+        ]
+      ],
+      "opacity_percentiles_0_50_100": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "gaussian": false,
+      "all_centers": "outputs/visualization/phase02_20261117/Sparse_TrainInitialization/all_centers.npz",
+      "viewport_sample": "outputs/visualization/phase02_20261117/Sparse_TrainInitialization/viewport_sample.ply",
+      "sample_count": 76223,
+      "sample_seed": 20261117,
+      "sample_policy": "Uniform without replacement; visualization only, no opacity/crop filtering",
+      "coordinate_policy": "Original XYZ; identity object transform; no geometric alignment",
+      "preview_semantics": "KIRI SH-DC viewport preview, not official CUDA rendering/evaluation"
+    }
+  },
+  "large_artifacts_committed": false,
+  "training_restarted_locally": false,
+  "phase03_training_started": false,
+  "checks": {
+    "final_bundle_files_verified": 145,
+    "local_handoff_tests": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "runtime_seconds": 2.48
+    },
+    "ruff": "PASS",
+    "blender_native_splat_import": "PASS, installed KIRI addon, actual project samples",
+    "original_blender_objects_preserved": [
+      "Camera",
+      "Cube",
+      "Light"
+    ],
+    "windows_cuda_native_png_parity": "PASS, image1, max difference0 in 8-bit PNG"
+  },
+  "phase03_handoff": "outputs/phase03_handoff/ignatius_legacy_v1_20261117.json"
+}

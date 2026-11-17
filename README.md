@@ -1,5 +1,7 @@
 # Video → SfM, GPU-strict
 
+**Kết quả Kaggle17/11/2026:** B0 full-resolution đã hoàn tất30000 iterations,3.381.717 Gaussians;33 test views đạt PSNR20,9130 /SSIM0,6952 /LPIPS0,2694. Đã `IMPORTED_FINAL`, kiểm tra Blender và native CUDA PLY inference trên Windows. [Evidence](docs/phase_02_kaggle_result_import.json), [Blender review và chuẩn bị Phase03](docs/phase_03_entry_readiness.md). PGSR chưa được train; checkpoint B0 là baseline riêng.
+
 **Mốc tài liệu14/11/2026:** [repository audit](docs/repository_audit.md) giữ trạng thái trước implementation. Trạng thái hiện tại tại [docs/README.md](docs/README.md) và [master plan](docs/plans/master_plan.md). Legacy image_set model khác thí nghiệm video; video V0 vẫn `BLOCKED_GPU_BA`. Các lệnh SfM bên dưới thuộc pipeline cũ; lệnh B0 nằm trong usage Phase02.
 
 **Phase01 (15/11/2026):** đã thêm COLMAP data preparation, frozen splits, train-only initialization và lazy CPU loader. [CLI/config/artifact contract](docs/tech/phase_01_usage.md), [kết quả và acceptance gates lịch sử](docs/phase_01_implementation_report.md). Legacy là experiment riêng được user cho phép; video vẫn thiếu sparse model. Actual native B0 loader/training được kiểm tra tiếp ở Phase02.

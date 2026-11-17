@@ -1,5 +1,7 @@
 # Phase02 — Báo cáo triển khai và thực nghiệm B0 Original3DGS
 
+**Cập nhật17/11/2026:** Kaggle full-resolution đã hoàn tất30000 iterations và được `IMPORTED_FINAL`,3.381.717 Gaussians;33 test views PSNR20,913033 /SSIM0,695186 /LPIPS0,269434. Đã kiểm tra full native PLY inference trên Windows CUDA và tạo Blender review riêng. [Result evidence](phase_02_kaggle_result_import.json), [Blender và Phase03 entry](phase_03_entry_readiness.md). Đoạn mô tả ngày16/11 bên dưới là lịch sử trước khi nhận kết quả Kaggle.
+
 Ngày16/11/2026, timezone `Asia/Saigon`. **B0 low-memory đã hoàn tất training30.000 iterations và evaluation33 held-out views trên CUDA.** Smoke/resume đã đạt; run full-resolution đã dừng bởi resource guard tại7401, checkpoint7000 được giữ, chưa được tính là kết quả hoàn chỉnh. Đây là kết quả local trên legacy experiment đã được user cho phép, không là kết quả video GPU-strict hoặc tái lập benchmark của paper. Không chạy PGSR/2DGS/GOF/meshing.
 
 Các số đo dưới đây lấy từ artifacts thực; [validation summary](phase_02_validation_summary.json) giữ bản JSON, [usage](tech/b0_training_usage.md) giữ contract và lệnh tái lập. Source SfM, raw, camera poses và prepared data được giữ nguyên.
