@@ -21,6 +21,8 @@ description: Implement, debug, or validate Gaussian optimization, CUDA renderers
 
 ## Tools và commands
 
+Phase03 actual adapter: [usage](../../../docs/tech/pgsr_training_usage.md), `src/pgsr` và `configs/training/pgsr_*.yaml`. Dùng `.tools/pgsr_env` riêng, native PGSR plane rasterizer/KNN; B0 checkpoints không tương thích. Smoke kích hoạt geometry20 để chạy thực các terms; research giữ native7000. Kiểm current run/evidence trước tuyên bố research complete. Kaggle helper riêng reuse sealed prepared `scene/`, không dùng B0 state; recovery/evaluation manifests tách biệt.
+
 `rg`, Git diff/status, package/compiler metadata, official source và phase-specific tests. Existing `src.pipeline` chỉ có SfM stages; không gọi `--stage train` chưa triển khai. CUDA smoke/training commands chỉ chạy sau implementation tương ứng và trong user scope; record exact arguments/return codes.
 
 ## Validation, lỗi và hoàn thành

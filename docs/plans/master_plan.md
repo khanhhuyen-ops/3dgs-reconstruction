@@ -1,5 +1,7 @@
 # Master plan — research roadmap
 
+**Current Phase03 checkpoint17/11/2026:** user đã yêu cầu actual PGSR implementation/training. `src/pgsr` và isolated native CUDA environment đã có; numerical tests, real smoke80→resume300, full-state/RNG restore và PLY reload đã pass. Kaggle research job đã submit/RUNNING, final30000/evaluation/Blender PGSR pending. [B2 usage](../tech/pgsr_training_usage.md), [local evidence](../phase_03_local_validation.json). Phase04–07 chưa thực thi; các status PGSR planned ở checkpoint cũ bên dưới là historical.
+
 Checkpoint tài liệu ngày14/11/2026 được giữ tại [audit](../repository_audit.md) và [documentation audit](../documentation_audit.md). [Phase01 report](../phase_01_implementation_report.md) là evidence lịch sử. Request tiếp theo ngày15/11 đã cho phép **Phase02 Original3DGS implementation, environment build và actual training** trên prepared legacy experiment; user xác nhận tiếp tục Phase02. Phase03–07 chưa được triển khai/chạy. CLI/config/source pin hiện tại: [B0 usage](../tech/b0_training_usage.md).
 
 ## Current checkpoint
@@ -46,6 +48,8 @@ Baseline protocol phải được thiết kế/freeze trước research runs dù
 | D14 | Ba B0 profiles tách smoke/low-memory/uncapped research | [B0 usage](../tech/b0_training_usage.md); cap có logged deferred ADC events, không gắn low-memory score thành paper benchmark |
 | D15 | RGB evaluator theo frozen project split và AlexNet LPIPS v0.1 với weights SHA-256 | sRGB rounded PNG, SSIM native, per-view mean; khác VGG choice của native metrics.py được công bố |
 | D16 | Giữ native ADC→Adam order và final-iteration skip; checkpoint thêm RNG/sampler | Native capture/restore giữ nguyên, save immutable files, actual CUDA row-state/RNG tests và smoke resume pass |
+| D17 | B2 dùng pinned PGSR plane renderer và official TNT guarded variant | [Usage](../tech/pgsr_training_usage.md): read-only prepared adapter, matched N/delta, native reductions và invalid-domain masks; không Ours |
+| D18 | B2 research cùng full-resolution/frozen split B0, ncc_scale1 | Không upscale gray3840; source/data/config identity strict, PGSR full state riêng và train-only exposure |
 
 ## Risks và quality gates
 

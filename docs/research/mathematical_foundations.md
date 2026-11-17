@@ -1,5 +1,7 @@
 # Mathematical foundations và conventions
 
+**PGSR native convention đã kiểm chứng17/11:** accumulated camera-facing `N` và positive plane offset `delta` dùng `Nᵀx+delta=0`, nên `Z=delta/(-Nᵀray)` và `H=Kn(R-tNᵀ/delta)Kr⁻¹`. Đây là signed-offset dạng tương đương với derivation tổng quát bên dưới; không normalize N trước division. Actual CUDA analytical depth/homography và finite-difference gradient checks có [evidence](../phase_03_local_validation.json), [implementation contract](../tech/pgsr_training_usage.md). Không gắn diagnostics này thành mesh accuracy.
+
 Nguồn chính theo [paper IDs](paper_inventory.md). Công thức chuyển hệ tọa độ là derivation hình học cho contract dự án; proposed losses được đánh dấu riêng. Không copy biểu thức khi dấu/notation khác implementation.
 
 ## 1. Camera, projection, similarity

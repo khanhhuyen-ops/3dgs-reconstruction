@@ -1,5 +1,7 @@
 # Training architecture
 
+**Phase03 implementation17/11:** `src/pgsr/{data,native,geometry,runner,checkpoint,evaluation}.py` là B2 adapter riêng với pinned plane renderer. Local CUDA/numerical và real smoke80→resume300/reload đã pass; research Kaggle đang chạy, chưa có final B2 benchmark. [Contracts/commands](../tech/pgsr_training_usage.md). B1/Ours vẫn planned. Native PGSR order cũng là backward → ADC/trim/reset → Adam → checkpoint; sơ đồ khái quát bên dưới không override thứ tự thực thi này.
+
 Thiết kế dựa trên P02 §§3–6, P01 §§4–6 và P14 §IV; [review](../research/literature_review.md). P02/P01/P14 là method-specific, không một renderer universal. [Training spec](../tech/training_specification.md) là hợp đồng thực thi tương lai.
 
 **B0 Phase02 actual path:** `src/gaussian_splatting` gọi pinned2023 native SceneInfo/cameras/GaussianModel/renderer/Adam/ADC; [usage](../tech/b0_training_usage.md) mô tả implementation. B1/B2/Ours trong sơ đồ đa phương pháp dưới đây vẫn planned. Sơ đồ tổng quát không quy định thứ tự native optimizer: verified B0 chạy **render → RGB loss → backward → collect screen-space gradients → native ADC/opacity reset → Adam (trừ final iteration) → checkpoint** theo selected `train.py`. Không tự reorder thành optimizer-before-ADC hoặc thêm geometry/exposure terms cho B0.
@@ -18,9 +20,9 @@ flowchart TD
   GE --> L
   AN --> L
   L --> B[Backward and finite gradient check]
-  B --> O[Optimizer update]
-  O --> ADC[Native density control at scheduled steps]
-  ADC --> G
+  B --> ADC[Native density control at scheduled steps]
+  ADC --> O[Optimizer update]
+  O --> G
   O --> C[Atomic checkpoint and metadata]
 ```
 

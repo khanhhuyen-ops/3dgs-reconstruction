@@ -1,5 +1,7 @@
 # Hướng dẫn tài liệu nghiên cứu
 
+**Phase03 update17/11/2026:** PGSR adapter/native environment đã triển khai, local CUDA numerical + real80→resume300/reload verified; Kaggle research job RUNNING. Final research metrics/depth-normal/Blender PGSR còn pending. [Usage và contracts](tech/pgsr_training_usage.md), [local evidence](phase_03_local_validation.json), [Phase03 plan](plans/phase_03_pgsr_training.md). Các mốc PGSR chưa triển khai ở đoạn cũ bên dưới là historical; Phase04–07 vẫn chưa thực thi.
+
 **Cập nhật17/11/2026:** Kaggle B0 full-resolution đã hoàn tất30000,3.381.717 Gaussians; bundle đã import và kiểm tra Blender/native CUDA Windows. [Import evidence](phase_02_kaggle_result_import.json), [Phase03 entry readiness](phase_03_entry_readiness.md). PGSR chưa train; các mô tả ngày16/11 dưới đây là checkpoint lịch sử trước khi nhận kết quả.
 
 Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full-resolution dừng bởi resource guard; [Kaggle Run All](tech/kaggle_phase02_usage.md) đã upload Private và build/restore checkpoint thật trên T4 ([evidence](phase_02_kaggle_publish.json)); full-resolution training Kaggle chưa bắt đầu. Phase03–07 chưa triển khai. Đọc [AGENTS](../AGENTS.md), [repository audit lịch sử](repository_audit.md), [master plan](plans/master_plan.md) rồi tài liệu theo task. Video SfM vẫn `BLOCKED_GPU_BA`; prepared legacy là thí nghiệm riêng được user cho phép. [Phase01 report](phase_01_implementation_report.md) giữ evidence lịch sử; [Phase02 report](phase_02_implementation_report.md) ghi actual results/artifacts, [B0 usage](tech/b0_training_usage.md) mô tả commands/contracts.
@@ -75,8 +77,8 @@ Mốc16/11/2026: **Phase02 B0 low-memory training/evaluation hoàn tất**, full
 | [implementation_report.md](implementation_report.md) | Evidence lịch sử10/11; `.git` note là trạng thái lịch sử, audit mới có Git |
 | [implementation_metrics.json](implementation_metrics.json) | Metrics lịch sử; không đổi thành new training results |
 | [tool_versions.md](tool_versions.md) | Tool provenance cũ, không version lock của future trainer |
-| [SKILL-video-sfm.md](../.agent/skills/preprocessing/SKILL-video-sfm.md) | Legacy SfM skill giữ nguyên |
-| [plan-video-sfm.md](../.agent/skills/preprocessing/plan-video-sfm.md) | Legacy SfM plan; phase numbering riêng với roadmap mới |
-| [tech-video-sfm.md](../.agent/skills/preprocessing/tech-video-sfm.md) | Legacy SfM tech; không tự thay backend/policy |
+| [SKILL-video-sfm.md](../.agents/skills/preprocessing/SKILL-video-sfm.md) | Legacy SfM skill tại vị trí checkout hiện tại, nội dung giữ nguyên |
+| [plan-video-sfm.md](../.agents/skills/preprocessing/plan-video-sfm.md) | Legacy SfM plan; phase numbering riêng với roadmap mới |
+| [tech-video-sfm.md](../.agents/skills/preprocessing/tech-video-sfm.md) | Legacy SfM tech; không tự thay backend/policy |
 
 Phase01 có `src/data/`/`configs/data/`; Phase02 hiện có `src/gaussian_splatting/`, minimal RGB `src/evaluation/` và `configs/training/`. Các thành phần Phase03–07 vẫn proposed/planned, không suy diễn B0 execution thành PGSR/mesh/evaluation benchmark hoàn chỉnh. Nguồn video chưa đủ sparse model; legacy không vượt gate video. Không tự sửa BA hoặc bắt đầu phase tiếp theo.

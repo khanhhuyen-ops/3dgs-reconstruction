@@ -1,5 +1,7 @@
 # PGSR: paper và official implementation
 
+**Implementation17/11:** selected revision giữ nguyên, đã build actual PGSR plane rasterizer/KNN trong environment riêng và real smoke80→resume300. [Usage](../tech/pgsr_training_usage.md) khai báo native TNT overrides, full-resolution/ncc_scale và invalid-domain hardening. Native positive offset dùng `Nᵀx+delta=0`, depth `delta/(-Nᵀray)`; analytic plane/homography tests đã pass. Notes14/11 bên dưới giữ historical audit, không là trạng thái runtime mới. Research30000/final B2 metrics pending Kaggle.
+
 Đối chiếu ngày14/11/2026, **chỉ đọc**, chưa compile/chạy. Paper: [P14](literature_review.md#p14), đặc biệt pp.5–9. Code snapshot: `de24f1a38b350387e8d8fe381b2cd70c1ae946e7`.
 
 Nguồn pinned: [train.py](https://github.com/zju3dv/PGSR/blob/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/train.py), [arguments](https://github.com/zju3dv/PGSR/blob/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/arguments/__init__.py), [loss utilities](https://github.com/zju3dv/PGSR/blob/de24f1a38b350387e8d8fe381b2cd70c1ae946e7/utils/loss_utils.py). Đây là revision đã kiểm tra, không khẳng định là revision tạo bảng trong paper.

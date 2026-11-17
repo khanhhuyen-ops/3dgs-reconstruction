@@ -1,5 +1,7 @@
 # Development environment
 
+**PGSR runtime đã kiểm chứng17/11/2026:** `.tools/pgsr_env` riêng, Python3.10.20/Torch2.4.1+cu121/Toolkit12.1/MSVC14.29/sm86, PGSR plane rasterizer + native KNN forward/backward trên RTX3050. PyTorch3D0.7.7 official pure-Torch transforms chạy CUDA; unused C++ extension không build. B0/SfM environments giữ nguyên. [Lock](../../configs/training/pgsr_dependency_lock.json), [usage và evidence](pgsr_training_usage.md). Bảng14/11 bên dưới là snapshot lịch sử, không mô tả interpreter training mới. Kaggle environment còn phải qua chính CUDA gates tại runtime.
+
 Snapshot read-only14/11/2026 tại interpreter hiện tại; không chạy CUDA tensor/benchmark.
 
 | Thành phần | Quan sát | Ý nghĩa |

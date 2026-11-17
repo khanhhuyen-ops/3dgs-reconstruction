@@ -21,6 +21,8 @@ description: Design, implement, or review depth, normal, planar, multi-view, and
 
 ## Tools và commands
 
+Phase03 hiện có `src/pgsr/geometry.py` official-code guarded variant và `scripts/pgsr/check_geometry_cuda.py` numerical/domain checks; [contract](../../../docs/tech/pgsr_training_usage.md). Native normal/positive offset theo `Nᵀx+delta=0`, không normalize riêng N; single-view full H×W mean, geo/NCC mean(weight×residual). Empty support phải log0 coverage; patch hằng bị reject. Finite-difference fixtures phải tránh depth-sort ties/discrete visibility changes; ghi tolerance, không suy gradient parity qua discontinuity.
+
 Đọc PDF/source primary; NumPy fixtures cho math và PyTorch CUDA cho required compute. Dùng targeted tests được phase triển khai, không tạo fake training metrics. Trước đổi thuật toán phải cập nhật cited equation/variant và config, không copy long paper text.
 
 ## Validation, lỗi và hoàn thành
