@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-17",
+  "method": "B2_PGSR",
+  "status": "LOCAL_CUDA_SMOKE_VERIFIED_KAGGLE_RESEARCH_PENDING",
+  "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+  "source_code_identity": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.4.1+cu121",
+    "cuda_runtime": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "device": "cuda:0",
+    "total_vram_bytes": 6441926656,
+    "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+    "extension_hashes": {
+      "diff_plane_rasterization._C": "fb6ba5874cb5debc3ab4e3b4bfbf892eb1a29292188b7d29a1dfa9ae02d0985e",
+      "simple_knn._C": "11782aeb584b7db0ffa3127c08269558b40b3e8b0f5aa7fa5f2bf65a839b88c4"
+    },
+    "regenerated_upstream_packaging_metadata": [
+      "submodules/diff-plane-rasterization/diff_plane_rasterization.egg-info/PKG-INFO",
+      "submodules/simple-knn/simple_knn.egg-info/PKG-INFO"
+    ],
+    "pytorch3d_version": "0.7.7",
+    "pytorch3d_usage": "Official pure-Torch CUDA transforms; unused PyTorch3D extension not built",
+    "code_identity": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+  },
+  "cuda_unit": {
+    "status": "SUCCESS",
+    "scope": "SYNTHETIC_CUDA_UNIT, not project reconstruction/training",
+    "plane_depth_max_error": 2.384185791015625e-07,
+    "homography_max_error": 9.5367431640625e-07,
+    "kernel_gradient_norms": {
+      "xyz": 0.1178976520895958,
+      "features_dc": 0.00843854434788227,
+      "features_rest": 0.0,
+      "scaling": 0.030070969834923744,
+      "rotation": 0.1836027354001999,
+      "opacity": 0.0022490881383419037
+    },
+    "objective_terms": {
+      "rgb": 0.07521098852157593,
+      "flatten": 0.0019900244660675526,
+      "single": 0.0006809741607867181,
+      "multi_geo": 0.005097958724945784,
+      "multi_ncc": 0.004807522054761648
+    },
+    "objective_counts": {
+      "geometry_valid_pixels": 992,
+      "multi_valid_pixels": 1090,
+      "ncc_candidate_patches": 128,
+      "ncc_valid_patches": 128,
+      "exposure_gate_used": true
+    },
+    "exposure_update_verified": true,
+    "constant_image_guard": true,
+    "undefined_warp_mask": true
+  },
+  "finite_difference": {
+    "xyz": {
+      "autograd": 0.0008629095973446965,
+      "finite_difference": 0.0008692344029744467,
+      "absolute_error": 6.324805629750129e-06,
+      "tolerance": 6.953875223795573e-05
+    },
+    "scaling": {
+      "autograd": 0.0005630842060782015,
+      "finite_difference": 0.000607222318649292,
+      "absolute_error": 4.413811257109046e-05,
+      "tolerance": 4.857778549194336e-05
+    },
+    "rotation": {
+      "autograd": -0.0024419291876256466,
+      "finite_difference": -0.0024437904357910156,
+      "absolute_error": 1.8612481653690338e-06,
+      "tolerance": 0.00019550323486328125
+    },
+    "opacity": {
+      "autograd": 0.00025550281861796975,
+      "finite_difference": 0.00025704503059387207,
+      "absolute_error": 1.542211975902319e-06,
+      "tolerance": 2.0563602447509766e-05
+    }
+  },
+  "invalid_domain_checks": {
+    "constant_ncc_rejected": true,
+    "empty_geometry_connected_zero": true,
+    "exposure_high_structural_error_gate": true
+  },
+  "real_data_smoke": {
+    "status": "SUCCESS",
+    "iterations": 300,
+    "optimizer_steps": 299,
+    "initial_gaussians": 6000,
+    "final_gaussians": 12699,
+    "training_seconds_total": 26.623219300000073,
+    "current_segment_start_iteration": 81,
+    "current_segment_seconds": 20.006184600000324,
+    "timing_scope": "Measured PGSR segments in this run, loop/checkpoint/export; excludes setup, data qualification and any unreported interrupted tail",
+    "geometry_coverage_totals": {
+      "geometry_valid_pixels": 7732690,
+      "multi_valid_pixels": 5705604,
+      "ncc_valid_patches": 117614
+    },
+    "memory": {
+      "allocated_bytes": 30693888,
+      "reserved_bytes": 79691776,
+      "peak_allocated_bytes": 64558080,
+      "peak_reserved_bytes": 79691776
+    },
+    "device_wide_memory": {
+      "runtime_seconds": 20.005688199999895,
+      "peak_device_memory_used_mib_sampled": 217.0,
+      "vram_samples": 35,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "export": {
+      "status": "EXPORTED_PENDING_SEPARATE_RELOAD",
+      "path": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/point_cloud/iteration_000300/point_cloud.ply",
+      "sha256": "56d39f79f51cac69f5149c40dca91134b1f68723b6abc21c8343a4e74186c3a3",
+      "gaussians": 12699,
+      "active_sh_degree": 0,
+      "reference_image_id": 5,
+      "artifact_type": "PGSR Gaussian splats, not a triangle mesh"
+    },
+    "dataset_identity": {
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4"
+    },
+    "exposure_rows": 8
+  },
+  "ply_reload": {
+    "rgb": 0.0,
+    "depth": 0.0,
+    "normal": 0.0
+  },
+  "geometry": {
+    "count": 8,
+    "mean_valid_ratio": 0.8423070987654321,
+    "contract": "pgsr-depth-normal-v1",
+    "scope": "Development 8 train views at resolution divisor8; not a research baseline"
+  },
+  "pytest": {
+    "command": "PGSR_RUN_CUDA_TESTS=1 .tools/pgsr_env/Scripts/python.exe -m pytest -q tests/test_pgsr.py",
+    "passed": 7,
+    "skipped": 0
+  },
+  "kaggle": {
+    "notebook": "https://www.kaggle.com/code/vthkhnhhuyn/phase03-pgsr-run-all",
+    "version": 1,
+    "status_at_publish": "RUNNING",
+    "source_transport": {
+      "schema": "phase03-pgsr-transport-v1",
+      "archive": "phase03_pgsr_source.bundle",
+      "archive_sha256": "fb1c71989af7d66c06e286c7c004f19d3d46b9288cb6c3048ef3ca2f90d14b2c",
+      "manifest_sha256": "633503d7c7559615f705cda1f02cb01bef75ef576c9f35c6111d8740d104a5d9",
+      "source_code_hash": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+    },
+    "full_training_complete": false
+  },
+  "research_metrics": null,
+  "blender_pgsr_review": "PENDING_FINAL_ARTIFACT",
+  "protected_inputs": {
+    "status": "SUCCESS",
+    "scope": "B0 source/config/outputs/viewer plus all Ignatius dataset/SfM input file sizes and mtimes; prepared hashes verified by loader separately",
+    "files_compared": 1838,
+    "comparison": "size and nanosecond mtime; not a fresh full-content hash of every historical artifact",
+    "changed": []
+  },
+  "smoke_png_metrics": {
+    "mean": {
+      "psnr": 9.8268582339484,
+      "ssim": 0.2227076461369341,
+      "lpips": 0.5567222418207111
+    },
+    "scope": "Development only, not research baseline; same PNG protocol as B0",
+    "ssim_definition_ast_identical_to_b0": true
+  }
+}

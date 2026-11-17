@@ -1,0 +1,32 @@
+{
+  "pgsr": {
+    "repository": "https://github.com/zju3dv/PGSR",
+    "commit": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+    "extensions": ["submodules/diff-plane-rasterization", "submodules/simple-knn"],
+    "source_layout": "CUDA sources and GLM are tracked in the PGSR commit; no .gitmodules",
+    "license": "Upstream LICENSE.md: educational, research, non-profit; modified work must remain open-source"
+  },
+  "pytorch3d": {
+    "repository": "https://github.com/facebookresearch/pytorch3d",
+    "commit": "89653419d0973396f3eff1a381ba09a07fffc2ed",
+    "version": "0.7.7",
+    "build": "PYTORCH3D_NO_EXTENSION=1",
+    "usage": "Official pure-Torch quaternion_to_matrix on CUDA tensors; no CPU fallback or PyTorch3D C++ ops used"
+  },
+  "runtime": {
+    "python": "3.10.20",
+    "torch": "2.4.1+cu121",
+    "torchvision": "0.19.1+cu121",
+    "numpy": "1.26.4",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "plyfile": "1.1.3",
+    "scipy": "1.15.3",
+    "opencv-python": "4.10.0.84",
+    "fvcore": "0.1.5.post20221221",
+    "iopath": "0.1.10",
+    "ninja": "1.13.2",
+    "pytest": "8.3.5"
+  },
+  "unused_meshing_dependencies": "Open3D/trimesh upstream mesh scripts are outside Phase03 training; not imported by the project PGSR trainer"
+}
