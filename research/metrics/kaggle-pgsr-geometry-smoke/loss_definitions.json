@@ -1,0 +1,74 @@
+{
+  "method": "B2_PGSR",
+  "source": "src/pgsr/geometry.py",
+  "source_sha256": "86a9dcf939e48cb450aa484734b00a419e27b5b0b75e9c83611b9b4c7a40a2d7",
+  "components": {
+    "loss_total": {
+      "variable": "total",
+      "definition": "rgb + scale_weight*flat + single_weight*single + geo_weight*geometric + ncc_weight*photometric",
+      "weighted": true
+    },
+    "raw_rgb": {
+      "variable": "rgb",
+      "definition": "(1-lambda_dssim)*L1(gated app or canonical RGB,target) + lambda_dssim*(1-SSIM(canonical,target))",
+      "weighted": false,
+      "weight": 1
+    },
+    "loss_regularization": {
+      "variable": "flat",
+      "source_name": "raw.flatten",
+      "definition": "mean visible minimum activated Gaussian scale",
+      "weighted": false,
+      "weight": 100.0,
+      "activation": "iteration 1 onward"
+    },
+    "loss_normal": {
+      "variable": "single",
+      "source_name": "raw.single",
+      "definition": "full H*W mean of masked-zero edge_weight * L1(native alpha-weighted depth normal - accumulated plane normal)",
+      "weighted": false,
+      "weight": 0.015,
+      "activation": "iteration > 20"
+    },
+    "loss_geometry": {
+      "variable": "geometric",
+      "source_name": "raw.multi_geo",
+      "definition": "accepted-pixel mean detached exp(-roundtrip_error) * roundtrip_error in pixels",
+      "weighted": false,
+      "weight": 0.03,
+      "activation": "iteration > 20 and eligible train neighbor"
+    },
+    "loss_multiview": {
+      "variable": "photometric",
+      "source_name": "raw.multi_ncc",
+      "definition": "accepted-patch mean of detached roundtrip weight * native squared-correlation LNCC loss; not a sum of geometry losses",
+      "weighted": false,
+      "weight": 0.15,
+      "activation": "iteration > 20 and valid nonconstant patches"
+    },
+    "loss_l1": {
+      "status": "NOT RECORDED",
+      "value": null,
+      "weight": null
+    },
+    "loss_ssim": {
+      "status": "NOT RECORDED",
+      "value": null,
+      "weight": null
+    },
+    "loss_depth": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    }
+  },
+  "exposure": "PGSR appearance parameters change the gated L1 branch; no separate additive exposure loss or exposure parameter history was logged",
+  "source_mapping": {
+    "loss_regularization": "raw.flatten",
+    "loss_normal": "raw.single",
+    "loss_geometry": "raw.multi_geo",
+    "loss_multiview": "raw.multi_ncc"
+  },
+  "missing_policy": "Empty CSV cell/null means unavailable; never substitute zero. Logged scheduled-inactive zeros are retained as observations.",
+  "comparison_warning": "Total objectives differ across models; lower total loss is not evidence of better reconstruction"
+}

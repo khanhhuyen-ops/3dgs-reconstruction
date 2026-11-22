@@ -1,0 +1,25 @@
+{
+  "status": "SUCCESS",
+  "audit_date": "2026-11-22",
+  "errors": [],
+  "retained_checkpoint_files_accessible": 58,
+  "readable_original_metric_json_files": 18,
+  "experiments_consistent": 8,
+  "recorded_loss_observations": 907,
+  "figure_groups_verified": 31,
+  "local_report_links_checked": 27,
+  "entrypoint_syntax_checks": [
+    "src/gaussian_splatting/runner.py",
+    "src/pgsr/runner.py",
+    "src/evaluation/evaluate_baseline.py",
+    "src/pgsr/evaluation.py",
+    "scripts/pgsr/score_png.py"
+  ],
+  "training_or_inference_launched": false,
+  "mesh_workflow": "No implemented project extraction workflow found; cannot verify execution",
+  "protected_changes": [],
+  "remaining_file_count": 18811,
+  "final_repository_logical_bytes_snapshot": 52508197406,
+  "checkpoint_integrity_scope": "All SHA256 values measured before cleanup; post-cleanup all files reopened and size/mtime checked, SHA256 recomputed if mtime changed",
+  "snapshot_scope": "All regular files at scan time; final manifest/report receipt writes can slightly change generated-audit size afterward"
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "Initialization/render/backward diagnostic; not a training iteration or convergence history",
+  "source": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T133608Z_4ef4c4/initialize_result.json",
+  "source_sha256": "0b9168493f6141fdde54ed1b8990343231c19071e0fcd80943b9ff6843e7d68b",
+  "recorded_loss": 0.31968390941619873,
+  "reported_scope": "REAL_DATA_INITIALIZATION_RENDER_BACKWARD",
+  "reported_status": "SUCCESS"
+}

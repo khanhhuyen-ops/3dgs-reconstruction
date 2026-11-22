@@ -1,0 +1,122 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 0.37677979469299316,
+      "final_recorded_value": 0.05880557373166084,
+      "minimum": 0.041059114038944244,
+      "maximum": 0.37677979469299316,
+      "mean": 0.0761085120307294,
+      "standard_deviation_population": 0.0342855826487951,
+      "iteration_of_minimum": 17900,
+      "valid_observations": 302,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": 0.29292330145835876,
+      "final_recorded_value": 0.04656894505023956,
+      "minimum": 0.026527654379606247,
+      "maximum": 0.29292330145835876,
+      "mean": 0.05332486426445427,
+      "standard_deviation_population": 0.028271797847764936,
+      "iteration_of_minimum": 22300,
+      "valid_observations": 302,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ]
+    },
+    "loss_ssim": {
+      "initial_recorded_value": 0.7122057676315308,
+      "final_recorded_value": 0.10775208473205566,
+      "minimum": 0.0929519534111023,
+      "maximum": 0.7122057676315308,
+      "mean": 0.16724309562057849,
+      "standard_deviation_population": 0.06640682894343686,
+      "iteration_of_minimum": 18000,
+      "valid_observations": 302,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ]
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 302,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 302,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_geometry": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 302,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_multiview": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 302,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_regularization": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 302,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    }
+  },
+  "observation_count": 302,
+  "distinct_recorded_iterations": 302,
+  "target_iterations": 30000,
+  "unobserved_target_iterations": 29698,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

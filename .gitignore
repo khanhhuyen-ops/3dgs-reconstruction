@@ -9,3 +9,10 @@ outputs/
 .tools/
 external/
 
+# Downloaded Kaggle bundles and scientific figure binaries remain local artifacts.
+/phase03_results/
+/phase03_cuda_numerics/
+/phase03_setup.log
+/research/figures/**/*.png
+/research/figures/**/*.pdf
+

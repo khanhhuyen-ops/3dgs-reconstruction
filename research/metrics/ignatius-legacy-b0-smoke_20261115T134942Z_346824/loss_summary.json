@@ -1,0 +1,122 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 0.2577238082885742,
+      "final_recorded_value": 0.07768458873033524,
+      "minimum": 0.0759752094745636,
+      "maximum": 0.2976604700088501,
+      "mean": 0.1422750583061805,
+      "standard_deviation_population": 0.06326501328814164,
+      "iteration_of_minimum": 850,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": 0.16074077785015106,
+      "final_recorded_value": 0.03516135364770889,
+      "minimum": 0.029920026659965515,
+      "maximum": 0.21389628946781158,
+      "mean": 0.08140787940758926,
+      "standard_deviation_population": 0.04686823085283783,
+      "iteration_of_minimum": 1000,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ]
+    },
+    "loss_ssim": {
+      "initial_recorded_value": 0.6456559896469116,
+      "final_recorded_value": 0.24777752161026,
+      "minimum": 0.20731979608535767,
+      "maximum": 0.6456559896469116,
+      "mean": 0.38574376243811387,
+      "standard_deviation_population": 0.13471555607980729,
+      "iteration_of_minimum": 850,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ]
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_geometry": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_multiview": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_regularization": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    }
+  },
+  "observation_count": 26,
+  "distinct_recorded_iterations": 26,
+  "target_iterations": 1200,
+  "unobserved_target_iterations": 1174,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

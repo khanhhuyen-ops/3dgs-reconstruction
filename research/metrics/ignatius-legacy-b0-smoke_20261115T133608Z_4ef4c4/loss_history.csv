@@ -1,0 +1,1 @@
+iteration,epoch,wall_time,loss_total,loss_l1,loss_ssim,loss_depth,loss_normal,loss_geometry,loss_multiview,loss_regularization

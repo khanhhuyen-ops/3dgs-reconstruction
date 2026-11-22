@@ -1,5 +1,7 @@
 # Hướng dẫn tài liệu nghiên cứu
 
+**Audited status, 2026-11-22:** start with [RESEARCH_STATUS.md](RESEARCH_STATUS.md), [project map](PROJECT_STRUCTURE.md) and [reproducibility](EXPERIMENT_REPRODUCIBILITY.md). B0 has completed research runs; B2 research is interrupted at21298/30000; B1 2DGS was not trained. Eight run records and907 loss observations were recovered. No training/inference was launched by the audit. Older running/planned claims below are historical. The formal Vietnamese [training report](../research/reports/bao_cao_phan_tich_huan_luyen.md) links all measured evidence.
+
 **Phase03 update17/11/2026:** PGSR adapter/native environment đã triển khai, local CUDA numerical + real80→resume300/reload verified; Kaggle research job RUNNING. Final research metrics/depth-normal/Blender PGSR còn pending. [Usage và contracts](tech/pgsr_training_usage.md), [local evidence](phase_03_local_validation.json), [Phase03 plan](plans/phase_03_pgsr_training.md). Các mốc PGSR chưa triển khai ở đoạn cũ bên dưới là historical; Phase04–07 vẫn chưa thực thi.
 
 **Cập nhật17/11/2026:** Kaggle B0 full-resolution đã hoàn tất30000,3.381.717 Gaussians; bundle đã import và kiểm tra Blender/native CUDA Windows. [Import evidence](phase_02_kaggle_result_import.json), [Phase03 entry readiness](phase_03_entry_readiness.md). PGSR chưa train; các mô tả ngày16/11 dưới đây là checkpoint lịch sử trước khi nhận kết quả.

@@ -1,0 +1,38 @@
+{
+  "audit_date": "2026-11-22",
+  "inventory_executed_utc": "2026-11-22T05:12:28.589143+00:00",
+  "scope": "All regular files under repository root including Git, environments and external sources; directory symlinks not followed",
+  "total_bytes": 52508197406,
+  "file_count": 18811,
+  "bytes_by_category": {
+    "source_or_other": 1197956456,
+    "git_internal": 3596764558,
+    "metadata_or_config": 74651503,
+    "log_or_metrics": 2536981,
+    "archive": 2516139438,
+    "installed_environment_or_external_source": 664758292,
+    "checkpoint_or_pretrained_weight": 31312683624,
+    "generated_visual_or_tensor": 3578276951,
+    "point_cloud_or_mesh": 4593273681,
+    "audit_generated": 23512328,
+    "derived_dataset": 1288845847,
+    "raw_dataset": 3658797747
+  },
+  "counts_by_category": {
+    "source_or_other": 251,
+    "git_internal": 438,
+    "metadata_or_config": 560,
+    "log_or_metrics": 136,
+    "archive": 9,
+    "installed_environment_or_external_source": 14790,
+    "checkpoint_or_pretrained_weight": 58,
+    "generated_visual_or_tensor": 1099,
+    "point_cloud_or_mesh": 20,
+    "audit_generated": 161,
+    "derived_dataset": 1024,
+    "raw_dataset": 265
+  },
+  "errors": [],
+  "symlinks_not_followed": [],
+  "size_semantics": "Logical file lengths; not compressed/sparse physical allocation; generated audit files can change after this snapshot"
+}

@@ -1,0 +1,312 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 9.975445747375488,
+      "final_recorded_value": 0.19469675421714783,
+      "minimum": 0.08388359844684601,
+      "maximum": 9.975445747375488,
+      "mean": 0.30210168174696417,
+      "standard_deviation_population": 0.9482511112078026,
+      "iteration_of_minimum": 6700,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 212,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_ssim": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 212,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 212,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.2438267022371292,
+      "minimum": -0.0,
+      "maximum": 1.211116075515747,
+      "mean": 0.27600157267923625,
+      "standard_deviation_population": 0.24374477420734783,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.14530254900455475,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_geometry": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.042224280536174774,
+      "minimum": -0.0,
+      "maximum": 0.16262871026992798,
+      "mean": 0.03584390468697749,
+      "standard_deviation_population": 0.034232436792156144,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.0023287832736968994,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_multiview": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.5065653324127197,
+      "minimum": -0.0,
+      "maximum": 0.5688878297805786,
+      "mean": 0.30012110972179556,
+      "standard_deviation_population": 0.2153808874958093,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.2366867959499359,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_regularization": {
+      "initial_recorded_value": 0.09753313660621643,
+      "final_recorded_value": 3.68594044175552e-11,
+      "minimum": 3.002168652566084e-11,
+      "maximum": 0.09753313660621643,
+      "mean": 0.001467645050450273,
+      "standard_deviation_population": 0.009401524968771684,
+      "iteration_of_minimum": 21000,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "raw_rgb": {
+      "initial_recorded_value": 0.22213131189346313,
+      "final_recorded_value": 0.11378782987594604,
+      "minimum": 0.06312534958124161,
+      "maximum": 0.28495723009109497,
+      "mean": 0.1051036638541604,
+      "standard_deviation_population": 0.03422602669744076,
+      "iteration_of_minimum": 20900,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "weighted_rgb": {
+      "initial_recorded_value": 0.22213131189346313,
+      "final_recorded_value": 0.11378782987594604,
+      "minimum": 0.06312534958124161,
+      "maximum": 0.28495723009109497,
+      "mean": 0.1051036638541604,
+      "standard_deviation_population": 0.03422602669744076,
+      "iteration_of_minimum": 20900,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "raw_flatten": {
+      "initial_recorded_value": 0.09753313660621643,
+      "final_recorded_value": 3.68594044175552e-11,
+      "minimum": 3.002168652566084e-11,
+      "maximum": 0.09753313660621643,
+      "mean": 0.001467645050450273,
+      "standard_deviation_population": 0.009401524968771684,
+      "iteration_of_minimum": 21000,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "weighted_flatten": {
+      "initial_recorded_value": 9.753313660621643,
+      "final_recorded_value": 3.6859404417555197e-09,
+      "minimum": 3.002168652566084e-09,
+      "maximum": 9.753313660621643,
+      "mean": 0.1467645050450273,
+      "standard_deviation_population": 0.9401524968771684,
+      "iteration_of_minimum": 21000,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ]
+    },
+    "raw_single": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.2438267022371292,
+      "minimum": -0.0,
+      "maximum": 1.211116075515747,
+      "mean": 0.27600157267923625,
+      "standard_deviation_population": 0.24374477420734783,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.14530254900455475,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_single": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.003657400533556938,
+      "minimum": -0.0,
+      "maximum": 0.018166741132736204,
+      "mean": 0.0041400235901885435,
+      "standard_deviation_population": 0.0036561716131102173,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.002179538235068321,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_geo": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.042224280536174774,
+      "minimum": -0.0,
+      "maximum": 0.16262871026992798,
+      "mean": 0.03584390468697749,
+      "standard_deviation_population": 0.034232436792156144,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.0023287832736968994,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_geo": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.0012667284160852433,
+      "minimum": -0.0,
+      "maximum": 0.004878861308097839,
+      "mean": 0.0010753171406093246,
+      "standard_deviation_population": 0.0010269731037646842,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 6.986349821090698e-05,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_ncc": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.5065653324127197,
+      "minimum": -0.0,
+      "maximum": 0.5688878297805786,
+      "mean": 0.30012110972179556,
+      "standard_deviation_population": 0.2153808874958093,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.2366867959499359,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_ncc": {
+      "initial_recorded_value": -0.0,
+      "final_recorded_value": 0.07598479986190795,
+      "minimum": -0.0,
+      "maximum": 0.08533317446708678,
+      "mean": 0.04501816645826933,
+      "standard_deviation_population": 0.0323071331243714,
+      "iteration_of_minimum": 100,
+      "valid_observations": 212,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "activation_threshold": 7000,
+      "active_range_observations": 142,
+      "active_range_minimum": 0.035503019392490384,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    }
+  },
+  "observation_count": 212,
+  "distinct_recorded_iterations": 212,
+  "target_iterations": 30000,
+  "unobserved_target_iterations": 29788,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

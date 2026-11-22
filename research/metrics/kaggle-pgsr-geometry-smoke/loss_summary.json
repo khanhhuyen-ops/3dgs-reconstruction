@@ -1,0 +1,312 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 40.32582473754883,
+      "final_recorded_value": 0.6726682186126709,
+      "minimum": 0.662114143371582,
+      "maximum": 42.86027145385742,
+      "mean": 12.946964887777964,
+      "standard_deviation_population": 14.959228712442242,
+      "iteration_of_minimum": 290,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_ssim": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.49549853801727295,
+      "minimum": 0.0,
+      "maximum": 1.0093529224395752,
+      "mean": 0.5959874242544174,
+      "standard_deviation_population": 0.2828857455890492,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0856100469827652,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_geometry": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.12917722761631012,
+      "minimum": 0.0,
+      "maximum": 0.24612753093242645,
+      "mean": 0.13003226444125177,
+      "standard_deviation_population": 0.06431490163830322,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.045821741223335266,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_multiview": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.30860456824302673,
+      "minimum": 0.0,
+      "maximum": 0.3563190698623657,
+      "mean": 0.26749364137649534,
+      "standard_deviation_population": 0.08209728369630827,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.19694013893604279,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_regularization": {
+      "initial_recorded_value": 0.40022093057632446,
+      "final_recorded_value": 0.004028788767755032,
+      "minimum": 0.004028788767755032,
+      "maximum": 0.42599326372146606,
+      "mean": 0.12645813198760153,
+      "standard_deviation_population": 0.1496967881259694,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "raw_rgb": {
+      "initial_recorded_value": 0.30373090505599976,
+      "final_recorded_value": 0.2121908962726593,
+      "minimum": 0.16891297698020935,
+      "maximum": 0.5122647285461426,
+      "mean": 0.24818659176429111,
+      "standard_deviation_population": 0.0723340765850138,
+      "iteration_of_minimum": 120,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "weighted_rgb": {
+      "initial_recorded_value": 0.30373090505599976,
+      "final_recorded_value": 0.2121908962726593,
+      "minimum": 0.16891297698020935,
+      "maximum": 0.5122647285461426,
+      "mean": 0.24818659176429111,
+      "standard_deviation_population": 0.0723340765850138,
+      "iteration_of_minimum": 120,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "raw_flatten": {
+      "initial_recorded_value": 0.40022093057632446,
+      "final_recorded_value": 0.004028788767755032,
+      "minimum": 0.004028788767755032,
+      "maximum": 0.42599326372146606,
+      "mean": 0.12645813198760153,
+      "standard_deviation_population": 0.1496967881259694,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "weighted_flatten": {
+      "initial_recorded_value": 40.022093057632446,
+      "final_recorded_value": 0.40287887677550316,
+      "minimum": 0.40287887677550316,
+      "maximum": 42.599326372146606,
+      "mean": 12.645813198760152,
+      "standard_deviation_population": 14.96967881259694,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ]
+    },
+    "raw_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.49549853801727295,
+      "minimum": 0.0,
+      "maximum": 1.0093529224395752,
+      "mean": 0.5959874242544174,
+      "standard_deviation_population": 0.2828857455890492,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0856100469827652,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.007432478070259094,
+      "minimum": 0.0,
+      "maximum": 0.015140293836593627,
+      "mean": 0.008939811363816262,
+      "standard_deviation_population": 0.004243286183835738,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.001284150704741478,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.12917722761631012,
+      "minimum": 0.0,
+      "maximum": 0.24612753093242645,
+      "mean": 0.13003226444125177,
+      "standard_deviation_population": 0.06431490163830322,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.045821741223335266,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.0038753168284893034,
+      "minimum": 0.0,
+      "maximum": 0.007383825927972793,
+      "mean": 0.0039009679332375528,
+      "standard_deviation_population": 0.0019294470491490968,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0013746522367000579,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.30860456824302673,
+      "minimum": 0.0,
+      "maximum": 0.3563190698623657,
+      "mean": 0.26749364137649534,
+      "standard_deviation_population": 0.08209728369630827,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.19694013893604279,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.04629068523645401,
+      "minimum": 0.0,
+      "maximum": 0.053447860479354854,
+      "mean": 0.0401240462064743,
+      "standard_deviation_population": 0.01231459255444624,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.029541020840406416,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    }
+  },
+  "observation_count": 30,
+  "distinct_recorded_iterations": 30,
+  "target_iterations": 300,
+  "unobserved_target_iterations": 270,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

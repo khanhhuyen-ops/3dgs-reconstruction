@@ -1,0 +1,5 @@
+iteration,psnr,ssim,lpips,views,source,scope
+300,13.15511865842015,0.3350761607289314,,4,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000300.json,"periodic validation subset, not final test"
+600,14.445008676221201,0.4151182696223259,,4,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000600.json,"periodic validation subset, not final test"
+900,14.869582784395792,0.4306168332695961,,4,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000900.json,"periodic validation subset, not final test"
+1200,14.921873416459718,0.43415291607379913,,4,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_001200.json,"periodic validation subset, not final test"

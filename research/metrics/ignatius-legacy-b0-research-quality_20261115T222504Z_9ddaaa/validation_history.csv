@@ -1,0 +1,8 @@
+iteration,psnr,ssim,lpips,views,source,scope
+1000,17.568109692678554,0.4869947505719734,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_001000.json,"periodic validation subset, not final test"
+2000,18.991723840998873,0.5575733464775663,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_002000.json,"periodic validation subset, not final test"
+3000,6.594323822757505,0.16317381754969107,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_003000.json,"periodic validation subset, not final test"
+4000,19.31018216994473,0.5981962247328325,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_004000.json,"periodic validation subset, not final test"
+5000,19.62615226674616,0.620390099106413,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_005000.json,"periodic validation subset, not final test"
+6000,6.623315001380681,0.14483846001552814,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_006000.json,"periodic validation subset, not final test"
+7000,19.831033273250775,0.6385992386124351,,33,outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_007000.json,"periodic validation subset, not final test"

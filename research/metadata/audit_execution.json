@@ -1,0 +1,48 @@
+{
+  "audit_date": "2026-11-22",
+  "recorded_utc": "2026-11-22T05:12:24.621084+00:00",
+  "source_base_commit": "6c5b1d7a99ff2d40842c7e8d243c9854738d4846",
+  "audit_scripts": {
+    "scripts/research/analyze.py": "6bdec4efbae4a639cfb3881631b61ff0ca04deb2c50adaf88002ca405e00a34c",
+    "scripts/research/assets.py": "c6eb09c184bca7c0eef3d21839c8b4bd8886a6de4d75b851658fa53abc512e04",
+    "scripts/research/checkpoints.py": "a518e969e196025f9a3ade6be864a222a18c9b9c21d89da62312896f6807f1bd",
+    "scripts/research/cleanup.py": "48602e9fdff3970d8f472aed8c10784e35d579afbefdeca50a2a213419401cfd",
+    "scripts/research/discover.py": "9f95236de5ffbb8461a796ca452d597bec87c31dc53b352f86aae41e2afde698",
+    "scripts/research/figures.py": "fd71262042584d2402eedf0c3190ca7e32a8beeac49f340ba5efdd060d3c9c46",
+    "scripts/research/report.py": "15106a86309ce843cc0cd68fb38562cf546486c606ffdcaf528e410c080ffc89",
+    "scripts/research/verify.py": "27c5d401fdfc33e8255fbb46c8d16471129e2751d6cf4b93c7eebb4148db73f9"
+  },
+  "tests": {
+    "command": ".tools/pgsr_env/Scripts/python.exe -m pytest -q -p no:cacheprovider --basetemp .tools/research_test_tmp_20261122_v2 tests/test_research_audit.py",
+    "result": "10 passed",
+    "training_launched": false,
+    "cuda_inference_launched": false
+  },
+  "codex_cli": "0.167.0",
+  "codexignore_created": false,
+  "codexignore_reason": "Support not established; use official AGENTS.md and documented search/Git exclusions",
+  "agent_instructions": {
+    "previous_bytes": 17083,
+    "current_bytes": 7818,
+    "reduction_fraction": 0.5423520458935784,
+    "scope": "Byte count reduction, not an exact tokenizer measurement"
+  },
+  "audit_packages": {
+    "numpy": "1.26.4",
+    "matplotlib": "3.10.9",
+    "pytest": "8.3.5"
+  },
+  "remote_status": {
+    "kernel": "vthkhnhhuyn/phase03-pgsr-run-all",
+    "session_status": "COMPLETE",
+    "verified_current_task": true,
+    "saved_training_iteration": 21298,
+    "target_iterations": 30000,
+    "training_complete": false
+  },
+  "operations": "Read-only recovery, CPU checkpoint inspection, standard plotting, documentation, and enumerated cache cleanup. No model retraining/resume/inference, package changes, valuable-artifact deletion, or file relocation.",
+  "additional_report_link_check": {
+    "checked": 32,
+    "errors": []
+  }
+}

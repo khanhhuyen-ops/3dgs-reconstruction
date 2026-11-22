@@ -1,0 +1,312 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 40.325740814208984,
+      "final_recorded_value": 0.6745232939720154,
+      "minimum": 0.6633854508399963,
+      "maximum": 42.86027908325195,
+      "mean": 12.98439448873202,
+      "standard_deviation_population": 14.944096669147001,
+      "iteration_of_minimum": 290,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_ssim": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT RECORDED",
+      "source_evidence": []
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.44271549582481384,
+      "minimum": 0.0,
+      "maximum": 1.0086520910263062,
+      "mean": 0.5854977582891782,
+      "standard_deviation_population": 0.28533697281771275,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.08088774979114532,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_geometry": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.1230214461684227,
+      "minimum": 0.0,
+      "maximum": 0.24523277580738068,
+      "mean": 0.12842300720512867,
+      "standard_deviation_population": 0.0653852208771716,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.04609544947743416,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_multiview": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.32615119218826294,
+      "minimum": 0.0,
+      "maximum": 0.348788321018219,
+      "mean": 0.2644428566098213,
+      "standard_deviation_population": 0.08050617837432306,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.21115241944789886,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_regularization": {
+      "initial_recorded_value": 0.4002201557159424,
+      "final_recorded_value": 0.004016111139208078,
+      "minimum": 0.004016111139208078,
+      "maximum": 0.42599332332611084,
+      "mean": 0.12683911533094944,
+      "standard_deviation_population": 0.14953594892235866,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "raw_rgb": {
+      "initial_recorded_value": 0.30372634530067444,
+      "final_recorded_value": 0.2136581391096115,
+      "minimum": 0.17057865858078003,
+      "maximum": 0.5132102966308594,
+      "mean": 0.24818140317996343,
+      "standard_deviation_population": 0.07258455012758407,
+      "iteration_of_minimum": 280,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "weighted_rgb": {
+      "initial_recorded_value": 0.30372634530067444,
+      "final_recorded_value": 0.2136581391096115,
+      "minimum": 0.17057865858078003,
+      "maximum": 0.5132102966308594,
+      "mean": 0.24818140317996343,
+      "standard_deviation_population": 0.07258455012758407,
+      "iteration_of_minimum": 280,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "raw_flatten": {
+      "initial_recorded_value": 0.4002201557159424,
+      "final_recorded_value": 0.004016111139208078,
+      "minimum": 0.004016111139208078,
+      "maximum": 0.42599332332611084,
+      "mean": 0.12683911533094944,
+      "standard_deviation_population": 0.14953594892235866,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "weighted_flatten": {
+      "initial_recorded_value": 40.02201557159424,
+      "final_recorded_value": 0.40161111392080784,
+      "minimum": 0.40161111392080784,
+      "maximum": 42.599332332611084,
+      "mean": 12.683911533094943,
+      "standard_deviation_population": 14.953594892235868,
+      "iteration_of_minimum": 300,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ]
+    },
+    "raw_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.44271549582481384,
+      "minimum": 0.0,
+      "maximum": 1.0086520910263062,
+      "mean": 0.5854977582891782,
+      "standard_deviation_population": 0.28533697281771275,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.08088774979114532,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.006640732437372208,
+      "minimum": 0.0,
+      "maximum": 0.015129781365394591,
+      "mean": 0.008782466374337673,
+      "standard_deviation_population": 0.0042800545922656915,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0012133162468671798,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.1230214461684227,
+      "minimum": 0.0,
+      "maximum": 0.24523277580738068,
+      "mean": 0.12842300720512867,
+      "standard_deviation_population": 0.0653852208771716,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.04609544947743416,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.0036906433850526807,
+      "minimum": 0.0,
+      "maximum": 0.00735698327422142,
+      "mean": 0.0038526902161538598,
+      "standard_deviation_population": 0.001961556626315148,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0013828634843230246,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.32615119218826294,
+      "minimum": 0.0,
+      "maximum": 0.348788321018219,
+      "mean": 0.2644428566098213,
+      "standard_deviation_population": 0.08050617837432306,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.21115241944789886,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.04892267882823944,
+      "minimum": 0.0,
+      "maximum": 0.052318248152732845,
+      "mean": 0.03966642849147319,
+      "standard_deviation_population": 0.012075926756148459,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.03167286291718483,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    }
+  },
+  "observation_count": 30,
+  "distinct_recorded_iterations": 30,
+  "target_iterations": 300,
+  "unobserved_target_iterations": 270,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

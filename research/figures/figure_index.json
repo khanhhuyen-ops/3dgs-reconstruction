@@ -1,0 +1,607 @@
+{
+  "figures": [
+    {
+      "files": [
+        "research/figures/training/b0-kaggle-c55f001d26_total.png",
+        "research/figures/training/b0-kaggle-c55f001d26_total.svg",
+        "research/figures/training/b0-kaggle-c55f001d26_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/b0-kaggle-c55f001d26_components.png",
+        "research/figures/training/b0-kaggle-c55f001d26_components.svg",
+        "research/figures/training/b0-kaggle-c55f001d26_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/b0-kaggle-c55f001d26_stability.png",
+        "research/figures/training/b0-kaggle-c55f001d26_stability.svg",
+        "research/figures/training/b0-kaggle-c55f001d26_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/b0-kaggle-c55f001d26_validation_psnr.png",
+        "research/figures/training/b0-kaggle-c55f001d26_validation_psnr.svg",
+        "research/figures/training/b0-kaggle-c55f001d26_validation_psnr.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_008000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_009000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_010000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_011000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_012000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_013000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_014000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_015000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_016000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_017000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_018000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_019000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_020000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_021000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_022000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_023000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_024000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_025000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_026000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_027000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_028000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_029000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_030000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/b0-kaggle-c55f001d26_validation_ssim.png",
+        "research/figures/training/b0-kaggle-c55f001d26_validation_ssim.svg",
+        "research/figures/training/b0-kaggle-c55f001d26_validation_ssim.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_008000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_009000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_010000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_011000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_012000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_013000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_014000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_015000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_016000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_017000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_018000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_019000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_020000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_021000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_022000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_023000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_024000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_025000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_026000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_027000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_028000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_029000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/validation_030000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_total.png",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_total.svg",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_components.png",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_components.svg",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_stability.png",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_stability.svg",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_psnr.png",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_psnr.svg",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_psnr.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_001000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_002000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_003000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_004000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_005000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_006000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_007000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_008000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_009000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_010000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_011000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_012000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_013000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_014000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_015000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_016000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_017000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_018000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_019000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_020000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_021000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_022000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_023000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_024000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_025000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_026000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_027000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_028000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_029000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_030000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_ssim.png",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_ssim.svg",
+        "research/figures/training/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6_validation_ssim.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_001000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_002000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_003000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_004000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_005000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_006000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_007000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_008000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_009000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_010000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_011000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_012000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_013000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_014000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_015000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_016000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_017000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_018000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_019000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_020000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_021000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_022000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_023000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_024000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_025000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_026000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_027000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_028000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_029000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/validation_030000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_total.png",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_total.svg",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_components.png",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_components.svg",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_stability.png",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_stability.svg",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_psnr.png",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_psnr.svg",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_psnr.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_001000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_002000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_003000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_004000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_005000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_006000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_007000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_ssim.png",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_ssim.svg",
+        "research/figures/training/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa_validation_ssim.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_001000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_002000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_003000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_004000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_005000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_006000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa/validation_007000.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_total.png",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_total.svg",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_components.png",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_components.svg",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_stability.png",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_stability.svg",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_psnr.png",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_psnr.svg",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_psnr.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000300.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000600.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000900.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_001200.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_ssim.png",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_ssim.svg",
+        "research/figures/training/ignatius-legacy-b0-smoke_20261115T134942Z_346824_validation_ssim.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000300.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000600.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_000900.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/validation_001200.json"
+      ],
+      "description": "Periodic validation subset; not final held-out test",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/kaggle-pgsr-geometry-smoke_total.png",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_total.svg",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_total.pdf"
+      ],
+      "sources": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/kaggle-pgsr-geometry-smoke_components.png",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_components.svg",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_components.pdf"
+      ],
+      "sources": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/kaggle-pgsr-geometry-smoke_stability.png",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_stability.svg",
+        "research/figures/training/kaggle-pgsr-geometry-smoke_stability.pdf"
+      ],
+      "sources": [
+        "phase03_results/smoke_evidence/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/local-smoke-v1_total.png",
+        "research/figures/training/local-smoke-v1_total.svg",
+        "research/figures/training/local-smoke-v1_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/local-smoke-v1_components.png",
+        "research/figures/training/local-smoke-v1_components.svg",
+        "research/figures/training/local-smoke-v1_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/local-smoke-v1_stability.png",
+        "research/figures/training/local-smoke-v1_stability.svg",
+        "research/figures/training/local-smoke-v1_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/pgsr-kaggle-c269454133_total.png",
+        "research/figures/training/pgsr-kaggle-c269454133_total.svg",
+        "research/figures/training/pgsr-kaggle-c269454133_total.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "description": "Raw recorded loss; gaps are not filled and totals are not comparable across objectives",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/pgsr-kaggle-c269454133_components.png",
+        "research/figures/training/pgsr-kaggle-c269454133_components.svg",
+        "research/figures/training/pgsr-kaggle-c269454133_components.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "description": "Distinct raw and weighted components; scheduled-inactive recorded zeros preserved",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/training/pgsr-kaggle-c269454133_stability.png",
+        "research/figures/training/pgsr-kaggle-c269454133_stability.svg",
+        "research/figures/training/pgsr-kaggle-c269454133_stability.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl"
+      ],
+      "description": "Stochastic sample-to-sample change and Gaussian count; not a deterministic convergence proof",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/comparisons/rendering_quality.png",
+        "research/figures/comparisons/rendering_quality.svg",
+        "research/figures/comparisons/rendering_quality.pdf"
+      ],
+      "sources": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/metrics/test_030000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6/metrics/test_030000.json",
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json",
+        "phase03_results/smoke_evidence/evaluation/rendering_metrics.json",
+        "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/local-smoke-v1/evaluation/rendering_metrics_png.json"
+      ],
+      "description": "Reported test scores grouped by explicit resolution/budget; float and PNG regimes cannot be ranked together",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    },
+    {
+      "files": [
+        "research/figures/comparisons/resources.png",
+        "research/figures/comparisons/resources.svg",
+        "research/figures/comparisons/resources.pdf"
+      ],
+      "sources": [
+        "research/comparisons/model_comparison.csv"
+      ],
+      "description": "Descriptive measurements only; no controlled performance ranking",
+      "smoothing": "NONE",
+      "interpolation": "NONE; markers are observed samples"
+    }
+  ],
+  "omissions": [
+    {
+      "experiment": "b0-kaggle-c55f001d26",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "ignatius-legacy-b0-smoke_20261115T133608Z_4ef4c4",
+      "plot": "training curves",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "ignatius-legacy-b0-smoke_20261115T134942Z_346824",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "kaggle-pgsr-geometry-smoke",
+      "plot": "validation_psnr",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "kaggle-pgsr-geometry-smoke",
+      "plot": "validation_ssim",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "kaggle-pgsr-geometry-smoke",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "local-smoke-v1",
+      "plot": "validation_psnr",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "local-smoke-v1",
+      "plot": "validation_ssim",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "local-smoke-v1",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "pgsr-kaggle-c269454133",
+      "plot": "validation_psnr",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "pgsr-kaggle-c269454133",
+      "plot": "validation_ssim",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "experiment": "pgsr-kaggle-c269454133",
+      "plot": "validation_lpips",
+      "reason": "NOT RECORDED"
+    },
+    {
+      "plot": "mesh_quality_comparison",
+      "reason": "No verified predicted triangle mesh or measured geometric accuracy in the discovered experiments"
+    }
+  ]
+}

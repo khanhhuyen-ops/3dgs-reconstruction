@@ -1,0 +1,57 @@
+{
+  "method": "B0_Original3DGS",
+  "source": "src/gaussian_splatting/runner.py",
+  "source_sha256": "909d8a982229ecd42a7339b45c818032e3b9ad6f82250275c185f88a31c7828d",
+  "components": {
+    "loss_total": {
+      "variable": "loss",
+      "definition": "(1-lambda_dssim)*l1 + lambda_dssim*structural",
+      "weighted": true,
+      "activation": "iteration 1 onward"
+    },
+    "loss_l1": {
+      "variable": "l1",
+      "definition": "mean absolute RGB error; native utils.loss_utils.l1_loss",
+      "weighted": false,
+      "weight": 0.8
+    },
+    "loss_ssim": {
+      "variable": "structural",
+      "definition": "1-SSIM (not SSIM similarity and not half-DSSIM)",
+      "weighted": false,
+      "weight": 0.2
+    },
+    "loss_depth": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    },
+    "loss_normal": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    },
+    "loss_geometry": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    },
+    "loss_multiview": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    },
+    "loss_regularization": {
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "value": null,
+      "weight": null
+    }
+  },
+  "exposure": "Not used",
+  "source_mapping": {
+    "loss_l1": "l1",
+    "loss_ssim": "dssim"
+  },
+  "missing_policy": "Empty CSV cell/null means unavailable; never substitute zero. Logged scheduled-inactive zeros are retained as observations.",
+  "comparison_warning": "Total objectives differ across models; lower total loss is not evidence of better reconstruction"
+}

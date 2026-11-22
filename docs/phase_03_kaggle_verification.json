@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-17",
+  "status": "KAGGLE_CUDA_AND_REAL_SMOKE_VERIFIED",
+  "notebook": "https://www.kaggle.com/code/vthkhnhhuyn/phase03-pgsr-run-all",
+  "version": 1,
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.4.1+cu121",
+    "cuda_runtime": "12.1",
+    "gpu": "Tesla T4",
+    "device": "cuda:0",
+    "total_vram_bytes": 15636037632,
+    "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+    "extension_hashes": {
+      "diff_plane_rasterization._C": "81aea1bfaf2b64f72db0d7ab4968786d440f82b81983dee3b2ac0fd940421e97",
+      "simple_knn._C": "99ddba051048c9a35e0d88bf4472e645c0e7a1282822ed92a96b6c2415292dc1"
+    },
+    "regenerated_upstream_packaging_metadata": [
+      "submodules/diff-plane-rasterization/diff_plane_rasterization.egg-info/PKG-INFO",
+      "submodules/simple-knn/simple_knn.egg-info/PKG-INFO"
+    ],
+    "pytorch3d_version": "0.7.7",
+    "pytorch3d_usage": "Official pure-Torch CUDA transforms; unused PyTorch3D extension not built",
+    "code_identity": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+  },
+  "numerical_checks": {
+    "status": "SUCCESS",
+    "scope": "SYNTHETIC_CUDA_NUMERICAL_CHECKS",
+    "finite_difference": {
+      "xyz": {
+        "autograd": 0.0008629096555523574,
+        "finite_difference": 0.0008692344029744467,
+        "absolute_error": 6.3247474220892155e-06,
+        "tolerance": 6.953875223795573e-05
+      },
+      "scaling": {
+        "autograd": 0.0005630841478705406,
+        "finite_difference": 0.000607222318649292,
+        "absolute_error": 4.413817077875137e-05,
+        "tolerance": 4.857778549194336e-05
+      },
+      "rotation": {
+        "autograd": -0.0024419291876256466,
+        "finite_difference": -0.0024437904357910156,
+        "absolute_error": 1.8612481653690338e-06,
+        "tolerance": 0.00019550323486328125
+      },
+      "opacity": {
+        "autograd": 0.00025550281861796975,
+        "finite_difference": 0.00025704503059387207,
+        "absolute_error": 1.542211975902319e-06,
+        "tolerance": 2.0563602447509766e-05
+      }
+    },
+    "constant_ncc_rejected": true,
+    "empty_geometry_connected_zero": true,
+    "exposure_high_structural_error_gate": true
+  },
+  "real_data_smoke": {
+    "smoke_training": {
+      "status": "SUCCESS",
+      "iterations": 300,
+      "optimizer_steps": 299,
+      "initial_gaussians": 6000,
+      "final_gaussians": 12899,
+      "training_seconds_total": 14.299288367000031,
+      "current_segment_start_iteration": 81,
+      "current_segment_seconds": 10.526611195999976,
+      "timing_scope": "Measured PGSR segments in this run, loop/checkpoint/export; excludes setup, data qualification and any unreported interrupted tail",
+      "geometry_coverage_totals": {
+        "geometry_valid_pixels": 7784368,
+        "multi_valid_pixels": 5666468,
+        "ncc_valid_patches": 117455
+      },
+      "memory": {
+        "allocated_bytes": 30543872,
+        "reserved_bytes": 79691776,
+        "peak_allocated_bytes": 65166848,
+        "peak_reserved_bytes": 79691776
+      },
+      "device_wide_memory": {
+        "runtime_seconds": 10.52676188700002,
+        "peak_device_memory_used_mib_sampled": 253.0,
+        "vram_samples": 20,
+        "sampling_interval_seconds": 0.5,
+        "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+      },
+      "export": {
+        "status": "EXPORTED_PENDING_SEPARATE_RELOAD",
+        "path": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/kaggle-geometry-smoke/point_cloud/iteration_000300/point_cloud.ply",
+        "sha256": "30095931513fcaecb0a63f4da68852601826af3218acc89d806e84440943c0fd",
+        "gaussians": 12899,
+        "active_sh_degree": 0,
+        "reference_image_id": 5,
+        "artifact_type": "PGSR Gaussian splats, not a triangle mesh"
+      },
+      "dataset_identity": {
+        "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+        "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4"
+      },
+      "exposure_rows": 8
+    },
+    "smoke_evaluation": {
+      "status": "SUCCESS",
+      "run": "/tmp/phase03-pgsr-v1/project/outputs/tanks_and_temples/Ignatius/research/B2_PGSR/kaggle-geometry-smoke",
+      "rendering": {
+        "psnr": 9.896436607081435,
+        "ssim": 0.22545178494218623,
+        "lpips": 0.5503517578948628
+      },
+      "geometry_views": 8
+    }
+  },
+  "research": {
+    "status": "STARTING_AFTER_VERIFIED_SMOKE",
+    "run": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133",
+    "complete": false,
+    "iterations_confirmed": null
+  },
+  "evidence_source": "Explicit version1 authenticated Kaggle SSE execution log; final sealed artifact import still pending",
+  "metric_protocol": "Smoke float RGB metrics are diagnostic. PNG primary scorer is separate and must run locally after final import for a B0-comparable table."
+}

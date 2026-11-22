@@ -1,0 +1,1203 @@
+{
+  "5e046f845dc5fa6b68e6f6a97e395addd942bab465b69e9704222dc57da70cf0": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 29000,
+    "optimizer_steps": 29000,
+    "gaussians": 3381717,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "f2b68f27578f0c1b3c086f0627e58bb796768c2d8c7811e701ab542d788a0f6a",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "8f3c2b9af29e04dcb3e77786748adaaf5b0a16289d2e5d2315e59fb382f14fcf",
+        "simple_knn._C": "8ac8de6d8dc9570f1df83916e949b0a41bffe1316bfb202623842c14952f9176"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 608709066,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "9c9538604d015403f355f41c4ac42ae989454b73d8bb55876843cd94ad4484d5": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 30000,
+    "optimizer_steps": 29999,
+    "gaussians": 3381717,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "f2b68f27578f0c1b3c086f0627e58bb796768c2d8c7811e701ab542d788a0f6a",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "8f3c2b9af29e04dcb3e77786748adaaf5b0a16289d2e5d2315e59fb382f14fcf",
+        "simple_knn._C": "8ac8de6d8dc9570f1df83916e949b0a41bffe1316bfb202623842c14952f9176"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 608709066,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d88d579188c02a3ed2d6fb1003c52a181c7051b304ebaeca88c2c72bd9833b1e": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 1000,
+    "optimizer_steps": 1000,
+    "gaussians": 203585,
+    "active_sh_degree": 1,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 36645306,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "9dc43f66954cf7c47c21e0b5559b6a0586019ae69d635f3818fec0149b74c059": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 2000,
+    "optimizer_steps": 2000,
+    "gaussians": 249213,
+    "active_sh_degree": 2,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "39bf5799f4c4fc19b5401f1c7501b9577bd8ed43163ab23427d09393fb1411b7": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 3000,
+    "optimizer_steps": 3000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "76904f7f96cc528a9f66753f6e12f645622ec6a8c33a91d3fcf38aaab41d3f9f": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 4000,
+    "optimizer_steps": 4000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "224168a2d6e070c3c0baa428007fc384ec21dd22c03ffb0a078a891d6b1e4bc7": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 5000,
+    "optimizer_steps": 5000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "76f316b7ea26f7c3ee27eacd2c49f537d0009f6cece61358aaf1017726b676b3": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 6000,
+    "optimizer_steps": 6000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "37ecaf9fe56908c84f97384a978044be4a436e0dc0fb6418b8e62fa691c8a46f": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 7000,
+    "optimizer_steps": 7000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d37ae86ebce9ee186274fa00110f4dc94f63fcbe019d26d2f5e9af337c74baa1": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 8000,
+    "optimizer_steps": 8000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d3d50952cb130ea9cf32d20a83bdddd5ece52cf89e59460b3fd8a205f5f08aa1": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 9000,
+    "optimizer_steps": 9000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "8db7054b5d039f85bde92cf8445a87d19745b4858e46acd014261f99169b6f25": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 10000,
+    "optimizer_steps": 10000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "8b09ee0ba8001b8cdb582e7e91872b97f2892ac4c1c97cd0453df3151b56cf86": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 11000,
+    "optimizer_steps": 11000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "07f0de87110777715d5ea4b6cbae83524d934946ef05e3ed9936420ba440c1d7": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 12000,
+    "optimizer_steps": 12000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "55764caec41f9f8abd959e378f3aeb0e5546afc9596570246ea037d586a3ece4": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 13000,
+    "optimizer_steps": 13000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "6c3a922980622d8a817bf311bea5f3e37a8990312b88bf77361a34744ca3dc9f": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 14000,
+    "optimizer_steps": 14000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "c0e1339ba2b46d9d29b86e864208a2015bc80eadbeec3f2a747f63fe0ca73bf0": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 15000,
+    "optimizer_steps": 15000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d004ca4ed6509e3721e27342f0d4039a00dd5df4262309e340b7887593dfcd24": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 16000,
+    "optimizer_steps": 16000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "0d61fc22db64b68607787ac97eeb2beb88c559ba3504ca81635b94e5303082d2": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 17000,
+    "optimizer_steps": 17000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "c7fae3985e244e859c1ce4daf5d6fcc07ebdd5651bd6c6a4890dd04c530c0bc4": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 18000,
+    "optimizer_steps": 18000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "5b260d5a50ab977fe4a5863f189ba05248abde892922fb6b26a412f7ba4fd60d": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 19000,
+    "optimizer_steps": 19000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "b0f87a76c238f9310736c3fc0cf2ddb0e0dd6b1e1cf22caf65d8790a6f5a27ec": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 20000,
+    "optimizer_steps": 20000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "8af01dc15b39b506ab13b86955cea6410c1a4cc829324839e1425048f2a3da1d": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 21000,
+    "optimizer_steps": 21000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d4f856386d4716ba39735e16fcf60ce93b6245d735c6ee7baa142756fcc7de0a": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 22000,
+    "optimizer_steps": 22000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "80af416c073464e7106beb5c580f60a6300f7ddc2d2644c52acce6819040aae2": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 23000,
+    "optimizer_steps": 23000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "e260d45de0c3717a4b056b0dbd053d4741e8c408b137269164672fcfb00a4358": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 24000,
+    "optimizer_steps": 24000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "a0e69d20c9909bc70ba4ba2d1477e9ed715e01381e04090438b980beb1f29430": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 25000,
+    "optimizer_steps": 25000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "70f08037f13899ef8506158a907a386725ac72e42b9b4aa3b8cc6a9d8f417fee": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 26000,
+    "optimizer_steps": 26000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "46f9d8718e0ba024f417b654d619a3e90ef1eb97f0efb29617e33e90e51a5fe9": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 27000,
+    "optimizer_steps": 27000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "e2911168c11c240986151602074a3dbd9e8570a1ea2022f9ade9c132d8857409": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 28000,
+    "optimizer_steps": 28000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "a32047c1a40d14bb360245f3ba625e1998a1776f6f3f287bb7f8ef0dfb8fb06f": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 29000,
+    "optimizer_steps": 29000,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "eb36d8fe8ce9327bcb6af1e2f0be4e0d2bec179e77e3e0d8aabbed7fca515d59": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 30000,
+    "optimizer_steps": 29999,
+    "gaussians": 249213,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7d02ff7d02eaaf540f601ab91f09f02f029b7c88fda2f3c55a0461c49eee9987",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 44858346,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "627ff02d981f82b97c602e034441c76b82575b9d8aff60f9a206a0f3248776d9": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 500,
+    "optimizer_steps": 500,
+    "gaussians": 76223,
+    "active_sh_degree": 0,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 13720146,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "305483bfbb20924a516ef8ca6ee74677bebbe151c491de9354a9fe89aa6ee2bc": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 1000,
+    "optimizer_steps": 1000,
+    "gaussians": 137196,
+    "active_sh_degree": 1,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 24695286,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "7d8abbb4de163eb61cf2cb506aea6aa289be948d9556014eab58d83a45862d0c": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 2000,
+    "optimizer_steps": 2000,
+    "gaussians": 602011,
+    "active_sh_degree": 2,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 108361986,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "f46f1ed6d59bb63972dd4651079fe95bba2d67fee45a89093fe01936a41463f8": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 3000,
+    "optimizer_steps": 3000,
+    "gaussians": 1121492,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 201868566,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "783afbab0a98f84f649954e129b59e684aeb8145b20adea17c3c64bc26b1fff1": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 4000,
+    "optimizer_steps": 4000,
+    "gaussians": 1363847,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 245492466,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d757f6ac22e948ecbe0564ea044fc4d464d0033c377cbe48995dda8f56a74fc1": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 5000,
+    "optimizer_steps": 5000,
+    "gaussians": 1832434,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 329838126,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "02064cb35da4f7c139a1bbda5fd274084f2c5d72ee70c36e616e93aedecd76f5": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 6000,
+    "optimizer_steps": 6000,
+    "gaussians": 2257979,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 406436226,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "bd31ba8fb327a4d767204dd860d9102bb933be8d61edfc338ca30da6aa2911d4": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 7000,
+    "optimizer_steps": 7000,
+    "gaussians": 2233886,
+    "active_sh_degree": 3,
+    "identity": {
+      "config": "7a29f2ab9d58b54f06e1e27ff71925cf76a340e09b1e9cd1b74c391a60e3aa51",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 402099486,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "c1f23c745bd3206a272e2d62840b497668a2364440911b8f33c2efb765fc20c4": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 300,
+    "optimizer_steps": 300,
+    "gaussians": 40251,
+    "active_sh_degree": 0,
+    "identity": {
+      "config": "3e04dad8241b33b6c85bd5efe4478f634900208b40225deeb8a45008cdbb9a59",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 4709373,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "bf0ae101ef0e4d3f83cc90dfa7a02afe28ce2374b57e83232cb3c4960579b83e": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 550,
+    "optimizer_steps": 550,
+    "gaussians": 78582,
+    "active_sh_degree": 0,
+    "identity": {
+      "config": "3e04dad8241b33b6c85bd5efe4478f634900208b40225deeb8a45008cdbb9a59",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 9194100,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "76597f161b14a54515be034c93ff1ca92638189f6f7ed3e7117e527cb72c6204": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 600,
+    "optimizer_steps": 600,
+    "gaussians": 78582,
+    "active_sh_degree": 0,
+    "identity": {
+      "config": "3e04dad8241b33b6c85bd5efe4478f634900208b40225deeb8a45008cdbb9a59",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 9194100,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "331051a6201dcf5d0452fc2bb282ee551625b4312d3911b59990b56e1a88dea8": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 900,
+    "optimizer_steps": 900,
+    "gaussians": 78582,
+    "active_sh_degree": 0,
+    "identity": {
+      "config": "3e04dad8241b33b6c85bd5efe4478f634900208b40225deeb8a45008cdbb9a59",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 9194100,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "b33875e3d0494cceea712ea3a09c8cf40ba261f0cdacef95b81637c810aff582": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "b0-checkpoint-v1",
+    "iteration": 1200,
+    "optimizer_steps": 1199,
+    "gaussians": 78582,
+    "active_sh_degree": 1,
+    "identity": {
+      "config": "3e04dad8241b33b6c85bd5efe4478f634900208b40225deeb8a45008cdbb9a59",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+      "extension_hashes": {
+        "diff_gaussian_rasterization._C": "39da7320d6c4fd7419dad3bab0858f29897d5870bdb922ee34a48074cf618e84",
+        "simple_knn._C": "3058c867aa75aafe342b38155b626280f659f48d575eea005693a5263c5cfed4"
+      },
+      "code": "f48fe731bf951ff77afe60cdb6b7425f7ba74ac4b173ca484e815463fad3ee7a"
+    },
+    "exposure_rows": null,
+    "full_state": true,
+    "finite_float_elements_checked": 9194100,
+    "storage_entries": 29,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "4cc89a59db1fee6ac53126e6c0e3666a603becba7c5fadcc0c5633f52145c157": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 250,
+    "optimizer_steps": 250,
+    "gaussians": 12699,
+    "active_sh_degree": 0,
+    "identity": {
+      "method": "B2_PGSR",
+      "config": "0ea1d382682776ef219628a06c4dd3ff2b098a87d3894a35f33f2d580abd9c32",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+      "code": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+    },
+    "exposure_rows": 8,
+    "full_state": true,
+    "finite_float_elements_checked": 2400166,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "7c61d12652ea7125fe2826ed6e7859345a95ed8c9805e6fbe0101d15e982c613": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 300,
+    "optimizer_steps": 299,
+    "gaussians": 12699,
+    "active_sh_degree": 0,
+    "identity": {
+      "method": "B2_PGSR",
+      "config": "0ea1d382682776ef219628a06c4dd3ff2b098a87d3894a35f33f2d580abd9c32",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+      "code": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+    },
+    "exposure_rows": 8,
+    "full_state": true,
+    "finite_float_elements_checked": 2400166,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "20591ff8a56a5dd28dd30c69c9a7ee04aafd552f19ed604fe09894c4dc868bc8": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 1,
+    "optimizer_steps": 1,
+    "gaussians": 64,
+    "active_sh_degree": 0,
+    "identity": {
+      "unit_fixture": "PGSR_SYNTHETIC_CUDA_ONLY"
+    },
+    "exposure_rows": 2,
+    "full_state": true,
+    "finite_float_elements_checked": 12115,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "d19e83b6ff44b190cc767e0777fabf974cdb167c6ba3ae6e5eacb687afe4622e": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 1,
+    "optimizer_steps": 1,
+    "gaussians": 64,
+    "active_sh_degree": 0,
+    "identity": {
+      "unit_fixture": "PGSR_SYNTHETIC_CUDA_ONLY"
+    },
+    "exposure_rows": 2,
+    "full_state": true,
+    "finite_float_elements_checked": 12115,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "ef82b72d46b1377417c0a983bae14d88696ee0abada424002d876c706b95f63e": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 21298,
+    "optimizer_steps": 21298,
+    "gaussians": 3733679,
+    "active_sh_degree": 3,
+    "identity": {
+      "method": "B2_PGSR",
+      "config": "9f33bca2da2891c499aa21cbc4b684dbf67374347a330b8e3a00812dc877aa2f",
+      "metadata": "7636dd218be5cdb1bfa10b76b59a40b2b72cfb6129b0bf2d8fac4283a767913b",
+      "split": "fbd4eb563ba6b5418165ce4d402e04ec123117f56b2fe0c601a35efaad3ba2b4",
+      "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+      "code": "c2694541331ea6bf2bb0b449dcb8cb10278bdaf25ec96be7416f874258de47e7"
+    },
+    "exposure_rows": 197,
+    "full_state": true,
+    "finite_float_elements_checked": 705666520,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  },
+  "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0": {
+    "readability": "SAFE_READ_PRETRAINED_OR_OTHER",
+    "schema": null,
+    "storage_entries": null
+  },
+  "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02": {
+    "readability": "SAFE_READ_PRETRAINED_OR_OTHER",
+    "schema": null,
+    "storage_entries": 16
+  },
+  "dc7a9012c780ebeddc76769137839488710dd527601fbce0e0202d8b53b3a87a": {
+    "readability": "VERIFIED_RESTRICTED_CPU_LOAD",
+    "schema": "pgsr-full-checkpoint-v1",
+    "iteration": 1,
+    "optimizer_steps": 1,
+    "gaussians": 64,
+    "active_sh_degree": 0,
+    "identity": {
+      "unit_fixture": "PGSR_SYNTHETIC_CUDA_ONLY"
+    },
+    "exposure_rows": 2,
+    "full_state": true,
+    "finite_float_elements_checked": 12115,
+    "storage_entries": 37,
+    "scope": "CPU serialization, finite/layout/Adam/RNG checks; CUDA restore not rerun during audit"
+  }
+}

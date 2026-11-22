@@ -1,0 +1,122 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 0.10964080691337585,
+      "final_recorded_value": 0.07844285666942596,
+      "minimum": 0.04399072751402855,
+      "maximum": 0.20949971675872803,
+      "mean": 0.09702814575204086,
+      "standard_deviation_population": 0.02143976607503813,
+      "iteration_of_minimum": 22900,
+      "valid_observations": 231,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": 0.055629663169384,
+      "final_recorded_value": 0.0420171394944191,
+      "minimum": 0.02794894203543663,
+      "maximum": 0.1449376493692398,
+      "mean": 0.05247836475345222,
+      "standard_deviation_population": 0.016466167807899404,
+      "iteration_of_minimum": 22900,
+      "valid_observations": 231,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ]
+    },
+    "loss_ssim": {
+      "initial_recorded_value": 0.32568538188934326,
+      "final_recorded_value": 0.22414571046829224,
+      "minimum": 0.10815787315368652,
+      "maximum": 0.4677479863166809,
+      "mean": 0.2752272623441952,
+      "standard_deviation_population": 0.05177310978065205,
+      "iteration_of_minimum": 22900,
+      "valid_observations": 231,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/training.jsonl"
+      ]
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 231,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 231,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_geometry": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 231,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_multiview": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 231,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_regularization": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 231,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    }
+  },
+  "observation_count": 231,
+  "distinct_recorded_iterations": 231,
+  "target_iterations": 30000,
+  "unobserved_target_iterations": 29769,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}
