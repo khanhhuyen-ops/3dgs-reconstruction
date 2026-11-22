@@ -135,7 +135,7 @@ def train(config, run, environment, resume=False, stop_after=None):
                     _, near_gray = near.get_image()
                     near_package = render(near, model, pipe, bg, app_model=app,
                                           return_plane=True, return_depth_normal=False)
-                loss, terms, coefficients, counts = objectives(
+                loss, terms, coefficients, counts, photometric = objectives(
                     model, app, camera, near, package, near_package, rgb, gray, near_gray, opt, config, iteration)
                 if not torch.isfinite(loss):
                     raise ValueError("Nonfinite PGSR objective")
@@ -184,15 +184,36 @@ def train(config, run, environment, resume=False, stop_after=None):
                 if not len(model.get_xyz):
                     raise ValueError("PGSR visibility trimming removed all Gaussians")
                 if iteration % config["log_interval"] == 0 or iteration == target:
+                    if (photometric["l1_appearance"] is None
+                            and "app_image" in package):
+                        with torch.no_grad():
+                            photometric["l1_appearance"] = (
+                                package["app_image"] - rgb).abs().mean()
+                    raw_terms = {k:float(v.detach()) for k,v in terms.items()}
+                    weighted_terms = {k:raw_terms[k]*coefficients[k] for k in terms}
+                    photometric_values = {
+                        key: (float(value.detach()) if hasattr(value, "detach") else value)
+                        for key, value in photometric.items()
+                    }
                     row = {"iteration":iteration,"image_id":iid,"neighbor_image_id":near.image_id if near else None,
-                           "loss":float(loss.detach()),"raw":{k:float(v.detach()) for k,v in terms.items()},
-                           "coefficients":coefficients,"weighted":{k:float(terms[k].detach())*coefficients[k] for k in terms},
+                           "loss":float(loss.detach()),"raw":raw_terms,
+                           "coefficients":coefficients,"weighted":weighted_terms,
+                           "loss_schema_version":"gaussian-loss-v1",
+                           "losses":{"total":float(loss.detach()),"raw":raw_terms,
+                                     "coefficients":coefficients,"weighted":weighted_terms,
+                                     "photometric":photometric_values,
+                                     "activation":{"flatten":True,
+                                                   "single":iteration>opt.single_view_weight_from_iter,
+                                                   "multi_geo":iteration>opt.multi_view_weight_from_iter and near is not None,
+                                                   "multi_ncc":iteration>opt.multi_view_weight_from_iter and near is not None,
+                                                   "exposure":bool(photometric_values["exposure_gate_used"])},
+                                     "coverage":counts},
                            "gaussians":len(model.get_xyz),"active_sh_degree":model.active_sh_degree,
                            "gradient_norms":gradients,"elapsed_segment_seconds":time.perf_counter()-started,
                            "position_lr":model.optimizer.param_groups[0]["lr"],**counts,**memory()}
                     append(run / "training.jsonl", row)
                     LOG.info("iteration %d/%d loss %.6f points %d geo %d ncc %d", iteration, config["iterations"], row["loss"], row["gaussians"], counts["multi_valid_pixels"], counts["ncc_valid_patches"])
-                del package, near_package, loss, terms, rgb, gray, near_gray
+                del package, near_package, loss, terms, photometric, rgb, gray, near_gray
                 if torch.cuda.memory_reserved() > config["torch_reserved_budget_gib"]*1024**3:
                     raise RuntimeError("BLOCKED_RESOURCE: measured reserved VRAM exceeds the declared profile")
                 session_stop = time.perf_counter()-started > config["session_seconds"]-600

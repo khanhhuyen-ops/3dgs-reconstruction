@@ -396,6 +396,27 @@ def train(
                             "loss": last_loss,
                             "l1": float(l1),
                             "dssim": float(structural),
+                            "loss_schema_version": "gaussian-loss-v1",
+                            "losses": {
+                                "total": last_loss,
+                                "raw": {
+                                    "l1": float(l1),
+                                    "ssim_dissimilarity": float(structural),
+                                },
+                                "coefficients": {
+                                    "l1": 1 - options.lambda_dssim,
+                                    "ssim_dissimilarity": options.lambda_dssim,
+                                },
+                                "weighted": {
+                                    "l1": float(l1) * (1 - options.lambda_dssim),
+                                    "ssim_dissimilarity": float(structural)
+                                    * options.lambda_dssim,
+                                },
+                                "activation": {
+                                    "l1": True,
+                                    "ssim_dissimilarity": True,
+                                },
+                            },
                             "train_psnr": float(
                                 -10 * torch.log10((image - target).square().mean())
                             ),

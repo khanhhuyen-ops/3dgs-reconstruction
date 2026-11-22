@@ -3,37 +3,37 @@
   "audit_date": "2026-11-22",
   "baseline": {
     "audit_date": "2026-11-22",
-    "inventory_executed_utc": "2026-11-22T05:06:32.594690+00:00",
+    "inventory_executed_utc": "2026-11-22T14:16:33.958071+00:00",
     "scope": "All regular files under repository root including Git, environments and external sources; directory symlinks not followed",
-    "total_bytes": 52500485363,
-    "file_count": 18926,
+    "total_bytes": 52511347995,
+    "file_count": 19000,
     "bytes_by_category": {
-      "source_or_other": 1197952556,
-      "git_internal": 3596764558,
-      "bytecode_or_tool_cache": 953633,
-      "metadata_or_config": 74651503,
+      "source_or_other": 1198580118,
+      "git_internal": 3598702865,
+      "bytecode_or_tool_cache": 573640,
+      "metadata_or_config": 74664668,
       "log_or_metrics": 2536981,
       "archive": 2516139438,
       "installed_environment_or_external_source": 664758292,
       "checkpoint_or_pretrained_weight": 31312683624,
       "generated_visual_or_tensor": 3578276951,
       "point_cloud_or_mesh": 4593273681,
-      "audit_generated": 14850552,
+      "audit_generated": 23514143,
       "derived_dataset": 1288845847,
       "raw_dataset": 3658797747
     },
     "counts_by_category": {
-      "source_or_other": 251,
-      "git_internal": 438,
-      "bytecode_or_tool_cache": 127,
-      "metadata_or_config": 560,
+      "source_or_other": 256,
+      "git_internal": 569,
+      "bytecode_or_tool_cache": 47,
+      "metadata_or_config": 566,
       "log_or_metrics": 136,
       "archive": 9,
       "installed_environment_or_external_source": 14790,
       "checkpoint_or_pretrained_weight": 58,
       "generated_visual_or_tensor": 1099,
       "point_cloud_or_mesh": 20,
-      "audit_generated": 149,
+      "audit_generated": 161,
       "derived_dataset": 1024,
       "raw_dataset": 265
     },
@@ -131,6 +131,9 @@
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/metrics/test_030000.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "configs/data/ignatius.yaml",
@@ -157,11 +160,13 @@
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/evaluate_result.json",
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/build_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
@@ -303,6 +308,9 @@
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/metrics/test_030000.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "configs/data/ignatius.yaml",
@@ -329,11 +337,13 @@
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/evaluate_result.json",
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/build_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
@@ -378,6 +388,9 @@
           ".tools/kaggle_publish/ready_remote/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/remote_main/phase02-original3dgs-resume-run-all.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -386,10 +399,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -430,6 +445,9 @@
           ".tools/kaggle_publish/ready_remote/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/remote_main/phase02-original3dgs-resume-run-all.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -438,10 +456,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -617,6 +637,7 @@
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/point_cloud/iteration_030000/validation.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/training_result.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kaggle_real_smoke80.json",
           ".tools/pgsr_publish/kaggle_smoke_results.json",
           ".tools/pgsr_research/protected_before.json",
@@ -706,6 +727,7 @@
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/point_cloud/iteration_030000/validation.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/training_result.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kaggle_real_smoke80.json",
           ".tools/pgsr_publish/kaggle_smoke_results.json",
           ".tools/pgsr_research/protected_before.json",
@@ -788,6 +810,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/README.md",
           "docs/phase_02_implementation_report.md",
@@ -831,6 +854,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/README.md",
           "docs/phase_02_implementation_report.md",
@@ -1115,6 +1139,9 @@
         "basename_reference_files": [
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -1122,10 +1149,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -1163,6 +1192,9 @@
         "basename_reference_files": [
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -1170,10 +1202,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -1210,6 +1244,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1255,6 +1290,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1299,6 +1335,7 @@
         "sha256": "b45807715be460697a6ceda1051aafea387f949bc044909928fbd46115ec3b19",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "scripts/pgsr/check_geometry_cuda.py",
@@ -1324,6 +1361,7 @@
         "sha256": "f47fa0288129af9f9fbbccc2a3f13ec5dfeaca707b0e89ab24da324af3cf08c9",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "src/pgsr/validation.py"
@@ -1348,6 +1386,7 @@
         "sha256": "f47fa0288129af9f9fbbccc2a3f13ec5dfeaca707b0e89ab24da324af3cf08c9",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "src/pgsr/validation.py"
@@ -1373,6 +1412,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1404,6 +1444,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1435,6 +1476,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1468,6 +1510,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1500,6 +1543,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1532,6 +1576,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1564,6 +1609,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1594,6 +1640,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1627,6 +1674,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1657,6 +1705,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1688,6 +1737,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1719,6 +1769,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -1750,6 +1801,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1780,6 +1832,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1810,6 +1863,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -1839,6 +1893,7 @@
         "sha256": "8de2f41a5d5f2637b153ed22863bfd3b2e797f7b7a346aa8a37725a2e2433685",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "src/pgsr/data.py"
@@ -1863,6 +1918,7 @@
         "sha256": "8de2f41a5d5f2637b153ed22863bfd3b2e797f7b7a346aa8a37725a2e2433685",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "src/pgsr/data.py"
@@ -1887,6 +1943,7 @@
         "sha256": "8de2f41a5d5f2637b153ed22863bfd3b2e797f7b7a346aa8a37725a2e2433685",
         "exact_path_reference_files": [],
         "basename_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
           "src/pgsr/data.py"
@@ -2116,6 +2173,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -2155,6 +2213,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -2670,6 +2729,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -2708,6 +2768,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -3222,6 +3283,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -3260,6 +3322,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -3774,6 +3837,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -3812,6 +3876,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -4326,6 +4391,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -4364,6 +4430,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -4878,6 +4945,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -4916,6 +4984,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -5430,6 +5499,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -5468,6 +5538,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -5982,6 +6053,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -6020,6 +6092,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -6534,6 +6607,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -6572,6 +6646,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -7086,6 +7161,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -7124,6 +7200,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -7638,6 +7715,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -7676,6 +7754,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -8190,6 +8269,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -8228,6 +8308,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -8742,6 +8823,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -8780,6 +8862,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -9294,6 +9377,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -9332,6 +9416,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -9846,6 +9931,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -9884,6 +9970,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -10398,6 +10485,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -10436,6 +10524,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -10950,6 +11039,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -10988,6 +11078,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -11502,6 +11593,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -11540,6 +11632,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -12054,6 +12147,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -12092,6 +12186,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -12606,6 +12701,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -12644,6 +12740,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -13158,6 +13255,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -13196,6 +13294,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -13710,6 +13809,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -13748,6 +13848,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -14262,6 +14363,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -14300,6 +14402,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -14814,6 +14917,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -14852,6 +14956,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -15366,6 +15471,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -15404,6 +15510,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -15918,6 +16025,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -15956,6 +16064,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -16470,6 +16579,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -16508,6 +16618,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -17022,6 +17133,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -17060,6 +17172,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -17574,6 +17687,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -17612,6 +17726,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -18126,6 +18241,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -18164,6 +18280,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -18678,6 +18795,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -18716,6 +18834,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -19230,6 +19349,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -19268,6 +19388,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -19782,6 +19903,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -19820,6 +19942,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/renders/test/iteration_030000/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
@@ -20330,11 +20453,15 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/phase_01_usage.md",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "scripts/kaggle/prepare_kaggle_input.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/pgsr/score_png.py",
           "src/data/loader.py",
           "src/data/preparation.py"
@@ -20363,11 +20490,15 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/phase_01_usage.md",
           "outputs/kaggle_handoff/ignatius_phase02_input/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "scripts/kaggle/prepare_kaggle_input.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/pgsr/score_png.py",
           "src/data/loader.py",
           "src/data/preparation.py"
@@ -20396,6 +20527,8 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_01_implementation_report.md",
           "docs/tech/phase_01_usage.md",
@@ -20403,8 +20536,10 @@
           "outputs/kaggle_handoff/ignatius_phase02_input/scene/integrity.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/scene/integrity.json",
+          "pgsr_mesh_kaggle.ipynb",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/pgsr/score_png.py",
           "scripts/visualization/phase02_pointcloud_review.py",
@@ -20442,6 +20577,8 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/roundtrip/ignatius_phase02_input_v1/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_01_implementation_report.md",
           "docs/tech/phase_01_usage.md",
@@ -20449,8 +20586,10 @@
           "outputs/kaggle_handoff/ignatius_phase02_input/scene/integrity.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/manifest.json",
           "outputs/kaggle_handoff/ignatius_phase02_input_v1/scene/integrity.json",
+          "pgsr_mesh_kaggle.ipynb",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/pgsr/score_png.py",
           "scripts/visualization/phase02_pointcloud_review.py",
@@ -21923,6 +22062,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -21951,7 +22091,9 @@
         "path": "phase03_results/smoke_evidence/evaluation/data_readiness.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/data_readiness.json",
         "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -21971,7 +22113,7 @@
       "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 1243,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/data_readiness.json",
@@ -21982,7 +22124,9 @@
         "path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/data_readiness.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/data_readiness.json",
         "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -22015,7 +22159,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/data_readiness.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/data_readiness.json",
         "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -22035,7 +22181,7 @@
       "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 1243,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/data_readiness.json",
@@ -22046,7 +22192,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/data_readiness.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/data_readiness.json",
         "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -22066,7 +22214,7 @@
       "sha256": "3c199b3c53b245eb37e7dc0edaca913b8d44dba4717c9d6330f8e817d175e07e",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 1243,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "outputs/kaggle_download/phase02_20261117/phase02_results_final/run/data_readiness.json",
@@ -22080,6 +22228,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -22113,6 +22262,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -22146,6 +22296,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -22184,6 +22335,7 @@
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
@@ -22225,6 +22377,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -22252,7 +22405,9 @@
         "path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/initial_point_ids.npy",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/b0-kaggle-c55f001d26/initial_point_ids.npy",
         "sha256": "80638d8ee9a15a6c55332935424087fce8023540717cc89a8013ba3718bf50dd",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -22287,6 +22442,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -25245,6 +25401,9 @@
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/metrics/test_030000.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "configs/data/ignatius.yaml",
@@ -25271,11 +25430,13 @@
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/evaluate_result.json",
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/build_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
@@ -25346,6 +25507,7 @@
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -25388,6 +25550,7 @@
           ".tools/kaggle_publish/ready_remote/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/remote_main/phase02-original3dgs-resume-run-all.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -25424,9 +25587,11 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
+          "docs/tech/loss_logging.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
@@ -26202,6 +26367,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -26240,6 +26406,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -26278,6 +26445,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -26316,6 +26484,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -26348,6 +26517,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -26384,6 +26554,7 @@
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -26428,6 +26599,7 @@
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -26472,6 +26644,7 @@
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -26548,6 +26721,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
@@ -26579,6 +26753,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
@@ -27700,6 +27875,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -27744,6 +27920,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -27819,6 +27996,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -27851,6 +28029,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
@@ -27908,16 +28087,21 @@
         "basename_reference_files": [
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -27978,6 +28162,7 @@
         ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
@@ -28049,6 +28234,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -28090,7 +28276,9 @@
         "path": "phase03_results/recovery/run/checkpoints/iteration_021298.pth",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/checkpoints/iteration_021298.pth",
         "sha256": "ef82b72d46b1377417c0a983bae14d88696ee0abada424002d876c706b95f63e",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/checkpoints/latest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
@@ -28118,13 +28306,17 @@
         "path": "phase03_results/recovery/run/checkpoints/latest.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/checkpoints/latest.json",
         "sha256": "1da3b2a84525a402c466fa7da687363f66316d538418c6a41dad1c00fa18dddf",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_publish/final_main/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/main/phase02.ipynb",
           ".tools/kaggle_publish/ready_remote/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/remote_main/phase02-original3dgs-resume-run-all.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -28133,10 +28325,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -28170,7 +28364,9 @@
         "path": "phase03_results/recovery/run/environment.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/environment.json",
         "sha256": "e1c030364765b228a991581648e615a7baf96a423eb6e0ea4f69bd974818ca89",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".agents/skills/preprocessing/SKILL-video-sfm.md",
           ".agents/skills/preprocessing/plan-video-sfm.md",
@@ -28215,7 +28411,9 @@
         "path": "phase03_results/smoke_evidence/environment.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/environment.json",
         "sha256": "e1c030364765b228a991581648e615a7baf96a423eb6e0ea4f69bd974818ca89",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".agents/skills/preprocessing/SKILL-video-sfm.md",
           ".agents/skills/preprocessing/plan-video-sfm.md",
@@ -28247,7 +28445,7 @@
       "sha256": "e1c030364765b228a991581648e615a7baf96a423eb6e0ea4f69bd974818ca89",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 853,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/recovery/run/identity.json",
@@ -28258,7 +28456,9 @@
         "path": "phase03_results/recovery/run/identity.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/identity.json",
         "sha256": "f4f67a066022c8155845d92c99fe5cc97d1644beb3d76b5ca3e85285a103ab7c",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -28289,7 +28489,9 @@
         "path": "phase03_results/index.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/kaggle_index.json",
         "sha256": "7b607fa2275616c1b51bc4933f00040ecddbe77264fdb863d99c385b2c747131",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           "notebooks/kaggle/phase03_pgsr_run_all.ipynb",
@@ -28306,7 +28508,7 @@
       "sha256": "7b607fa2275616c1b51bc4933f00040ecddbe77264fdb863d99c385b2c747131",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 103,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/recovery/manifest.json",
@@ -28317,7 +28519,9 @@
         "path": "phase03_results/recovery/manifest.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
         "sha256": "af79cab20cc0ad9891cfe6c0c9dc9c9cea8fefcf8c54b0ffd81fafb3bb946fd7",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".agents/skills/preprocessing/SKILL-video-sfm.md",
           ".agents/skills/preprocessing/plan-video-sfm.md",
@@ -28331,6 +28535,8 @@
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/metrics/test_030000.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "configs/data/ignatius.yaml",
@@ -28357,11 +28563,13 @@
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/evaluate_result.json",
           "outputs/tanks_and_temples/Ignatius/research/B0_3DGS/ignatius-legacy-b0-smoke_20261115T134942Z_346824/metrics/test_001200.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/build_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
@@ -28399,10 +28607,14 @@
         "path": "phase03_results/recovery/run/resolved_config.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/resolved_config.json",
         "sha256": "1cac2504c7298cd5c166439608eb7c77987083a8aa59ec5c32ed11680c479780",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/phase_02_kaggle_publish.json",
@@ -28410,10 +28622,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/prepare_kaggle_input.py",
           "scripts/kaggle/runtime.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -28447,7 +28661,9 @@
         "path": "phase03_cuda_numerics/camera.png",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/diagnostics/camera.png",
         "sha256": "0ebd52f484b3c1214e3838d0e3168b6ee039078c51a8303d776a39e3adfcec77",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -28461,7 +28677,7 @@
       "sha256": "0ebd52f484b3c1214e3838d0e3168b6ee039078c51a8303d776a39e3adfcec77",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 129,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_cuda_numerics/geometry_checks.json",
@@ -28472,7 +28688,9 @@
         "path": "phase03_cuda_numerics/geometry_checks.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/diagnostics/geometry_checks.json",
         "sha256": "2023a37dc4febde5a792cfe39fd99994c9c371419a72ffa7601c8cb42a18f1ee",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "scripts/pgsr/check_geometry_cuda.py"
         ],
@@ -28483,7 +28701,7 @@
       "sha256": "2023a37dc4febde5a792cfe39fd99994c9c371419a72ffa7601c8cb42a18f1ee",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 1947,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_setup.log",
@@ -28495,6 +28713,7 @@
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/diagnostics/setup.log",
         "sha256": "4b62591542c5a6bb01b34716236f8e37e89a9b3fd2f8415febfd81a43c640b03",
         "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_publish/kernel/phase03-pgsr-run-all.ipynb",
           "notebooks/kaggle/phase03_pgsr_run_all.ipynb",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/run_manifest.json",
@@ -28519,7 +28738,9 @@
         "path": "phase03_results/recovery/run/density.jsonl",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/density.jsonl",
         "sha256": "23e94d28c0098d9149179ccd2b96a715225e264401e779e159dff45184360f50",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -28553,7 +28774,9 @@
         "path": "phase03_results/recovery/run/run.log",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/run.log",
         "sha256": "001134c718e4211f20a14e98cef029631462988b69ad41bd4ce7ecf08514edf9",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/b0_build_logs/protected_before.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
@@ -28592,7 +28815,9 @@
         "path": "phase03_results/recovery/run/run_manifest.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/run_manifest.json",
         "sha256": "49c69fc2ac61b67743b6c7956e567986f77f1c3326e3793d065fe2100d3a1ca3",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_publish/final_main/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/main/phase02.ipynb",
@@ -28632,12 +28857,15 @@
         "path": "phase03_results/recovery/run/training.jsonl",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training.jsonl",
         "sha256": "1b654d2849a1b175dd47e823d8ecb0fd09072b0313988fc89ab7bc410a0ba490",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
+          "docs/tech/loss_logging.md",
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
@@ -28672,6 +28900,7 @@
         "exact_path_reference_files": [],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -28713,7 +28942,9 @@
         "path": "phase03_results/recovery/run/training_result.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training_result.json",
         "sha256": "224ee6892df88d37824ab68e619ea884b288ec31f4d5fae50251a3a0c998bc00",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -28758,7 +28989,9 @@
         "path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/result.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/logs/training_result.json",
         "sha256": "224ee6892df88d37824ab68e619ea884b288ec31f4d5fae50251a3a0c998bc00",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -28804,7 +29037,9 @@
         "path": "phase03_results/recovery/run/point_cloud/iteration_021298/point_cloud.ply",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/point_cloud/iteration_021298/point_cloud.ply",
         "sha256": "3dc923556de13cb492a354e2864650d75735cae36384b540def94af6f951142c",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/run/point_cloud/iteration_030000/validation.json",
@@ -28890,7 +29125,9 @@
         "path": "phase03_results/recovery/run/point_cloud/iteration_021298/reload_reference.npz",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/point_cloud/iteration_021298/reload_reference.npz",
         "sha256": "b37e858e5b3ed6da4d79ee88c6af4a58f4412f4967dbd5cfa10f87edac0f3bb9",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/run_manifest.json",
@@ -28918,7 +29155,9 @@
         "path": "phase03_results/recovery/run/point_cloud/iteration_021298/validation.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/point_cloud/iteration_021298/validation.json",
         "sha256": "504d5df16f6d1fb23c91302cfb5a71d12a891bdfc4854f07cd60b3648693f683",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -28961,13 +29200,17 @@
         "path": "phase03_results/recovery/run/preflight/ae9ab280/checkpoints/latest.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/checkpoints/latest.json",
         "sha256": "793ac04b1ec7c10291913e57df97a6586e7b1f76471f63661f69523e2b76b9d3",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_publish/final_main/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/main/phase02.ipynb",
           ".tools/kaggle_publish/ready_remote/phase02-ignatius-run-all.ipynb",
           ".tools/kaggle_publish/remote_main/phase02-original3dgs-resume-run-all.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/kernel/pgsr_mesh_kaggle.ipynb",
+          ".tools/mesh_publish/remote_check/pgsr-mesh-kaggle.ipynb",
           ".tools/pgsr_research/protected_before.json",
           "docs/phase_02_implementation_report.md",
           "docs/tech/b0_training_usage.md",
@@ -28976,10 +29219,12 @@
           "outputs/kaggle_download/phase02_20261117/phase02_results/manifest.json",
           "outputs/kaggle_download/phase02_20261117/phase02_results_final/manifest.json",
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
+          "pgsr_mesh_kaggle.ipynb",
           "phase03_results/recovery/manifest.json",
           "scripts/kaggle/import_kaggle_results.py",
           "scripts/kaggle/runtime.py",
           "scripts/kaggle/workflow.py",
+          "scripts/kaggle_pgsr/build_mesh_notebook.py",
           "scripts/kaggle_pgsr/handoff.py",
           "scripts/kaggle_pgsr/import_results.py",
           "scripts/kaggle_pgsr/runtime.py",
@@ -29013,7 +29258,9 @@
         "path": "phase03_results/recovery/run/preflight/ae9ab280/cuda_unit.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/cuda_unit.json",
         "sha256": "04e478053d564d76ce9bcda242d5dc7106fabbbe7d97b011a6f54ccbd4015ab1",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -29039,7 +29286,9 @@
         "path": "phase03_results/recovery/run/preflight/ae9ab280/resume_000001_00.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/resume_000001_00.json",
         "sha256": "7614617ac8d59d6680172b6c18506ec5a4a3d4156dc27399c5e353f88bedcfa1",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json"
@@ -29064,7 +29313,9 @@
         "path": "phase03_results/recovery/run/preflight/ae9ab280/unit_camera.png",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/unit_camera.png",
         "sha256": "b95b2d7f6a52e4c94e0a690272260ecbaacc82eabff8b9f4be2613652576edf9",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -29090,7 +29341,9 @@
         "path": "phase03_results/smoke_evidence/preflight/9b1551d6/unit_camera.png",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/unit_camera.png",
         "sha256": "b95b2d7f6a52e4c94e0a690272260ecbaacc82eabff8b9f4be2613652576edf9",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -29103,7 +29356,7 @@
       "sha256": "b95b2d7f6a52e4c94e0a690272260ecbaacc82eabff8b9f4be2613652576edf9",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 103,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/preflight/b0def0fd/unit_camera.png",
@@ -29114,7 +29367,9 @@
         "path": "phase03_results/smoke_evidence/preflight/b0def0fd/unit_camera.png",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/preflight/ae9ab280/unit_camera.png",
         "sha256": "b95b2d7f6a52e4c94e0a690272260ecbaacc82eabff8b9f4be2613652576edf9",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -29127,7 +29382,7 @@
       "sha256": "b95b2d7f6a52e4c94e0a690272260ecbaacc82eabff8b9f4be2613652576edf9",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 103,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/dataset_integration.json",
@@ -29138,7 +29393,9 @@
         "path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/dataset_integration.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/segments/20261117T075123Z737e54/dataset_integration.json",
         "sha256": "9fb42a1926e7a35276e8ff60533a3b1b4009ec8741c56c8df439464f264fbe38",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -29171,7 +29428,9 @@
         "path": "phase03_results/recovery/run/segments/20261117T075123Z737e54/neighbors.json",
         "canonical_copy": "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/segments/20261117T075123Z737e54/neighbors.json",
         "sha256": "3b4321e9ee308459e7c91c1c38d99a0d1772f071ae157a0af92ec6c9102058fa",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -30636,6 +30895,7 @@
           ".agents/skills/preprocessing/plan-video-sfm.md",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
@@ -30711,6 +30971,7 @@
           ".agents/skills/preprocessing/plan-video-sfm.md",
           ".tools/kaggle_publish/verify/phase02.ipynb",
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
+          ".tools/mesh_publish/remote_input_files.json",
           ".tools/pgsr_research/protected_before.json",
           "docs/implementation_report.md",
           "docs/phase_02_implementation_report.md",
@@ -30778,7 +31039,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/dataset_integration.json",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/dataset_integration.json",
         "sha256": "c3c1ed19279908af22835a5a0efbfb44e2084bada5ea5fd2dc83e89784a08983",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -30798,7 +31061,7 @@
       "sha256": "c3c1ed19279908af22835a5a0efbfb44e2084bada5ea5fd2dc83e89784a08983",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 505,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/dataset_integration.json",
@@ -30809,7 +31072,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/dataset_integration.json",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/dataset_integration.json",
         "sha256": "c3c1ed19279908af22835a5a0efbfb44e2084bada5ea5fd2dc83e89784a08983",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -30829,7 +31094,7 @@
       "sha256": "c3c1ed19279908af22835a5a0efbfb44e2084bada5ea5fd2dc83e89784a08983",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 505,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/initial_point_ids.npy",
@@ -30840,7 +31105,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/initial_point_ids.npy",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/initial_point_ids.npy",
         "sha256": "5628defa409968ef269b181f3373b4b8fc06c847ed82f974183eaeb54df5576a",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -30859,7 +31126,7 @@
       "sha256": "5628defa409968ef269b181f3373b4b8fc06c847ed82f974183eaeb54df5576a",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 48128,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/initial_point_ids.npy",
@@ -30870,7 +31137,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/initial_point_ids.npy",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/initial_point_ids.npy",
         "sha256": "5628defa409968ef269b181f3373b4b8fc06c847ed82f974183eaeb54df5576a",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -30889,7 +31158,7 @@
       "sha256": "5628defa409968ef269b181f3373b4b8fc06c847ed82f974183eaeb54df5576a",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 48128,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/neighbors.json",
@@ -30900,7 +31169,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074822Z5407c1/neighbors.json",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/neighbors.json",
         "sha256": "f7f7869aeaff762785cde796800e1cb7424649bc7c8a2691699a461ce5332232",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -30913,7 +31184,7 @@
       "sha256": "f7f7869aeaff762785cde796800e1cb7424649bc7c8a2691699a461ce5332232",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 823,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/neighbors.json",
@@ -30924,7 +31195,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/neighbors.json",
         "canonical_copy": "phase03_results/smoke_evidence/evaluation/neighbors.json",
         "sha256": "f7f7869aeaff762785cde796800e1cb7424649bc7c8a2691699a461ce5332232",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           "outputs/tanks_and_temples/Ignatius/research/B2_PGSR/pgsr-kaggle-c269454133/configs/recovery_manifest.json",
           "phase03_results/recovery/manifest.json",
@@ -30937,7 +31210,7 @@
       "sha256": "f7f7869aeaff762785cde796800e1cb7424649bc7c8a2691699a461ce5332232",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 823,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
     },
     {
       "original_path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/result.json",
@@ -30948,7 +31221,9 @@
         "path": "phase03_results/smoke_evidence/segments/20261117T074919Z15c336/result.json",
         "canonical_copy": "phase03_results/smoke_evidence/training_result.json",
         "sha256": "88e594438281e937be5857a33dc2a42a019f9e31c13a8bbe889ad4227c9bf852",
-        "exact_path_reference_files": [],
+        "exact_path_reference_files": [
+          ".tools/mesh_publish/remote_input_files.json"
+        ],
         "basename_reference_files": [
           ".tools/kaggle_results_metadata_20261117/phase02_results_final/manifest.json",
           ".tools/pgsr_research/protected_before.json",
@@ -30981,64 +31256,635 @@
       "sha256": "88e594438281e937be5857a33dc2a42a019f9e31c13a8bbe889ad4227c9bf852",
       "proposed_action": "REQUIRE_USER_APPROVAL",
       "estimated_storage_savings": 1658,
-      "risk_level": "MEDIUM"
+      "risk_level": "HIGH"
+    },
+    {
+      "original_path": ".pytest_cache/v/cache/lastfailed",
+      "bytes": 2,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "mtime_ns": 1795356974996093700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 2,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 2558,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "686ee7963e7477b94648d5beef50732165581fba12851ede9287f06c3662cd50",
+      "mtime_ns": 1795356974996093700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 2558,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": ".tools/research_test_tmp_20261122_v2/test_changed_cache_is_preserve0/src/__pycache__/fixture.pyc",
+      "bytes": 11,
+      "category": "audit_generated",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "fe32608c9ef5b6cf7e3f946480253ff76f24f4ec0678f3d0f07f9844cbff9601",
+      "mtime_ns": 1795324284930253900,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 11,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/kaggle/__pycache__/workflow.cpython-314.pyc",
+      "bytes": 12469,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "fa24a9ed34f740aa3516611fc9a12afc5bd561eda6f7753e7d96e85de293613a",
+      "mtime_ns": 1795356956639153700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 12469,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/kaggle_pgsr/__pycache__/handoff.cpython-314.pyc",
+      "bytes": 10441,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "24d82094243d3c2d74134ea2657218a2e1258026f55f1d93c010b6c07caa664b",
+      "mtime_ns": 1795356956636735700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 10441,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/pgsr/__pycache__/check_geometry_cuda.cpython-314.pyc",
+      "bytes": 8629,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "e77b0899a7cbbd15978aff764ad2e890ffa74d1bd735c58275eefc889a66df8f",
+      "mtime_ns": 1795356952500736000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 8629,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/pgsr/__pycache__/score_png.cpython-314.pyc",
+      "bytes": 7564,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "07475d32745aa27ce5dbdcfdf143124320c15a00db8ec04950e7699a918bf297",
+      "mtime_ns": 1795356952502655600,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 7564,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/analyze.cpython-314.pyc",
+      "bytes": 41163,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "b3119e012002e552d80ba084f89d710e266e14f9bf6cb912124068c347f39fed",
+      "mtime_ns": 1795356973407392400,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 41163,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/assets.cpython-314.pyc",
+      "bytes": 8881,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "295d18c2b776b8ece16ffb752e15ab692dee86ffe3606f073556066c759fceba",
+      "mtime_ns": 1795356952507788700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 8881,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/checkpoints.cpython-314.pyc",
+      "bytes": 20547,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "1d2f8071587081e45af85e0513a0c3e38a160300d7a82242173b4e1f68aa8fd0",
+      "mtime_ns": 1795356952507788700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 20547,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/cleanup.cpython-314.pyc",
+      "bytes": 13477,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "9664018e9cebdaac9f3864c4c8d8855322e34053af531adeaae5cc216cfa135b",
+      "mtime_ns": 1795356952507788700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 13477,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/discover.cpython-314.pyc",
+      "bytes": 13812,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "9ca34cbf4cd256f5aa80680c45db09ab0600ab94322e1a56f94cd85e49bb21ae",
+      "mtime_ns": 1795356952523496100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 13812,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/figures.cpython-314.pyc",
+      "bytes": 15403,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "fb3b34b3a0383cfa1c11785c4ed0ae75a44862b9b9fe49f9caefb9f77161a3ac",
+      "mtime_ns": 1795356952527643000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 15403,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/report.cpython-314.pyc",
+      "bytes": 32003,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "3b585918c14337ac23acceee203f26cb180f6f3a4e5751206ca904fa04d6188d",
+      "mtime_ns": 1795356952530563200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 32003,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "scripts/research/__pycache__/verify.cpython-314.pyc",
+      "bytes": 13942,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "04fe146c5f34b2568504000ce8223be7d3f90833f513603e53c09105fb6648f4",
+      "mtime_ns": 1795356952533004300,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 13942,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 212,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "905c082f63d48963e929c0f09b4c0344bf9d6f4615171c835a7de38859ba6cc6",
+      "mtime_ns": 1795356953944121200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 212,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/common/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 247,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "81e1c0adaf77c23d666e6d0796911971bac2665ce66fb46fdbdc1a8747f37393",
+      "mtime_ns": 1795356953945111600,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 247,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/common/__pycache__/config.cpython-314.pyc",
+      "bytes": 6670,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "ac0fc1fdd8894fc7e6d9474beb8a32112bb6002f5dff74b5fff60790e8e59d41",
+      "mtime_ns": 1795356953947585800,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 6670,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/common/__pycache__/io.cpython-314.pyc",
+      "bytes": 7603,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "c2c0df15a1094137e2814c0021bb5b42159e05773ef504b282ead9a08b63ae39",
+      "mtime_ns": 1795356953969149600,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 7603,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/evaluation/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 256,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "8286271cc5fa01baa783fb491cf399b176f2dbe14dd065620057dae751bfb809",
+      "mtime_ns": 1795356956572830000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 256,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/evaluation/__pycache__/rendering_metrics.cpython-314.pyc",
+      "bytes": 6364,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "2ac1a9b65f8507ffa1713b0978818586aa02db3ff91a680716cce945e4321453",
+      "mtime_ns": 1795356956573892100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 6364,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 204,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "eb6b34c9aa0502ee737fb1a9e84eb32e1d78b999d51295d5834695efd610bfb2",
+      "mtime_ns": 1795356952460772000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 204,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/checkpoint.cpython-314.pyc",
+      "bytes": 4425,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "f748037d5859fb18e91b9357f96b025c3c15ad76c0ab649d866fc97c164a1bd3",
+      "mtime_ns": 1795356952461771900,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 4425,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/config.cpython-314.pyc",
+      "bytes": 5988,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "adb923e00226c2a531cfcb950c77620eb99968021774d68b0a5f7fce6d732c54",
+      "mtime_ns": 1795356952463771700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 5988,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/data.cpython-314.pyc",
+      "bytes": 13584,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "f25910686e526ea1a1c3ccfdc0f8274e6d9de5ba1f381708386f1f5f0fff3c96",
+      "mtime_ns": 1795356952467453500,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 13584,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/native.cpython-314.pyc",
+      "bytes": 5300,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "1ba0049c12f6d9168e40eda7ad9a8a387b997cd704aedc6b5dec23b05ad525b7",
+      "mtime_ns": 1795356952468481500,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 5300,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/runner.cpython-314.pyc",
+      "bytes": 32035,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "716406971666adc4eb7fe0505c6a535d00740c83473635652219ca745ea480eb",
+      "mtime_ns": 1795356952473481000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 32035,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/gaussian_splatting/__pycache__/validation.cpython-314.pyc",
+      "bytes": 9733,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "7d153a32c9c08e65d8f1c2d23449e5a6cb504c682cbe41e9d5ff0b9845c8b079",
+      "mtime_ns": 1795356952475180200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 9733,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 203,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "339d40ff210f6cbabb63a30d9d0ca7e599a992a45fe441fb65c3d6df76e6c6da",
+      "mtime_ns": 1795356952475180200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 203,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/checkpoint.cpython-314.pyc",
+      "bytes": 11136,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "b487b1d541283d26cfe9b16ac44e9fdeb40640c51f95dc254f60c9217e6074c2",
+      "mtime_ns": 1795356952475180200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 11136,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/config.cpython-314.pyc",
+      "bytes": 5569,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "9a2b6520553b3b904546ff5bcb3272baaa8c6a7bc06a10fdcebe0b4e16ad4c53",
+      "mtime_ns": 1795356952475180200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 5569,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/data.cpython-314.pyc",
+      "bytes": 12745,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "e6dc58d0f9a28392dd022b96b277d43cc7c3edf06241deb4424326bfb1ae2351",
+      "mtime_ns": 1795356952483799000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 12745,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/evaluation.cpython-314.pyc",
+      "bytes": 14102,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "a3050390bc3e4609a58aba62116328c18a2ab3424c98d038ed151c392d430b0a",
+      "mtime_ns": 1795356952483799000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 14102,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/geometry.cpython-314.pyc",
+      "bytes": 18752,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "02211dddd3bb7618b401cf25fa124bd72318eb95be7a954e186a512fff77b138",
+      "mtime_ns": 1795356952483799000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 18752,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/native.cpython-314.pyc",
+      "bytes": 5689,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "a56a01eb6133c1b6663f0883d8a865aed8c1fa3b9a986f4cd4b21a2ab2a31db6",
+      "mtime_ns": 1795356952483799000,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 5689,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/runner.cpython-314.pyc",
+      "bytes": 24312,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "5f657d434a0165008d560a6efc80ebf830f5015126231563c8da98925617b6fa",
+      "mtime_ns": 1795356952495218500,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 24312,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "src/pgsr/__pycache__/validation.cpython-314.pyc",
+      "bytes": 16443,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "a4f48e94be255c7b5f802012929d9a5e0d35bdde8c8e352cdb547f00d71ee6fa",
+      "mtime_ns": 1795356952498126400,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 16443,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_data_preparation.cpython-314.pyc",
+      "bytes": 36163,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "faf07ed99046325cd38f1586131ea9281760f5c284ef77d2e408009bc937e59a",
+      "mtime_ns": 1795356952539486900,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 36163,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_gaussian_baseline.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 31415,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "3d568cfa3a2b9e7181b2872acbf20c1c1baaae661089c60436e35ac267387f78",
+      "mtime_ns": 1795356953007730400,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 31415,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_gaussian_baseline.cpython-314.pyc",
+      "bytes": 11252,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "7447def1a79c8d6344a18170bc59e7aa801f3fb851349f166752caf8718a8a08",
+      "mtime_ns": 1795356952541231800,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 11252,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_gpu_policy.cpython-314.pyc",
+      "bytes": 11303,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "d06fb2595c9c2fdeb4fe5e8a53d4cfb4bbaf679ddb5800995eab69893d264971",
+      "mtime_ns": 1795356952541231800,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 11303,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_kaggle_handoff.cpython-314.pyc",
+      "bytes": 16989,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "f7581f60fea3f2b73782ea045802601be01d585cb8984ea67418c31693bf50bd",
+      "mtime_ns": 1795356952541231800,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 16989,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_pgsr.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 17161,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "ff03876baebe006204764b94857f4d20e606506501d7a380babcb8846debb243",
+      "mtime_ns": 1795356953974277100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 17161,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_pgsr.cpython-314.pyc",
+      "bytes": 7681,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "b93cf722bb7343b13db9c455343391e1d02ff310bec167421c18275d3217a0cf",
+      "mtime_ns": 1795356952550472200,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 7681,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_preprocessing.cpython-314.pyc",
+      "bytes": 7334,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "5b008568c39a9130e2027c7f91173bbdf42a3a746ef74fa44d184be2462f9704",
+      "mtime_ns": 1795356952552978100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 7334,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_research_audit.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 20346,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "911701631b21cd4cd88e771a10cddcb46ccea964f9e59cd289299c7385362b31",
+      "mtime_ns": 1795356952974472700,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 20346,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_research_audit.cpython-314.pyc",
+      "bytes": 7386,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "24c92ba083c5254257ae167488e92d91d4c1650b6ba812f5316b7b1c921b91d4",
+      "mtime_ns": 1795356952552978100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 7386,
+      "risk_level": "LOW"
+    },
+    {
+      "original_path": "tests/__pycache__/test_sfm_geometry.cpython-314.pyc",
+      "bytes": 4147,
+      "category": "bytecode_or_tool_cache",
+      "reason": "Regenerable Python bytecode or pytest/ruff cache outside installed packages and protected artifacts",
+      "dependency_verification": "Interpreter/tool cache only; source, logs, datasets, environments and model artifacts retained",
+      "canonical_copy": null,
+      "sha256": "11e91d7d967ad5e547eedf93d77d2d17451a7027b5522c0b81b2fa4de95ab828",
+      "mtime_ns": 1795356952552978100,
+      "proposed_action": "AUTO_DELETE_DISPOSABLE_FILE",
+      "estimated_storage_savings": 4147,
+      "risk_level": "LOW"
     }
   ],
   "policy": "Only precisely enumerated bytecode/tool cache files may be auto-deleted; all potentially valuable artifacts preserved",
-  "supplementary_inventory": {
-    "audit_date": "2026-11-22",
-    "inventory_executed_utc": "2026-11-22T05:09:55.518372+00:00",
-    "scope": "All regular files under repository root including Git, environments and external sources; directory symlinks not followed",
-    "total_bytes": 52502586493,
-    "file_count": 18803,
-    "bytes_by_category": {
-      "source_or_other": 1197953876,
-      "git_internal": 3596764558,
-      "metadata_or_config": 74651503,
-      "log_or_metrics": 2536981,
-      "archive": 2516139438,
-      "installed_environment_or_external_source": 664758292,
-      "checkpoint_or_pretrained_weight": 31312683624,
-      "generated_visual_or_tensor": 3578276951,
-      "point_cloud_or_mesh": 4593273681,
-      "audit_generated": 17903995,
-      "derived_dataset": 1288845847,
-      "raw_dataset": 3658797747
-    },
-    "counts_by_category": {
-      "source_or_other": 251,
-      "git_internal": 438,
-      "metadata_or_config": 560,
-      "log_or_metrics": 136,
-      "archive": 9,
-      "installed_environment_or_external_source": 14790,
-      "checkpoint_or_pretrained_weight": 58,
-      "generated_visual_or_tensor": 1099,
-      "point_cloud_or_mesh": 20,
-      "audit_generated": 153,
-      "derived_dataset": 1024,
-      "raw_dataset": 265
-    },
-    "errors": [],
-    "symlinks_not_followed": [],
-    "size_semantics": "Logical file lengths; not compressed/sparse physical allocation; generated audit files can change after this snapshot"
-  },
   "removed": [
-    {
-      "path": ".pytest_cache/.gitignore",
-      "bytes": 39,
-      "sha256": "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d"
-    },
-    {
-      "path": ".pytest_cache/CACHEDIR.TAG",
-      "bytes": 191,
-      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-    },
-    {
-      "path": ".pytest_cache/README.md",
-      "bytes": 310,
-      "sha256": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70"
-    },
     {
       "path": ".pytest_cache/v/cache/lastfailed",
       "bytes": 2,
@@ -31046,128 +31892,73 @@
     },
     {
       "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 6970,
-      "sha256": "2ae547b74288fb4e90e247092f4b0c79108bfbe3673a8aa666b518be7728b7a5"
+      "bytes": 2558,
+      "sha256": "686ee7963e7477b94648d5beef50732165581fba12851ede9287f06c3662cd50"
     },
     {
-      "path": ".pytest_cache/v/cache/stepwise",
-      "bytes": 2,
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      "path": ".tools/research_test_tmp_20261122_v2/test_changed_cache_is_preserve0/src/__pycache__/fixture.pyc",
+      "bytes": 11,
+      "sha256": "fe32608c9ef5b6cf7e3f946480253ff76f24f4ec0678f3d0f07f9844cbff9601"
     },
     {
-      "path": ".ruff_cache/.gitignore",
-      "bytes": 35,
-      "sha256": "9e3a60f1e6ec4ae60215c11d54b171392745ec25e9dded433d5bd921363af316"
+      "path": "scripts/kaggle/__pycache__/workflow.cpython-314.pyc",
+      "bytes": 12469,
+      "sha256": "fa24a9ed34f740aa3516611fc9a12afc5bd561eda6f7753e7d96e85de293613a"
     },
     {
-      "path": ".ruff_cache/0.15.1/12144624999002785672",
-      "bytes": 132,
-      "sha256": "3fe8afa3607c8c1009498606e8a0f505b9c2e6eb2accce2dd5042dc541f34009"
+      "path": "scripts/kaggle_pgsr/__pycache__/handoff.cpython-314.pyc",
+      "bytes": 10441,
+      "sha256": "24d82094243d3c2d74134ea2657218a2e1258026f55f1d93c010b6c07caa664b"
     },
     {
-      "path": ".ruff_cache/0.15.1/16345970409078651254",
-      "bytes": 311,
-      "sha256": "803ee9f70b9749564c6ba5043c1ec82c7fbb550e1967bb553e57caffc80d501f"
+      "path": "scripts/pgsr/__pycache__/check_geometry_cuda.cpython-314.pyc",
+      "bytes": 8629,
+      "sha256": "e77b0899a7cbbd15978aff764ad2e890ffa74d1bd735c58275eefc889a66df8f"
     },
     {
-      "path": ".ruff_cache/0.15.1/2453501106950976922",
-      "bytes": 120,
-      "sha256": "f1f02346136439355dccd00038274cebfb96f7ded6a176418072fd595d97811c"
+      "path": "scripts/pgsr/__pycache__/score_png.cpython-314.pyc",
+      "bytes": 7564,
+      "sha256": "07475d32745aa27ce5dbdcfdf143124320c15a00db8ec04950e7699a918bf297"
     },
     {
-      "path": ".ruff_cache/0.15.1/9113544516366280843",
-      "bytes": 2124,
-      "sha256": "345cf15c162241beaafb4fa742accf08e4209636e48a9d1e8bd556b61ee6da84"
+      "path": "scripts/research/__pycache__/analyze.cpython-314.pyc",
+      "bytes": 41163,
+      "sha256": "b3119e012002e552d80ba084f89d710e266e14f9bf6cb912124068c347f39fed"
     },
     {
-      "path": ".ruff_cache/0.15.1/9661298804487125574",
-      "bytes": 216,
-      "sha256": "1314abda2275bbfec1154e14442f911e770b74c020911e6bf3361a6125912af7"
+      "path": "scripts/research/__pycache__/assets.cpython-314.pyc",
+      "bytes": 8881,
+      "sha256": "295d18c2b776b8ece16ffb752e15ab692dee86ffe3606f073556066c759fceba"
     },
     {
-      "path": ".ruff_cache/CACHEDIR.TAG",
-      "bytes": 43,
-      "sha256": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae"
+      "path": "scripts/research/__pycache__/checkpoints.cpython-314.pyc",
+      "bytes": 20547,
+      "sha256": "1d2f8071587081e45af85e0513a0c3e38a160300d7a82242173b4e1f68aa8fd0"
     },
     {
-      "path": ".tools/phase01_native_readers/2dgs/scene/__pycache__/colmap_loader.cpython-314.pyc",
-      "bytes": 16207,
-      "sha256": "524e3a3be7254e77f1103a1ce573872917105483fe966e9e747a82ee72291914"
+      "path": "scripts/research/__pycache__/cleanup.cpython-314.pyc",
+      "bytes": 13477,
+      "sha256": "9664018e9cebdaac9f3864c4c8d8855322e34053af531adeaae5cc216cfa135b"
     },
     {
-      "path": ".tools/phase01_native_readers/3dgs/scene/__pycache__/colmap_loader.cpython-314.pyc",
-      "bytes": 16207,
-      "sha256": "248dbadd998d2e43806ac580f2d77ff03dc69e9d150acded92430770441540b7"
+      "path": "scripts/research/__pycache__/discover.cpython-314.pyc",
+      "bytes": 13812,
+      "sha256": "9ca34cbf4cd256f5aa80680c45db09ab0600ab94322e1a56f94cd85e49bb21ae"
     },
     {
-      "path": ".tools/phase01_native_readers/pgsr/scene/__pycache__/colmap_loader.cpython-314.pyc",
-      "bytes": 17083,
-      "sha256": "79ad23f65c086db34112c0c8ad91e09de21ce67acca1933e8d593475aa02dfb5"
+      "path": "scripts/research/__pycache__/figures.cpython-314.pyc",
+      "bytes": 15403,
+      "sha256": "fb3b34b3a0383cfa1c11785c4ed0ae75a44862b9b9fe49f9caefb9f77161a3ac"
     },
     {
-      "path": "scripts/kaggle/__pycache__/import_kaggle_results.cpython-310.pyc",
-      "bytes": 6133,
-      "sha256": "4d5e9c4ccb9fc0d28c48c4923ad7d6cfde60b20aa1f98fec169895c0b0cdd42d"
+      "path": "scripts/research/__pycache__/report.cpython-314.pyc",
+      "bytes": 32003,
+      "sha256": "3b585918c14337ac23acceee203f26cb180f6f3a4e5751206ca904fa04d6188d"
     },
     {
-      "path": "scripts/kaggle/__pycache__/workflow.cpython-310.pyc",
-      "bytes": 6725,
-      "sha256": "4595d5fc8c2b7824a445c30898f81cab776885d0d7fdeb502b83d9398dfb945e"
-    },
-    {
-      "path": "scripts/kaggle_pgsr/__pycache__/build_notebook.cpython-310.pyc",
-      "bytes": 8578,
-      "sha256": "50e4381594b595b03d2058f78e5632584552788779eacddbd1e4fab02b922e08"
-    },
-    {
-      "path": "scripts/kaggle_pgsr/__pycache__/handoff.cpython-310.pyc",
-      "bytes": 5597,
-      "sha256": "886060462bf256ef9b9ef8fdc659ef9a8a6fbd62ac032e4b6a517be533ad6343"
-    },
-    {
-      "path": "scripts/kaggle_pgsr/__pycache__/import_results.cpython-310.pyc",
-      "bytes": 7592,
-      "sha256": "4e9ff3edc6b026e8ecc6442c846548faa8ffd80368590d53273b147e56a1e955"
-    },
-    {
-      "path": "scripts/kaggle_pgsr/__pycache__/runtime.cpython-310.pyc",
-      "bytes": 4472,
-      "sha256": "b6aef53585e52c29eca7d5e360191c2490b49a930c8d070215101eda1e4841c6"
-    },
-    {
-      "path": "scripts/pgsr/__pycache__/check_geometry_cuda.cpython-310.pyc",
-      "bytes": 4746,
-      "sha256": "30ac5af38c4542986ca5e2f1edf6d5278b730d72ceaad07ca6ca7beb1c66587b"
-    },
-    {
-      "path": "scripts/pgsr/__pycache__/score_png.cpython-310.pyc",
-      "bytes": 4397,
-      "sha256": "cf0690b6fdebbab2aa79444d29e2fe07cb9fa7da65da8a8608a6f2e0d5fcfadf"
-    },
-    {
-      "path": "scripts/research/__pycache__/discover.cpython-310.pyc",
-      "bytes": 7170,
-      "sha256": "f77ddea8e0944beaa3502fec5cdfacee7c3fb264b80c484606ed4656ee5eb6cb"
-    },
-    {
-      "path": "scripts/visualization/__pycache__/phase02_pointcloud_review.cpython-310.pyc",
-      "bytes": 13540,
-      "sha256": "9fc6319363f8d74e0a4f7ec25982b1ee5f36f27d187551eb1076ec969135b0e2"
-    },
-    {
-      "path": "scripts/visualization/__pycache__/phase02_pointcloud_review.cpython-313.pyc",
-      "bytes": 18540,
-      "sha256": "2d05541f7cf8a0396052e1d189b8709a82f980c3ec28572fc97a2da0337c06f2"
-    },
-    {
-      "path": "scripts/visualization/__pycache__/phase03_pgsr_review.cpython-310.pyc",
-      "bytes": 3104,
-      "sha256": "b71d6dd69661bcef1fda50b77d8f6d54958a400c8d74a0c9f24ee823dc7080b9"
-    },
-    {
-      "path": "src/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 203,
-      "sha256": "2ce2eeda9007131ec227e9c7d5d38a11a490c5fd3db22300ce2beff01ba28deb"
+      "path": "scripts/research/__pycache__/verify.cpython-314.pyc",
+      "bytes": 13942,
+      "sha256": "04fe146c5f34b2568504000ce8223be7d3f90833f513603e53c09105fb6648f4"
     },
     {
       "path": "src/__pycache__/__init__.cpython-314.pyc",
@@ -31175,29 +31966,9 @@
       "sha256": "905c082f63d48963e929c0f09b4c0344bf9d6f4615171c835a7de38859ba6cc6"
     },
     {
-      "path": "src/__pycache__/pipeline.cpython-310.pyc",
-      "bytes": 5086,
-      "sha256": "b8c2e13ab4f016a68505c5a0f66c8a02fa28569c368b9b016ab98760a3a09df0"
-    },
-    {
-      "path": "src/__pycache__/pipeline.cpython-314.pyc",
-      "bytes": 9126,
-      "sha256": "c701bacb73f98ecca06dd5c21e8284fd2c10541199fa9dba4eb753e8fa54a2f7"
-    },
-    {
-      "path": "src/common/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 238,
-      "sha256": "791158fcf330f1694d253e45e49fd4682c2bf675e52b33131a953427ffafcd57"
-    },
-    {
       "path": "src/common/__pycache__/__init__.cpython-314.pyc",
       "bytes": 247,
       "sha256": "81e1c0adaf77c23d666e6d0796911971bac2665ce66fb46fdbdc1a8747f37393"
-    },
-    {
-      "path": "src/common/__pycache__/config.cpython-310.pyc",
-      "bytes": 3822,
-      "sha256": "0480018df50f4b5d7116110e3c4f99f2f56247eaac7c81d920da948cc9bcff2e"
     },
     {
       "path": "src/common/__pycache__/config.cpython-314.pyc",
@@ -31205,468 +31976,162 @@
       "sha256": "ac0fc1fdd8894fc7e6d9474beb8a32112bb6002f5dff74b5fff60790e8e59d41"
     },
     {
-      "path": "src/common/__pycache__/environment.cpython-310.pyc",
-      "bytes": 3218,
-      "sha256": "470fde7dd8859a9ffa77f706372a7bcaf80c8f3c3f14f348a22ee10f2adc6034"
-    },
-    {
-      "path": "src/common/__pycache__/environment.cpython-314.pyc",
-      "bytes": 5796,
-      "sha256": "3ea837fd2b352d67b329022d7b8187476c4b21cfca6e39620bfda1d642f5fecf"
-    },
-    {
-      "path": "src/common/__pycache__/gpu.cpython-310.pyc",
-      "bytes": 1874,
-      "sha256": "a5a5f65b1782b3d8aadd41f508d03b01d4eb570e1c58aa2b40dc5843027fdd54"
-    },
-    {
-      "path": "src/common/__pycache__/gpu.cpython-314.pyc",
-      "bytes": 3547,
-      "sha256": "9574abadd23b922350abaa10008e2967510c737309b2551f949783834c01b743"
-    },
-    {
-      "path": "src/common/__pycache__/io.cpython-310.pyc",
-      "bytes": 4050,
-      "sha256": "b81376ea9d4b543e4053a1b5c4edf4528840eb9ebb84f37bbb929b8105865ff4"
-    },
-    {
       "path": "src/common/__pycache__/io.cpython-314.pyc",
       "bytes": 7603,
       "sha256": "c2c0df15a1094137e2814c0021bb5b42159e05773ef504b282ead9a08b63ae39"
     },
     {
-      "path": "src/common/__pycache__/telemetry.cpython-310.pyc",
-      "bytes": 2194,
-      "sha256": "2cadadf7ed04cad3d72a05f3798fde07d31fa81d8cd637f7b5da298a45ed0ee4"
+      "path": "src/evaluation/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 256,
+      "sha256": "8286271cc5fa01baa783fb491cf399b176f2dbe14dd065620057dae751bfb809"
     },
     {
-      "path": "src/common/__pycache__/telemetry.cpython-314.pyc",
-      "bytes": 4134,
-      "sha256": "d784163675fe800de8bdfe8621d2fdf78d5012d5696ff1611b2f0e78808c2ab3"
-    },
-    {
-      "path": "src/data/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 248,
-      "sha256": "4e9a330482cae83158164ceb7d0a3a0d7491ea120c98a9bbaeb54e14412f30fe"
-    },
-    {
-      "path": "src/data/__pycache__/__init__.cpython-314.pyc",
-      "bytes": 257,
-      "sha256": "5d77417b116a4222fba8c1e9808ac1fe622d84a933be540ad9df5ae122101ad3"
-    },
-    {
-      "path": "src/data/__pycache__/cli.cpython-314.pyc",
-      "bytes": 6621,
-      "sha256": "ea05af030d5d3a7812752034e1b0424bb088732e7f65c6fa2e77747a22a94322"
-    },
-    {
-      "path": "src/data/__pycache__/colmap.cpython-310.pyc",
-      "bytes": 16220,
-      "sha256": "8e14558c4e4ab15efa89a1bc98b010a7863a188df85d4721254eb62d42274050"
-    },
-    {
-      "path": "src/data/__pycache__/colmap.cpython-314.pyc",
-      "bytes": 34091,
-      "sha256": "8fda63e6c6893bc80b9dc2484925ba0cea07d4bb076747055df566362a301674"
-    },
-    {
-      "path": "src/data/__pycache__/compatibility.cpython-314.pyc",
-      "bytes": 9633,
-      "sha256": "3b1d0d5e8585954f1699250e9d225aaf134219a575e4b567b22c701f7ed8d9f4"
-    },
-    {
-      "path": "src/data/__pycache__/config.cpython-310.pyc",
-      "bytes": 5972,
-      "sha256": "7fd96b4d21d44b32bc7a066524140d7fc3525bdef0472bacab65234c8572de26"
-    },
-    {
-      "path": "src/data/__pycache__/config.cpython-314.pyc",
-      "bytes": 9890,
-      "sha256": "735650294d87657de57cdd7c8af4a90fb2cfec2f388df75b17e764b9c701e561"
-    },
-    {
-      "path": "src/data/__pycache__/geometry.cpython-310.pyc",
-      "bytes": 4146,
-      "sha256": "27a95166635531fd0d7f2a8212bca859861018c22a95a890a41772ebf20298ae"
-    },
-    {
-      "path": "src/data/__pycache__/geometry.cpython-314.pyc",
-      "bytes": 8176,
-      "sha256": "80bad876c352262ee03c671154e4bb73398158242c62ecd6dc50f7c5d0f82544"
-    },
-    {
-      "path": "src/data/__pycache__/image_processing.cpython-310.pyc",
-      "bytes": 6453,
-      "sha256": "d17045fdb1d2ac8ba974d9981532ec0543829f3607a6bc5e6f3244000926e8fa"
-    },
-    {
-      "path": "src/data/__pycache__/image_processing.cpython-314.pyc",
-      "bytes": 14537,
-      "sha256": "595aceb58474eea3e83d933ba8a764e6ef7858b1d214d6a6492b8c1d73121bb5"
-    },
-    {
-      "path": "src/data/__pycache__/inspect_dataset.cpython-314.pyc",
-      "bytes": 412,
-      "sha256": "323f9665a454472aba83fc4b6db696c765ee61893b82b19d410f11e845d8558e"
-    },
-    {
-      "path": "src/data/__pycache__/loader.cpython-310.pyc",
-      "bytes": 11993,
-      "sha256": "8cb971dc0a4839bf8eda9fddbd9682a589eb7c814dba9ad335343d92e100879e"
-    },
-    {
-      "path": "src/data/__pycache__/loader.cpython-314.pyc",
-      "bytes": 22436,
-      "sha256": "efa5282361a38d5dba325456a94dfc0518185bcf2f352615d112a9f7d7bdd5fe"
-    },
-    {
-      "path": "src/data/__pycache__/preparation.cpython-310.pyc",
-      "bytes": 14353,
-      "sha256": "6f1ea95d750e865a612920085527beabfbf0d9834bacb16de00671c674b4c76c"
-    },
-    {
-      "path": "src/data/__pycache__/preparation.cpython-314.pyc",
-      "bytes": 26253,
-      "sha256": "141aeafffa86fb876d271d1eb7fc178450c4a3518361f6440368a74d10e774ce"
-    },
-    {
-      "path": "src/data/__pycache__/prepare_dataset.cpython-314.pyc",
-      "bytes": 412,
-      "sha256": "4ce85909c7285db2adbec4a9728f0be3922eca6d2428d61ef84f9ad67b0438c1"
-    },
-    {
-      "path": "src/data/__pycache__/splits.cpython-310.pyc",
-      "bytes": 3674,
-      "sha256": "422f283b2555f34dc179deaae138f8b928eccee1102b8e83bcbe732af1e38b33"
-    },
-    {
-      "path": "src/data/__pycache__/splits.cpython-314.pyc",
-      "bytes": 6180,
-      "sha256": "744fb4edc958558c6e51bb7fc6a0a14fb8900d67fa88768ea4a599402c43d2e2"
-    },
-    {
-      "path": "src/data/__pycache__/training_data.cpython-310.pyc",
-      "bytes": 6170,
-      "sha256": "8d0acd6a5deed9d3cd697f83f2700088984131499fa4fda7fc80b975a2f710c7"
-    },
-    {
-      "path": "src/data/__pycache__/training_data.cpython-314.pyc",
-      "bytes": 11367,
-      "sha256": "1996e83972fed0885e7e4480c1af6a364f3858b6c0ea814f82f43eeaded0b101"
-    },
-    {
-      "path": "src/data/__pycache__/validate_colmap.cpython-314.pyc",
-      "bytes": 414,
-      "sha256": "6695460bc4a64ca59b7b5ef57f131f839d466d29fda9af62d286693c8809c1da"
-    },
-    {
-      "path": "src/data/__pycache__/validation.cpython-310.pyc",
-      "bytes": 10605,
-      "sha256": "0837c86bdec127c15f67d1d7166ae9192cc0d79a7d6747bd83fe267277582f87"
-    },
-    {
-      "path": "src/data/__pycache__/validation.cpython-314.pyc",
-      "bytes": 23095,
-      "sha256": "47e72acdeb7799c8612dd2ed287d0d050092ecf65ea40e51eead18099a6baf7a"
-    },
-    {
-      "path": "src/data/__pycache__/verify_compatibility.cpython-314.pyc",
-      "bytes": 423,
-      "sha256": "553a9286e203987ca0c3c77bb2637ded6d31fa17283d13528fce14257a0d71ae"
-    },
-    {
-      "path": "src/evaluation/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 247,
-      "sha256": "0516fa4a998a7cb0a22211161a0019ac36939f01c7f19e4a1550e37baf9415dd"
-    },
-    {
-      "path": "src/evaluation/__pycache__/evaluate_baseline.cpython-310.pyc",
-      "bytes": 6427,
-      "sha256": "3fbb4f8cd2baec8f88596652e2b197f8f842f3368a800f564b16352a1f432d7c"
-    },
-    {
-      "path": "src/evaluation/__pycache__/rendering_metrics.cpython-310.pyc",
-      "bytes": 3251,
-      "sha256": "bf374a2ddf89b6327b8f59ce2138eb8485886794b4049b589e88ff3259a4a32f"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 243,
-      "sha256": "64790e472a9b79cc2db8e8c972d1968ff591ef5cdf1d49237cab0b0f12df48fd"
+      "path": "src/evaluation/__pycache__/rendering_metrics.cpython-314.pyc",
+      "bytes": 6364,
+      "sha256": "2ac1a9b65f8507ffa1713b0978818586aa02db3ff91a680716cce945e4321453"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/__init__.cpython-314.pyc",
-      "bytes": 252,
-      "sha256": "a4a9418eb2f3d9117a01d1a76f828d5dffbabd755234d1f45bd6496e8c42dc8d"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/checkpoint.cpython-310.pyc",
-      "bytes": 2556,
-      "sha256": "79cd054b97e90e7d45e858f0480dc8a18bbcad211a2245b9c793f79f61f68fb4"
+      "bytes": 204,
+      "sha256": "eb6b34c9aa0502ee737fb1a9e84eb32e1d78b999d51295d5834695efd610bfb2"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/checkpoint.cpython-314.pyc",
-      "bytes": 4473,
-      "sha256": "27a45a3fe0ca90bfa3dd7d44a7b4b398ff98a980410cce97d452633ce9c8a1e8"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/config.cpython-310.pyc",
-      "bytes": 3660,
-      "sha256": "8cb59256df253e92a86fd4087729c93acbbd624cf1e56180dc87803e75a9658b"
+      "bytes": 4425,
+      "sha256": "f748037d5859fb18e91b9357f96b025c3c15ad76c0ab649d866fc97c164a1bd3"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/config.cpython-314.pyc",
-      "bytes": 6036,
-      "sha256": "38f224906ab4a76ce8811f1aa7c4f2377aac6277edc743b0677046196ccda416"
+      "bytes": 5988,
+      "sha256": "adb923e00226c2a531cfcb950c77620eb99968021774d68b0a5f7fce6d732c54"
     },
     {
-      "path": "src/gaussian_splatting/__pycache__/data.cpython-310.pyc",
-      "bytes": 7065,
-      "sha256": "3e677b4d861be97fe34056db6072f6ca7fa2c361c0b03b412e62dc9f2a1f738f"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/native.cpython-310.pyc",
-      "bytes": 3235,
-      "sha256": "bc317c29ed432e056694cbc51baf5e78f0c8ca479b967e152d76cf44103d4a47"
+      "path": "src/gaussian_splatting/__pycache__/data.cpython-314.pyc",
+      "bytes": 13584,
+      "sha256": "f25910686e526ea1a1c3ccfdc0f8274e6d9de5ba1f381708386f1f5f0fff3c96"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/native.cpython-314.pyc",
-      "bytes": 5348,
-      "sha256": "4341648013fac5a55c2c7eb80600e2cd7118cffcb87ea53495116659c4c646de"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/runner.cpython-310.pyc",
-      "bytes": 16159,
-      "sha256": "3ceb463b866367e918a0037fa5a4d8c4745ffedcaeddce649acd91f26700f51d"
+      "bytes": 5300,
+      "sha256": "1ba0049c12f6d9168e40eda7ad9a8a387b997cd704aedc6b5dec23b05ad525b7"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/runner.cpython-314.pyc",
-      "bytes": 31534,
-      "sha256": "d721c3de79bbc3be3650dbb9ad7dd10087ee4e263e117224421b5597d16bf262"
-    },
-    {
-      "path": "src/gaussian_splatting/__pycache__/validation.cpython-310.pyc",
-      "bytes": 4888,
-      "sha256": "05079f295c39be4fe586d6be6a84e2735a455aa41e37cbf622995ad5399aceaa"
+      "bytes": 32035,
+      "sha256": "716406971666adc4eb7fe0505c6a535d00740c83473635652219ca745ea480eb"
     },
     {
       "path": "src/gaussian_splatting/__pycache__/validation.cpython-314.pyc",
-      "bytes": 9781,
-      "sha256": "ef9ae5e7d0b86286b7901e4212acc713ab1afc7e82ec4fa51255909f9df8b05f"
+      "bytes": 9733,
+      "sha256": "7d153a32c9c08e65d8f1c2d23449e5a6cb504c682cbe41e9d5ff0b9845c8b079"
     },
     {
-      "path": "src/geometry/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 193,
-      "sha256": "828ff5795be3c44f682ee838e226fe26e89bb8adb0795438ea6af28f5fff6536"
+      "path": "src/pgsr/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 203,
+      "sha256": "339d40ff210f6cbabb63a30d9d0ca7e599a992a45fe441fb65c3d6df76e6c6da"
     },
     {
-      "path": "src/geometry/__pycache__/__init__.cpython-314.pyc",
-      "bytes": 202,
-      "sha256": "c68456fcd55c4f750691f8a997513b33d67c9aed301a3c5515f64f4ea6ed5aed"
+      "path": "src/pgsr/__pycache__/checkpoint.cpython-314.pyc",
+      "bytes": 11136,
+      "sha256": "b487b1d541283d26cfe9b16ac44e9fdeb40640c51f95dc254f60c9217e6074c2"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 237,
-      "sha256": "b8b7d5df5ef9804306443c98e0758c117f3067740a2bfe874616172d87708c55"
+      "path": "src/pgsr/__pycache__/config.cpython-314.pyc",
+      "bytes": 5569,
+      "sha256": "9a2b6520553b3b904546ff5bcb3272baaa8c6a7bc06a10fdcebe0b4e16ad4c53"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/__init__.cpython-314.pyc",
-      "bytes": 246,
-      "sha256": "5e7d1c0d05b926aadcbf00487d076f2db433b24b8564320eeab9fac99303be0a"
+      "path": "src/pgsr/__pycache__/data.cpython-314.pyc",
+      "bytes": 12745,
+      "sha256": "e6dc58d0f9a28392dd022b96b277d43cc7c3edf06241deb4424326bfb1ae2351"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/colmap_runner.cpython-310.pyc",
-      "bytes": 13727,
-      "sha256": "ed80cdb22be02b62aa9503b26ee67a2574e63ecb90d08a2a1cc4fc4319b770d6"
+      "path": "src/pgsr/__pycache__/evaluation.cpython-314.pyc",
+      "bytes": 14102,
+      "sha256": "a3050390bc3e4609a58aba62116328c18a2ab3424c98d038ed151c392d430b0a"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/colmap_runner.cpython-314.pyc",
-      "bytes": 25188,
-      "sha256": "4d3cb416f53f198a2ee3832d6372601dd7d86e3a1187cfa829b6e4ef5eea52f9"
+      "path": "src/pgsr/__pycache__/geometry.cpython-314.pyc",
+      "bytes": 18752,
+      "sha256": "02211dddd3bb7618b401cf25fa124bd72318eb95be7a954e186a512fff77b138"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/gpu_probe.cpython-310.pyc",
-      "bytes": 6062,
-      "sha256": "8f3b32a5d8ea1e5a814f0ce9df4ad64d14d974a4b9042e9d48f1f1a5a1082ec7"
+      "path": "src/pgsr/__pycache__/native.cpython-314.pyc",
+      "bytes": 5689,
+      "sha256": "a56a01eb6133c1b6663f0883d8a865aed8c1fa3b9a986f4cd4b21a2ab2a31db6"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/gpu_probe.cpython-314.pyc",
-      "bytes": 10300,
-      "sha256": "4e26b61a443a4e2523bac70d502fc6bb12fc4547a0849e300c6fbe766234a0bc"
+      "path": "src/pgsr/__pycache__/runner.cpython-314.pyc",
+      "bytes": 24312,
+      "sha256": "5f657d434a0165008d560a6efc80ebf830f5015126231563c8da98925617b6fa"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/metrics.cpython-310.pyc",
-      "bytes": 2746,
-      "sha256": "9ed47d4c2eec35180eb5ba24544f08b461f61b677aaf5b9124c6169a18689831"
+      "path": "src/pgsr/__pycache__/validation.cpython-314.pyc",
+      "bytes": 16443,
+      "sha256": "a4f48e94be255c7b5f802012929d9a5e0d35bdde8c8e352cdb547f00d71ee6fa"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/metrics.cpython-314.pyc",
-      "bytes": 4975,
-      "sha256": "c0a05b2c63900bea7636e3bd6794030811e6a128fcf4332903f633c4b83a4304"
+      "path": "tests/__pycache__/test_data_preparation.cpython-314.pyc",
+      "bytes": 36163,
+      "sha256": "faf07ed99046325cd38f1586131ea9281760f5c284ef77d2e408009bc937e59a"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/model_io.cpython-310.pyc",
-      "bytes": 6928,
-      "sha256": "f91957e930ae8e14608f1cca20c6afc8e8c0f91dc68d2727f085f343d39655ca"
+      "path": "tests/__pycache__/test_gaussian_baseline.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 31415,
+      "sha256": "3d568cfa3a2b9e7181b2872acbf20c1c1baaae661089c60436e35ac267387f78"
     },
     {
-      "path": "src/geometry/sfm/__pycache__/model_io.cpython-314.pyc",
-      "bytes": 13437,
-      "sha256": "ac820f043a7d44244c826f024d2573367234ba1328573de643725920adc05eb6"
+      "path": "tests/__pycache__/test_gaussian_baseline.cpython-314.pyc",
+      "bytes": 11252,
+      "sha256": "7447def1a79c8d6344a18170bc59e7aa801f3fb851349f166752caf8718a8a08"
     },
     {
-      "path": "src/pgsr/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 242,
-      "sha256": "b0b61365804532e016a458fcf1286dafefbb1e7157a39fb01ded17ca35c4f4c9"
+      "path": "tests/__pycache__/test_gpu_policy.cpython-314.pyc",
+      "bytes": 11303,
+      "sha256": "d06fb2595c9c2fdeb4fe5e8a53d4cfb4bbaf679ddb5800995eab69893d264971"
     },
     {
-      "path": "src/pgsr/__pycache__/checkpoint.cpython-310.pyc",
-      "bytes": 5695,
-      "sha256": "e4f1fd567b1fccb0d0ceaac92e98ae4863aad3515e6046714e7b21febab59bc8"
+      "path": "tests/__pycache__/test_kaggle_handoff.cpython-314.pyc",
+      "bytes": 16989,
+      "sha256": "f7581f60fea3f2b73782ea045802601be01d585cb8984ea67418c31693bf50bd"
     },
     {
-      "path": "src/pgsr/__pycache__/config.cpython-310.pyc",
-      "bytes": 3766,
-      "sha256": "45504c0c04bb524616ff39b45c9b9334301abf38b24479c2cc2f9b153fc386b7"
+      "path": "tests/__pycache__/test_pgsr.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 17161,
+      "sha256": "ff03876baebe006204764b94857f4d20e606506501d7a380babcb8846debb243"
     },
     {
-      "path": "src/pgsr/__pycache__/data.cpython-310.pyc",
-      "bytes": 6712,
-      "sha256": "8f580863b5273ad558ec7cc5c541c07e308f1db20936fa4c94dcb87a62269f8f"
+      "path": "tests/__pycache__/test_pgsr.cpython-314.pyc",
+      "bytes": 7681,
+      "sha256": "b93cf722bb7343b13db9c455343391e1d02ff310bec167421c18275d3217a0cf"
     },
     {
-      "path": "src/pgsr/__pycache__/evaluation.cpython-310.pyc",
-      "bytes": 7305,
-      "sha256": "8fb805af25858e79825cb69db22eb1054acd4cf377dabedbb2d9592ce2883a48"
+      "path": "tests/__pycache__/test_preprocessing.cpython-314.pyc",
+      "bytes": 7334,
+      "sha256": "5b008568c39a9130e2027c7f91173bbdf42a3a746ef74fa44d184be2462f9704"
     },
     {
-      "path": "src/pgsr/__pycache__/geometry.cpython-310.pyc",
-      "bytes": 7714,
-      "sha256": "2611da650610789755c8d3557d37a8466a59fd4f47f8a589305f4f2560877829"
+      "path": "tests/__pycache__/test_research_audit.cpython-314-pytest-8.4.2.pyc",
+      "bytes": 20346,
+      "sha256": "911701631b21cd4cd88e771a10cddcb46ccea964f9e59cd289299c7385362b31"
     },
     {
-      "path": "src/pgsr/__pycache__/native.cpython-310.pyc",
-      "bytes": 3293,
-      "sha256": "29c133eda25e00c97f50afeaa761c5511d923fcdb3990fa5b3e157b0f93903f2"
+      "path": "tests/__pycache__/test_research_audit.cpython-314.pyc",
+      "bytes": 7386,
+      "sha256": "24c92ba083c5254257ae167488e92d91d4c1650b6ba812f5316b7b1c921b91d4"
     },
     {
-      "path": "src/pgsr/__pycache__/runner.cpython-310.pyc",
-      "bytes": 11642,
-      "sha256": "54fd73117111a581cb683936a096fcfc49c5e81e47f293ad9ef8ebd3531ff775"
-    },
-    {
-      "path": "src/pgsr/__pycache__/validation.cpython-310.pyc",
-      "bytes": 7512,
-      "sha256": "dd88acb47e43c9d424035fdf6c9d8dc249adfc29427a0c2678da0495af787c5a"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/__init__.cpython-310.pyc",
-      "bytes": 257,
-      "sha256": "c1307bb145aa1d55d4af2dc75d6c769d9aef7620307e4f0c3ce8bd71e2cae4bb"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/__init__.cpython-314.pyc",
-      "bytes": 266,
-      "sha256": "beabe5eb48622ec8a6bf75a62d45c0e6aaa12196bad7088e1268809994f16885"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/extract_frames.cpython-310.pyc",
-      "bytes": 5694,
-      "sha256": "3bba65e104dc35ee67400e23ce86b7006726a4a8384baf3e5e616aa85de14923"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/extract_frames.cpython-314.pyc",
-      "bytes": 10155,
-      "sha256": "a4c9219f428b36b8b27c4fdc73ee59d1bb99e70505b051aea62fe2671a6476e3"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/select_keyframes.cpython-310.pyc",
-      "bytes": 9843,
-      "sha256": "ad3fa4e5132495fda69f1752e5aa4717b564eee0babde1456e1264dbd708966c"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/select_keyframes.cpython-314.pyc",
-      "bytes": 18332,
-      "sha256": "23368868eddb0a3fd9c1fc1122119d6f3cb8aa55e058e8f91d5e2255ded3703f"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/video_probe.cpython-310.pyc",
-      "bytes": 1736,
-      "sha256": "6cb06da60b9802a1fb3cf3de9a78fea16913feefd3e1818703285b25c5f6769d"
-    },
-    {
-      "path": "src/preprocessing/__pycache__/video_probe.cpython-314.pyc",
-      "bytes": 3151,
-      "sha256": "b543ca0960eec3b8cdeaa04e45f98543a3bf727bde2d910951e4867ef321b125"
-    },
-    {
-      "path": "tests/__pycache__/test_data_preparation.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 30185,
-      "sha256": "717dd1704b6aef60724e61bafbe3cb984c007d79bf37ae85fe5c08c3e927722e"
-    },
-    {
-      "path": "tests/__pycache__/test_data_preparation.cpython-314-pytest-8.4.2.pyc",
-      "bytes": 64135,
-      "sha256": "3e9355d693b6772e6b9a637ca09706058246d46cff73fd5da4d82d6073f7f801"
-    },
-    {
-      "path": "tests/__pycache__/test_gaussian_baseline.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 14389,
-      "sha256": "336d4a451cb91d063cf30f58815445f90863e805107444a90febe07ad0e9660f"
-    },
-    {
-      "path": "tests/__pycache__/test_gpu_policy.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 10818,
-      "sha256": "3671a70fbba9216b7e5cd3f3cf82f09dbd8767c097f812ceadb27f48bced997f"
-    },
-    {
-      "path": "tests/__pycache__/test_gpu_policy.cpython-314-pytest-8.4.2.pyc",
-      "bytes": 21428,
-      "sha256": "c219530408a6ee17e04422b4256bae1b1ecbc71d625e265f2e9547711cad777d"
-    },
-    {
-      "path": "tests/__pycache__/test_kaggle_handoff.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 13490,
-      "sha256": "a011abe796cadbb9be229773adb3dadfd2625863d462b7882419a3625903924e"
-    },
-    {
-      "path": "tests/__pycache__/test_pgsr.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 7982,
-      "sha256": "12a5f94e4543137b589757444cf9281fbddbdc15c41877eb84e1094d64f6ebfe"
-    },
-    {
-      "path": "tests/__pycache__/test_pgsr.cpython-310.pyc",
-      "bytes": 4027,
-      "sha256": "bc4bb62e7abdb3ea79bf4c2deee4f571cffeb6497a2bdff80e7b688cb0f69527"
-    },
-    {
-      "path": "tests/__pycache__/test_preprocessing.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 6968,
-      "sha256": "d8633b20cecf4e9b2075bd3ce9d1f808276813b662e24940b10ebf13e7ab63e3"
-    },
-    {
-      "path": "tests/__pycache__/test_preprocessing.cpython-314-pytest-8.4.2.pyc",
-      "bytes": 13699,
-      "sha256": "e7eda03e61806e76f028df472e59889c4f8fbe9098e75c71718d6e81acdc2e13"
-    },
-    {
-      "path": "tests/__pycache__/test_sfm_geometry.cpython-310-pytest-8.3.5.pyc",
-      "bytes": 3795,
-      "sha256": "23185506d819e9448e97be24a72ef8f22dcf28d33ae6dccf213a42970e9c510d"
-    },
-    {
-      "path": "tests/__pycache__/test_sfm_geometry.cpython-314-pytest-8.4.2.pyc",
-      "bytes": 7369,
-      "sha256": "c9cc5eb8f832f80ce45ded9ca38e3f2d57758812887df320f783a178f9e5995a"
+      "path": "tests/__pycache__/test_sfm_geometry.cpython-314.pyc",
+      "bytes": 4147,
+      "sha256": "11e91d7d967ad5e547eedf93d77d2d17451a7027b5522c0b81b2fa4de95ab828"
     }
   ],
   "skipped": [],
-  "removed_count": 127,
-  "logical_bytes_removed": 953633,
-  "volume_free_bytes_before": 57892540416,
-  "volume_free_bytes_after": 57893658624,
-  "observed_free_space_delta": 1118208,
+  "removed_count": 48,
+  "logical_bytes_removed": 573651,
+  "volume_free_bytes_before": 57860558848,
+  "volume_free_bytes_after": 57861218304,
+  "observed_free_space_delta": 659456,
   "storage_measurement_note": "Logical bytes are exact file lengths removed; volume free-space delta may include concurrent writes and cluster allocation",
-  "protected_artifacts_deleted": 0,
-  "plan_refresh_note": "Additional read-only full project-artifact duplicate audit; original cleanup receipt retained; no further deletions"
+  "protected_artifacts_deleted": 0
 }

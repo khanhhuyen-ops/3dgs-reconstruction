@@ -115,8 +115,9 @@ def cuda_fixture(output: Path) -> dict:
     gray = (.5+.2*torch.sin(grid_x.float()*.45)+.2*torch.cos(grid_y.float()*.37))[None]
     gray_near = (.5+.2*torch.sin((grid_x.float()+1)*.45)+.2*torch.cos(grid_y.float()*.37))[None]
     target = (package["render"].detach()*.8+.02).clamp(0, 1)
-    total, losses, _, counts = objectives(model, app, reference, neighbor, package, near_package,
-                                         target, gray, gray_near, options, DEFAULTS, 2)
+    total, losses, _, counts, photometric = objectives(
+        model, app, reference, neighbor, package, near_package,
+        target, gray, gray_near, options, DEFAULTS, 2)
     assert counts["geometry_valid_pixels"]>0 and counts["multi_valid_pixels"]>0
     assert counts["ncc_valid_patches"]>0 and counts["exposure_gate_used"]
     total.backward()
@@ -140,6 +141,9 @@ def cuda_fixture(output: Path) -> dict:
               "environment":environment, "plane_depth_max_error":error,
               "homography_max_error":homography_error, "kernel_gradient_norms":gradients,
               "objective_terms":{k:float(v.detach()) for k,v in losses.items()},
+              "photometric_terms":{
+                  k:(float(v.detach()) if hasattr(v,"detach") else v)
+                  for k,v in photometric.items()},
               "objective_counts":counts, "exposure_update_verified":True,
               "full_checkpoint_restore":checkpoint.inspect(path, identity),
               "constant_image_guard":True, "undefined_warp_mask":True}

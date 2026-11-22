@@ -74,18 +74,18 @@ def check(output):
     app=AppModel(1)
     gray=torch.ones(1,48,48,device='cuda')*.5
     target=package['render'].detach().clamp(0,1)
-    total,terms,_,counts=objectives(model,app,camera,camera,package,package,target,gray,gray,opt,DEFAULTS,2)
+    total,terms,_,counts,_=objectives(model,app,camera,camera,package,package,target,gray,gray,opt,DEFAULTS,2)
     assert counts['multi_valid_pixels']>0 and counts['ncc_valid_patches']==0
     assert torch.isfinite(total) and terms['multi_ncc']==0
     # No geometric support yields connected finite zeros, not apparent convergence.
     empty={**package,'plane_depth':package['plane_depth']*0,'rendered_normal':package['rendered_normal']*0}
-    total,terms,_,empty_counts=objectives(model,app,camera,camera,empty,empty,target,gray,gray,opt,DEFAULTS,2)
+    total,terms,_,empty_counts,_=objectives(model,app,camera,camera,empty,empty,target,gray,gray,opt,DEFAULTS,2)
     assert empty_counts['geometry_valid_pixels']==empty_counts['multi_valid_pixels']==0
     assert torch.isfinite(total) and terms['single']==terms['multi_geo']==terms['multi_ncc']==0
     total.backward()
     # Exposure is gated off if canonical SSIM discrepancy is above native threshold.
     gated={**package,'render':torch.zeros_like(package['render']),'app_image':torch.ones_like(package['render'])}
-    _,_,_,gate=objectives(model,app,camera,None,gated,None,torch.ones_like(target),gray,None,opt,DEFAULTS,0)
+    _,_,_,gate,_=objectives(model,app,camera,None,gated,None,torch.ones_like(target),gray,None,opt,DEFAULTS,0)
     assert not gate['exposure_gate_used']
     report={'status':'SUCCESS','scope':'SYNTHETIC_CUDA_NUMERICAL_CHECKS','environment':environment,
             'finite_difference':results,'constant_ncc_rejected':True,'empty_geometry_connected_zero':True,

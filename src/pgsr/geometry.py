@@ -61,7 +61,13 @@ def objectives(model, app, reference, neighbor, package, neighbor_package,
     image = package["render"]
     structural = 1-ssim(image, target)
     exposure_used = "app_image" in package and bool(structural < .5)
-    rgb = (1-options.lambda_dssim)*l1_loss(package["app_image"] if exposure_used else image, target)
+    l1_uncompensated = l1_loss(image, target)
+    # Do not retain an unused appearance-loss graph on every iteration. The
+    # runner computes the diagnostic branch under no_grad only on log rows.
+    l1_appearance = (l1_loss(package["app_image"], target)
+                     if exposure_used else None)
+    l1_selected = l1_appearance if exposure_used else l1_uncompensated
+    rgb = (1-options.lambda_dssim)*l1_selected
     rgb = rgb + options.lambda_dssim*structural
     visible = package["visibility_filter"]
     flat = model.get_scaling[visible].sort(dim=-1).values[:, 0].mean() if visible.any() else zero
@@ -167,4 +173,14 @@ def objectives(model, app, reference, neighbor, package, neighbor_package,
                     "multi_geo": options.multi_view_geo_weight,
                     "multi_ncc": options.multi_view_ncc_weight}
     total = sum(losses[k]*coefficients[k] for k in losses)
-    return total, losses, coefficients, {**counts, "exposure_gate_used": exposure_used}
+    photometric = {
+        "l1_uncompensated": l1_uncompensated,
+        "l1_appearance": l1_appearance,
+        "l1_selected": l1_selected,
+        "ssim_dissimilarity": structural,
+        "l1_coefficient": 1-options.lambda_dssim,
+        "ssim_dissimilarity_coefficient": options.lambda_dssim,
+        "exposure_gate_used": exposure_used,
+    }
+    return (total, losses, coefficients,
+            {**counts, "exposure_gate_used": exposure_used}, photometric)

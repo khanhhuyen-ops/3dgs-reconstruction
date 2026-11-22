@@ -31,6 +31,24 @@ def test_console_does_not_replace_full_precision_structured_row(tmp_path,monkeyp
     assert rows[1]["source_kind"].startswith("recorded_console")
 
 
+def test_normalized_pgsr_loss_schema_recovers_photometric_components(tmp_path,monkeypatch):
+    monkeypatch.setattr(analyze,"ROOT",tmp_path)
+    payload={
+        "iteration":7100,"loss":.42,"raw":{"rgb":.2},
+        "losses":{"raw":{"rgb":.2,"flatten":.01,"single":.03,"multi_geo":.04,"multi_ncc":.05},
+                  "coefficients":{"rgb":1.,"flatten":100.,"single":.015,"multi_geo":.03,"multi_ncc":.15},
+                  "weighted":{"rgb":.2,"flatten":1.,"single":.00045,"multi_geo":.0012,"multi_ncc":.0075},
+                  "photometric":{"l1_selected":.15,"ssim_dissimilarity":.4,
+                                 "l1_uncompensated":.16,"l1_appearance":.15,
+                                 "exposure_gate_used":True}}}
+    (tmp_path/"training.jsonl").write_text(__import__("json").dumps(payload)+"\n")
+    rows,errors=analyze.load_history(tmp_path,{"method":"B2_PGSR"})
+    assert not errors and len(rows)==1
+    assert rows[0]["loss_l1"]==.15 and rows[0]["loss_ssim"]==.4
+    assert rows[0]["weighted_flatten"]==1.
+    assert rows[0]["photometric_exposure_gate_used"] is True
+
+
 def test_summary_never_inserts_missing_zero():
     rows=[{"iteration":1,"loss_total":1.,"source_file":"fixture"},{"iteration":10,"loss_total":.5,"source_file":"fixture"}]
     summary=analyze.summarize(rows,{"components":{"loss_l1":{"status":"NOT RECORDED"}}},100)

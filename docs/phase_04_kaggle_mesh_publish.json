@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-11-22T14:07:29.379841+00:00",
+  "notebook_url": "https://www.kaggle.com/code/vthkhnhhuyn/pgsr-mesh-kaggle",
+  "version": 1,
+  "execution_status": "KernelWorkerStatus.QUEUED",
+  "failure_message": "",
+  "private": true,
+  "gpu": "NvidiaTeslaT4",
+  "internet": true,
+  "datasets": [
+    {
+      "url": "https://www.kaggle.com/datasets/vthkhnhhuyn/ignatius-phase02-3dgs-resume-input-v1",
+      "role": "Existing prepared COLMAP cameras/points/images; only scene extracted",
+      "uploaded": false
+    },
+    {
+      "url": "https://www.kaggle.com/datasets/vthkhnhhuyn/ignatius-pgsr-mesh-extraction-config-v1",
+      "role": "New extraction settings and provenance only",
+      "uploaded_bytes": 508,
+      "private": true
+    }
+  ],
+  "checkpoint_kernel_source": "https://www.kaggle.com/code/vthkhnhhuyn/phase03-pgsr-run-all",
+  "checkpoint_iteration": 21298,
+  "checkpoint_sha256": "ef82b72d46b1377417c0a983bae14d88696ee0abada424002d876c706b95f63e",
+  "training_complete": false,
+  "checkpoint_upload_required": false,
+  "input_discovery": "/kaggle/input/**; validated published checkpoint pointer/config and attached private input references",
+  "output_directory": "/kaggle/working/pgsr_mesh_results",
+  "zip_output": "/kaggle/working/pgsr_mesh_results.zip",
+  "local_model_execution": false,
+  "training_requested": false,
+  "variant": "Official PGSR render_set with explicitly declared CUDA tensor TSDF adapter",
+  "validation": "nbformat, compiled cells/worker, remote metadata roundtrip and input file references",
+  "notebook_sha256": "c46ac2a55fcd502ea8a69aa4f043e0e13d5a2c67a85cfaa5cdca6d6434733c4e",
+  "runtime_gpu_operations_verified": false,
+  "mesh_completed": false
+}

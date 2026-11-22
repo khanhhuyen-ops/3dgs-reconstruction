@@ -1,5 +1,7 @@
 # Experiment reproducibility
 
+Future training loss records follow the versioned [loss logging contract](tech/loss_logging.md). Historical logs remain immutable and missing components are not inferred.
+
 This audit reads existing results. It does not authorize training, CUDA inference, benchmark reruns or mesh extraction. Full inventories and checkpoint files remain at their original paths.
 
 ## Evidence regeneration without training

@@ -22,6 +22,7 @@ Start with [research status](RESEARCH_STATUS.md); do not infer execution from ol
 | `datasets/.../prepared/legacy_v1/...` | Frozen downstream legacy scene; 197 train / 33 val / 33 test |
 | `research/metadata` | Experiment registry, all scientific artifact paths, checkpoint audit and inventory summary |
 | `research/metrics/<experiment_id>` | Full recovered CSV loss histories, definitions, summary statistics and periodic validation |
+| `docs/tech/loss_logging.md` | Versioned B0/B2 loss fields, historical fallback and comparison rules |
 | `research/comparisons` | Recorded metric table and pairwise comparability decisions |
 | `research/figures` | PNG/SVG/PDF plots and source index; missing-data omissions are explicit |
 | `research/cleanup` | Complete inventory, dependencies, approval list, plan and executed-cleanup receipt |

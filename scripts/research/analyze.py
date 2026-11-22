@@ -58,13 +58,21 @@ def load_history(root: Path, config: dict) -> tuple[list[dict], list[dict]]:
                      "gaussians":raw.get("gaussians"),"train_psnr":raw.get("train_psnr"),
                      "peak_allocated_bytes":raw.get("peak_allocated_bytes"),"peak_reserved_bytes":raw.get("peak_reserved_bytes")}
                 if pgsr:
-                    components=raw.get("raw",{})
+                    normalized=raw.get("losses",{})
+                    components=normalized.get("raw",raw.get("raw",{}))
+                    photometric=normalized.get("photometric",{})
                     row.update(loss_normal=components.get("single"),loss_geometry=components.get("multi_geo"),
                                loss_multiview=components.get("multi_ncc"),loss_regularization=components.get("flatten"))
+                    if "l1_selected" in photometric:
+                        row["loss_l1"]=photometric["l1_selected"]
+                    if "ssim_dissimilarity" in photometric:
+                        row["loss_ssim"]=photometric["ssim_dissimilarity"]
                     for name,value in components.items():
                         row["raw_"+name]=value
-                        row["weighted_"+name]=raw.get("weighted",{}).get(name)
-                        row["coefficient_"+name]=raw.get("coefficients",{}).get(name)
+                        row["weighted_"+name]=normalized.get("weighted",raw.get("weighted",{})).get(name)
+                        row["coefficient_"+name]=normalized.get("coefficients",raw.get("coefficients",{})).get(name)
+                    for name,value in photometric.items():
+                        row["photometric_"+name]=value
                     for name in ("geometry_valid_pixels","multi_valid_pixels","ncc_candidate_patches","ncc_valid_patches","exposure_gate_used"):
                         row[name]=raw.get(name)
                 else:
@@ -103,6 +111,8 @@ def definitions(config: dict) -> dict:
         components={
             "loss_total":{"variable":"total","definition":"rgb + scale_weight*flat + single_weight*single + geo_weight*geometric + ncc_weight*photometric","weighted":True},
             "raw_rgb":{"variable":"rgb","definition":"(1-lambda_dssim)*L1(gated app or canonical RGB,target) + lambda_dssim*(1-SSIM(canonical,target))","weighted":False,"weight":1},
+            "loss_l1":{"variable":"losses.photometric.l1_selected","definition":"mean absolute RGB error from the branch selected by the native exposure gate","weighted":False,"weight":1-opt.get("lambda_dssim",.2),"availability":"Recorded by gaussian-loss-v1 rows; historical rows remain unavailable"},
+            "loss_ssim":{"variable":"losses.photometric.ssim_dissimilarity","definition":"1-SSIM of canonical rendered RGB and target","weighted":False,"weight":opt.get("lambda_dssim",.2),"availability":"Recorded by gaussian-loss-v1 rows; historical rows remain unavailable"},
             "loss_regularization":{"variable":"flat","source_name":"raw.flatten","definition":"mean visible minimum activated Gaussian scale","weighted":False,"weight":opt.get("scale_loss_weight"),"activation":"iteration 1 onward"},
             "loss_normal":{"variable":"single","source_name":"raw.single","definition":"full H*W mean of masked-zero edge_weight * L1(native alpha-weighted depth normal - accumulated plane normal)","weighted":False,"weight":opt.get("single_view_weight"),"activation":f"iteration > {opt.get('single_view_weight_from_iter')}"},
             "loss_geometry":{"variable":"geometric","source_name":"raw.multi_geo","definition":"accepted-pixel mean detached exp(-roundtrip_error) * roundtrip_error in pixels","weighted":False,"weight":opt.get("multi_view_geo_weight"),"activation":f"iteration > {opt.get('multi_view_weight_from_iter')} and eligible train neighbor"},
@@ -111,11 +121,11 @@ def definitions(config: dict) -> dict:
         source="src/pgsr/geometry.py"
     for key in BASE_COLUMNS[3:]:
         if key not in components:
-            components[key]={"status":"NOT RECORDED" if pgsr and key in ("loss_l1","loss_ssim") else "NOT IMPLEMENTED AS A SEPARATE TERM",
+            components[key]={"status":"NOT IMPLEMENTED AS A SEPARATE TERM",
                              "value":None,"weight":None}
     return {"method":config.get("method"),"source":source,"source_sha256":digest(ROOT/source),"components":components,
-            "exposure":"PGSR appearance parameters change the gated L1 branch; no separate additive exposure loss or exposure parameter history was logged" if pgsr else "Not used",
-            "source_mapping":{"loss_regularization":"raw.flatten","loss_normal":"raw.single","loss_geometry":"raw.multi_geo","loss_multiview":"raw.multi_ncc"} if pgsr else {"loss_l1":"l1","loss_ssim":"dssim"},
+            "exposure":"PGSR appearance parameters change the gated L1 branch; gaussian-loss-v1 records both L1 branches and the selected branch, but exposure is not a separate additive loss" if pgsr else "Not used",
+            "source_mapping":{"loss_l1":"losses.photometric.l1_selected","loss_ssim":"losses.photometric.ssim_dissimilarity","loss_regularization":"losses.raw.flatten","loss_normal":"losses.raw.single","loss_geometry":"losses.raw.multi_geo","loss_multiview":"losses.raw.multi_ncc"} if pgsr else {"loss_l1":"losses.raw.l1","loss_ssim":"losses.raw.ssim_dissimilarity"},
             "missing_policy":"Empty CSV cell/null means unavailable; never substitute zero. Logged scheduled-inactive zeros are retained as observations.",
             "comparison_warning":"Total objectives differ across models; lower total loss is not evidence of better reconstruction"}
 
