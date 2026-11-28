@@ -1,0 +1,50 @@
+project:
+  name: 3dgs-mesh-reconstruction
+  seed: 42
+input:
+  dataset: tanks_and_temples
+  scene: Museum
+  video: datasets/tanks_and_temples/museum/Museum.mp4
+  source_mode: video
+preprocessing:
+  candidate_fps: 2.0
+  max_width: 1280
+  jpeg_quality: 2
+  target_selected_frames: 96
+  min_selected_frames: 40
+  max_selected_frames: 120
+  thumbnail_width: 320
+  batch_size: 4
+  min_blur_score: 0.0001
+  duplicate_mse: 0.00005
+  max_exposure_fraction: 0.85
+  max_gap_seconds: 8.0
+  max_duration_seconds: null
+sfm:
+  implementation: colmap
+  camera_model: SIMPLE_RADIAL
+  single_camera: true
+  matching: sequential
+  sequential_overlap: 10
+  max_image_size: 1280
+  max_num_features: 4096
+  max_num_matches: 8192
+  mapper_backend: CASPAR
+  min_registered_images: 3
+gpu_policy:
+  mode: strict
+  device: cuda:0
+  gpu_index: 0
+  allow_cpu_fallback: false
+  require_gpu_features: true
+  require_gpu_matching: true
+  require_gpu_ba: true
+  verify_runtime_backend: true
+paths:
+  extracted_frames: datasets/tanks_and_temples/museum/preprocessing/extracted_frames/video_v0
+  selected_frames: datasets/tanks_and_temples/museum/preprocessing/selected_frames/video_v0
+  output: outputs/tanks_and_temples/Museum/sfm_colmap/video_v0
+tools:
+  ffmpeg: ffmpeg
+  ffprobe: ffprobe
+  colmap: colmap

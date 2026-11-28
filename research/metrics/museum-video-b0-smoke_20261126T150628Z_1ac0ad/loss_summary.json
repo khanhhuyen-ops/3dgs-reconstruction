@@ -1,0 +1,122 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 0.2769731879234314,
+      "final_recorded_value": 0.04424598067998886,
+      "minimum": 0.0265062116086483,
+      "maximum": 0.2769731879234314,
+      "mean": 0.10826724036954917,
+      "standard_deviation_population": 0.07331407829175522,
+      "iteration_of_minimum": 1000,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": 0.15579380095005035,
+      "final_recorded_value": 0.021079042926430702,
+      "minimum": 0.019234852865338326,
+      "maximum": 0.15579380095005035,
+      "mean": 0.062379189838583655,
+      "standard_deviation_population": 0.04111740272292837,
+      "iteration_of_minimum": 1000,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/training.jsonl"
+      ]
+    },
+    "loss_ssim": {
+      "initial_recorded_value": 0.7616906762123108,
+      "final_recorded_value": 0.1369137167930603,
+      "minimum": 0.0555916428565979,
+      "maximum": 0.7616906762123108,
+      "mean": 0.2918194326070639,
+      "standard_deviation_population": 0.2038220537751308,
+      "iteration_of_minimum": 1000,
+      "valid_observations": 26,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/training.jsonl"
+      ]
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_geometry": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_multiview": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_regularization": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 26,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    }
+  },
+  "observation_count": 26,
+  "distinct_recorded_iterations": 26,
+  "target_iterations": 1200,
+  "unobserved_target_iterations": 1174,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

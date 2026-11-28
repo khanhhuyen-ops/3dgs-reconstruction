@@ -1,6 +1,7 @@
 """Recover recorded experiment evidence without training, rendering, or changing inputs."""
 from __future__ import annotations
 
+import argparse
 from collections import defaultdict
 import csv
 import hashlib
@@ -260,7 +261,9 @@ def collect_runs(inventory: list[dict]) -> list[dict]:
         for folder in (root/"metrics",root/"evaluation"):
             if folder.exists():
                 metrics += [relative(p) for p in folder.glob("*.json")]
-        record={"experiment_id":experiment_id,"model":config["method"],"dataset":config.get("dataset"),"scene":"Ignatius",
+        dataset_parts=Path(config.get("dataset") or ".").parts
+        scene=dataset_parts[2].title() if dataset_parts[:2]==("datasets","tanks_and_temples") else "Unknown"
+        record={"experiment_id":experiment_id,"model":config["method"],"dataset":config.get("dataset"),"scene":scene,
                 "root":relative(root),"aliases":[relative(a[0]) for a in aliases[1:]],"configuration":relative(existing(root,"resolved_config.json")),
                 "lineage":lineage,
                 "profile":config.get("profile",config.get("variant")),"seed":config.get("seed"),"resolution_divisor":config.get("resolution"),
@@ -338,13 +341,22 @@ def comparisons(runs: list[dict]) -> list[dict]:
 
 
 def main() -> None:
-    with (RESEARCH/"cleanup/file_inventory.csv").open(encoding="utf-8") as stream:
-        inventory=list(csv.DictReader(stream))
-    runs=collect_runs(inventory)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--museum", action="store_true", help="Register current Museum runs without reprocessing Ignatius")
+    args=parser.parse_args()
+    if args.museum:
+        output=ROOT/"outputs/tanks_and_temples/Museum/research"
+        inventory=[{"path":relative(path)} for path in sorted(output.glob("*/*/resolved_config.json"))]
+        prior=read_json(RESEARCH/"metadata/experiment_registry.json",[])
+        runs=[row for row in prior if row["scene"]!="Museum"] + collect_runs(inventory)
+    else:
+        with (RESEARCH/"cleanup/file_inventory.csv").open(encoding="utf-8") as stream:
+            inventory=list(csv.DictReader(stream))
+        runs=collect_runs(inventory)
     write_json(RESEARCH/"metadata/experiment_registry.json",runs)
     fields=[k for k in runs[0] if k not in ("config_values","training_result","memory","device_wide_memory")]
     write_csv(RESEARCH/"metadata/experiment_registry.csv",runs,fields)
-    rows=comparisons(runs)
+    comparisons(runs)
     print(json.dumps({"experiments":len(runs),"models":sorted({r['model'] for r in runs}),"loss_observations":sum(r['loss_observations'] for r in runs)}))
     for run in runs:
         print(f"{run['model']:18} {run['actual_observed_completed_iteration']:6}/{run['target_iterations']:<6} {run['training_status']:22} {run['loss_observations']:5} observations | {run['experiment_id']}")

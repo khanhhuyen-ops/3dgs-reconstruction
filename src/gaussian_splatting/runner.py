@@ -423,16 +423,26 @@ def train(
                             "gaussians": len(model.get_xyz),
                             "active_sh_degree": model.active_sh_degree,
                             "optimizer_steps": optimizer_steps,
+                            "learning_rates": {
+                                group["name"]: group["lr"]
+                                for group in model.optimizer.param_groups
+                            },
                             "elapsed_segment_seconds": now - elapsed_start,
                             "seconds_since_last_log": now - last_time,
                             **memory(),
                         }
                         append_json(run / "training.jsonl", row)
                         LOG.info(
-                            "iteration %d/%d loss %.6f gaussians %d allocated %.0f MiB",
+                            "iteration %d/%d loss_total %.9g loss_l1 %.9g "
+                            "loss_ssim %.9g weighted_l1 %.9g weighted_ssim %.9g "
+                            "gaussians %d allocated %.0f MiB",
                             iteration,
                             config["iterations"],
                             last_loss,
+                            row["losses"]["raw"]["l1"],
+                            row["losses"]["raw"]["ssim_dissimilarity"],
+                            row["losses"]["weighted"]["l1"],
+                            row["losses"]["weighted"]["ssim_dissimilarity"],
                             len(model.get_xyz),
                             row["allocated_bytes"] / 1048576,
                         )
@@ -544,6 +554,8 @@ def main() -> int:
         ):
             raise ValueError("Run/config/output-root mismatch")
     else:
+        metadata_path = repo_path(ROOT, config["dataset"]) / "metadata.json"
+        source = read_json(metadata_path).get("source", {}) if metadata_path.is_file() else {}
         run = repo_path(ROOT, config["output_root"]) / (
             config["experiment"]
             + "_"
@@ -564,7 +576,9 @@ def main() -> int:
                 "profile": config["profile"],
                 "created_utc": datetime.now(timezone.utc).isoformat(),
                 "display_timezone": "Asia/Saigon",
-                "source_mode": "legacy image_set, historical CPU BA (not video GPU-strict SfM)",
+                "source_mode": source.get("mode", "UNKNOWN"),
+                "ba_history": source.get("ba_history", "UNKNOWN"),
+                "source_manifest": source.get("manifest"),
                 "git_head": subprocess.check_output(
                     ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
                 ).strip(),

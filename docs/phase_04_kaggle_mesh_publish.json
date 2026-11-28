@@ -1,8 +1,8 @@
 {
-  "checked_utc": "2026-11-22T14:07:29.379841+00:00",
+  "checked_utc": "2026-11-24T04:19:00+00:00",
   "notebook_url": "https://www.kaggle.com/code/vthkhnhhuyn/pgsr-mesh-kaggle",
-  "version": 1,
-  "execution_status": "KernelWorkerStatus.QUEUED",
+  "version": 2,
+  "execution_status": "KernelWorkerStatus.COMPLETE",
   "failure_message": "",
   "private": true,
   "gpu": "NvidiaTeslaT4",
@@ -31,8 +31,17 @@
   "local_model_execution": false,
   "training_requested": false,
   "variant": "Official PGSR render_set with explicitly declared CUDA tensor TSDF adapter",
-  "validation": "nbformat, compiled cells/worker, remote metadata roundtrip and input file references",
-  "notebook_sha256": "c46ac2a55fcd502ea8a69aa4f043e0e13d5a2c67a85cfaa5cdca6d6434733c4e",
-  "runtime_gpu_operations_verified": false,
-  "mesh_completed": false
+  "validation": "nbformat and compiled worker; remote Tesla T4 rendering, CUDA tensor TSDF integration/extraction; local SHA256, PLY header, ZIP integrity and Blender 5.2.3 import",
+  "notebook_sha256": "51a9ebdf3dc4e1db2bf45e3a4310e05effabfb050ea53a550289b0644388ef37",
+  "version_1_failure": "Open3D rejected Float32 depth with UInt8 color before the first TSDF integration",
+  "version_2_fix": "Normalize legacy RGB to Float32 so CUDA TSDF receives the supported Float32/Float32 pair",
+  "runtime_gpu_operations_verified": true,
+  "mesh_completed": true,
+  "mesh_sha256": "93a7818cb65fba4d01517117dc4736112fd928244e0655baebaac7274dbdb250",
+  "mesh_vertices": 1131692,
+  "mesh_triangles": 2184436,
+  "integrated_train_views": 197,
+  "downloaded_bundle": "outputs/kaggle_download/pgsr_mesh_20261124_v2/pgsr_mesh_results.zip",
+  "blender_demo": "outputs/kaggle_download/pgsr_mesh_20261124_v2/Ignatius_PGSR_Mesh_Demo.blend",
+  "geometry_evaluation": "NOT AVAILABLE: no qualified GT protocol"
 }

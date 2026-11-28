@@ -1,0 +1,5 @@
+iteration,psnr,ssim,lpips,views,source,scope
+300,11.668559598966043,0.2705342210829258,,4,outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/validation_000300.json,"periodic validation subset, not final test"
+600,13.176246657353701,0.3312128856778145,,4,outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/validation_000600.json,"periodic validation subset, not final test"
+900,13.004363672399666,0.31778986006975174,,4,outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/validation_000900.json,"periodic validation subset, not final test"
+1200,13.00783748835412,0.31145504117012024,,4,outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/validation_001200.json,"periodic validation subset, not final test"

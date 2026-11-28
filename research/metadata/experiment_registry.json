@@ -1469,5 +1469,399 @@
       "exposure_rows": 197
     },
     "checkpoint_validation": "VERIFIED_RESTRICTED_CPU_LOAD"
+  },
+  {
+    "experiment_id": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+    "model": "B0_Original3DGS",
+    "dataset": "datasets/tanks_and_temples/museum/prepared/video_v1/museum-video-v1-04702c7617547b96",
+    "scene": "Museum",
+    "root": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+    "aliases": [],
+    "configuration": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/resolved_config.json",
+    "lineage": {
+      "relation": "independent run record or no migration evidence"
+    },
+    "profile": "smoke",
+    "seed": 42,
+    "resolution_divisor": 4,
+    "target_iterations": 1200,
+    "actual_observed_completed_iteration": 1200,
+    "last_loss_iteration": 1200,
+    "published_checkpoint_iteration": 1200,
+    "training_status": "COMPLETED",
+    "reported_status": "SUCCESS",
+    "start_timestamp": "20261126T150628Z",
+    "start_timestamp_scope": "UTC encoded run name when present; not a measured loop start",
+    "end_timestamp": null,
+    "training_duration_seconds": 12.374727999998868,
+    "reported_training_seconds": 13.239898599998924,
+    "reported_segment_start_iteration": 551,
+    "recorded_elapsed_maxima_by_segment": {
+      "0": 5.703297199999724,
+      "1": 6.671430799999143
+    },
+    "duration_scope": "Sum of maximum recorded elapsed time in each detected log segment; observed lower bound, excludes unlogged tails/setup and does not repair missing earlier sessions",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "final_checkpoint": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/checkpoints/iteration_001200.pth",
+    "checkpoint_role": "final declared schedule",
+    "best_validation": {
+      "iteration": 600,
+      "psnr": 13.176246657353701,
+      "ssim": 0.3312128856778145,
+      "lpips": null,
+      "views": 4,
+      "source": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/validation_000600.json",
+      "scope": "periodic validation subset, not final test"
+    },
+    "best_checkpoint": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/checkpoints/iteration_000600.pth",
+    "best_checkpoint_note": "Highest recorded validation PSNR is diagnostic; not preregistered selection and checkpoint availability not assumed",
+    "source_logs": [
+      "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/training.jsonl"
+    ],
+    "loss_observations": 26,
+    "evaluation_outputs": [
+      "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/metrics/test_001200.json"
+    ],
+    "can_resume": "PENDING_CHECKPOINT_VALIDATION",
+    "inference_reproducibility": "EXPORTED_PLY_PRESENT",
+    "resume_entrypoint_layout": "ROOT_LAYOUT_MISMATCH_OR_METHOD_SPECIFIC_IDENTITY",
+    "flat_recovery_aliases": [],
+    "mesh_extraction_reproducibility": "NOT IMPLEMENTED/NOT VERIFIED",
+    "final_gaussians": 79570,
+    "gaussian_count_scope": "reported completed segment",
+    "memory": {
+      "allocated_bytes": 46193664,
+      "reserved_bytes": 117440512,
+      "peak_allocated_bytes": 94567936,
+      "peak_reserved_bytes": 119537664,
+      "device_free_bytes": 5237637120,
+      "device_total_bytes": 6441926656
+    },
+    "memory_scope": "Maximum of available log/report/failure peaks; earlier unreported peaks remain unknown",
+    "device_wide_memory": {
+      "runtime_seconds": 7.1179348999994545,
+      "peak_device_memory_used_mib_sampled": 239.0,
+      "vram_samples": 13,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "identity": {},
+    "parse_failures": [],
+    "geometry_coverage_totals": null,
+    "config_values": {
+      "method": "B0_Original3DGS",
+      "profile": "smoke",
+      "experiment": "museum-video-b0-smoke",
+      "seed": 42,
+      "dataset": "datasets/tanks_and_temples/museum/prepared/video_v1/museum-video-v1-04702c7617547b96",
+      "output_root": "outputs/tanks_and_temples/Museum/research/B0_3DGS",
+      "device": "cuda:0",
+      "allow_cpu_fallback": false,
+      "iterations": 1200,
+      "resolution": 4,
+      "sh_degree": 2,
+      "white_background": false,
+      "train_view_limit": 12,
+      "initial_point_limit": 20000,
+      "cpu_camera_cache": 12,
+      "max_gaussians": 80000,
+      "torch_reserved_budget_gib": 5.0,
+      "checkpoint_interval": 300,
+      "validation_interval": 300,
+      "log_interval": 50,
+      "gradient_check_interval": 100,
+      "validation_view_limit": 4,
+      "optimizer": {
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2
+      },
+      "density": {
+        "densify_from_iter": 50,
+        "densify_until_iter": 700,
+        "densification_interval": 50,
+        "opacity_reset_interval": 250,
+        "densify_grad_threshold": 0.0002
+      }
+    },
+    "training_result": {
+      "status": "SUCCESS",
+      "iterations": 1200,
+      "optimizer_steps": 1199,
+      "initial_gaussians": 20000,
+      "final_gaussians": 79570,
+      "final_sampled_training_loss": 0.04424598067998886,
+      "training_seconds_total": 13.239898599998924,
+      "memory": {
+        "allocated_bytes": 46193664,
+        "reserved_bytes": 117440512,
+        "peak_allocated_bytes": 92485632,
+        "peak_reserved_bytes": 117440512,
+        "device_free_bytes": 5237637120,
+        "device_total_bytes": 6441926656
+      },
+      "device_wide_memory": {
+        "runtime_seconds": 7.1179348999994545,
+        "peak_device_memory_used_mib_sampled": 239.0,
+        "vram_samples": 13,
+        "sampling_interval_seconds": 0.5,
+        "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+      },
+      "export": {
+        "status": "SUCCESS",
+        "path": "outputs/tanks_and_temples/Museum/research/B0_3DGS/museum-video-b0-smoke_20261126T150628Z_1ac0ad/point_cloud/iteration_001200/point_cloud.ply",
+        "sha256": "a34298e3978505093dbc620530e95978d26ec3c1e70ac03191e0676cace9e02d",
+        "gaussians": 79570,
+        "active_sh_degree": 1,
+        "max_sh_degree": 2,
+        "render_reload_max_abs_difference": 0.0,
+        "artifact_type": "Gaussian splats; not triangle mesh"
+      },
+      "dataset": {
+        "status": "SUCCESS",
+        "native_scene_loader": "readColmapSceneInfo (actual, unmodified)",
+        "native_revision": "414b553ef1d3032ea634b7b7a1d121173f36592c",
+        "source_mode": "video",
+        "dataset_id": "museum-video-v1-04702c7617547b96",
+        "metadata_sha256": "daabead1a0d78980486d603938efe5c4d0efcfc5c680092fd0e7a2882e54c444",
+        "split_hash": "563bd500d630082f2a4d4db9723c8df133d2e83ab8090a125d143c74b4ca8f82",
+        "split_counts": {
+          "train": 12,
+          "val": 20,
+          "test": 20
+        },
+        "source_split_counts": {
+          "train": 119,
+          "val": 20,
+          "test": 20
+        },
+        "initial_points": 20000,
+        "point_selection": "seeded source-point subset",
+        "native_train_extent": 5.505301856994629,
+        "native_nerf_normalization": {
+          "translate": [
+            -0.822166383266449,
+            -0.03123489022254944,
+            -0.20019549131393433
+          ],
+          "radius": 5.505301856994629
+        },
+        "project_normalization_applied": false,
+        "pose_transform_applied": false,
+        "protocol": "fixed_pose_transductive; source BA accessed held-out RGB",
+        "camera_sampling": "native random-without-replacement stack over selected train IDs only"
+      },
+      "native_final_iteration_skips_adam": true,
+      "current_segment_start_iteration": 551
+    }
+  },
+  {
+    "experiment_id": "museum-video-pgsr-smoke-ad6f30b634",
+    "model": "B2_PGSR",
+    "dataset": "datasets/tanks_and_temples/museum/prepared/video_v1/museum-video-v1-04702c7617547b96",
+    "scene": "Museum",
+    "root": "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634",
+    "aliases": [],
+    "configuration": "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/resolved_config.json",
+    "lineage": {
+      "relation": "independent run record or no migration evidence"
+    },
+    "profile": "development_geometry_activation_and_resume_v1",
+    "seed": 42,
+    "resolution_divisor": 8,
+    "target_iterations": 300,
+    "actual_observed_completed_iteration": 300,
+    "last_loss_iteration": 300,
+    "published_checkpoint_iteration": 300,
+    "training_status": "COMPLETED",
+    "reported_status": "SUCCESS",
+    "start_timestamp": null,
+    "start_timestamp_scope": "UTC encoded run name when present; not a measured loop start",
+    "end_timestamp": null,
+    "training_duration_seconds": 10.320595500001218,
+    "reported_training_seconds": 10.461356900001192,
+    "reported_segment_start_iteration": 81,
+    "recorded_elapsed_maxima_by_segment": {
+      "0": 2.5833168999997724,
+      "1": 7.737278600001446
+    },
+    "duration_scope": "Sum of maximum recorded elapsed time in each detected log segment; observed lower bound, excludes unlogged tails/setup and does not repair missing earlier sessions",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "final_checkpoint": "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/checkpoints/iteration_000300.pth",
+    "checkpoint_role": "final declared schedule",
+    "best_validation": null,
+    "best_checkpoint": null,
+    "best_checkpoint_note": "Highest recorded validation PSNR is diagnostic; not preregistered selection and checkpoint availability not assumed",
+    "source_logs": [
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+    ],
+    "loss_observations": 30,
+    "evaluation_outputs": [
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/dataset_integration.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/data_readiness.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/geometry_contract.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/neighbors.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/reload_validation.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/rendering_metrics.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/rendering_metrics_png.json",
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/evaluation/result.json"
+    ],
+    "can_resume": "PENDING_CHECKPOINT_VALIDATION",
+    "inference_reproducibility": "EXPORTED_PLY_PRESENT",
+    "resume_entrypoint_layout": "FLAT_LAYOUT_PRESENT",
+    "flat_recovery_aliases": [
+      "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634"
+    ],
+    "mesh_extraction_reproducibility": "NOT IMPLEMENTED/NOT VERIFIED",
+    "final_gaussians": 2230,
+    "gaussian_count_scope": "reported completed segment",
+    "memory": {
+      "allocated_bytes": 19563520,
+      "reserved_bytes": 37748736,
+      "peak_allocated_bytes": 40351232,
+      "peak_reserved_bytes": 60817408
+    },
+    "memory_scope": "Maximum of available log/report/failure peaks; earlier unreported peaks remain unknown",
+    "device_wide_memory": {
+      "runtime_seconds": 7.798363699999754,
+      "peak_device_memory_used_mib_sampled": 199.0,
+      "vram_samples": 15,
+      "sampling_interval_seconds": 0.5,
+      "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+    },
+    "identity": {
+      "method": "B2_PGSR",
+      "config": "05f2267f77bf4b4ea7583b8275ef3b6303c2e48f673cbf57b4c161d7916d4452",
+      "metadata": "daabead1a0d78980486d603938efe5c4d0efcfc5c680092fd0e7a2882e54c444",
+      "split": "563bd500d630082f2a4d4db9723c8df133d2e83ab8090a125d143c74b4ca8f82",
+      "native_revision": "de24f1a38b350387e8d8fe381b2cd70c1ae946e7",
+      "code": "cee3101ee99a20b705ab56da658d94112c30addeee8dba121dad0fae644cbc4b"
+    },
+    "parse_failures": [],
+    "geometry_coverage_totals": {
+      "geometry_valid_pixels": 3696004,
+      "multi_valid_pixels": 1350482,
+      "ncc_valid_patches": 85927
+    },
+    "config_values": {
+      "method": "B2_PGSR",
+      "variant": "development_geometry_activation_and_resume_v1",
+      "dataset": "datasets/tanks_and_temples/museum/prepared/video_v1/museum-video-v1-04702c7617547b96",
+      "output_root": "outputs/tanks_and_temples/Museum/research/B2_PGSR",
+      "experiment": "museum-video-pgsr-smoke",
+      "seed": 42,
+      "iterations": 300,
+      "resolution": 8,
+      "sh_degree": 3,
+      "white_background": false,
+      "device": "cuda:0",
+      "allow_cpu_fallback": false,
+      "train_view_limit": 8,
+      "initial_point_limit": 6000,
+      "cpu_camera_cache": 8,
+      "ncc_scale": 1.0,
+      "multi_view_num": 8,
+      "multi_view_max_angle": 30.0,
+      "multi_view_min_dis": 0.01,
+      "multi_view_max_dis": 1.5,
+      "exposure_from_iter": 10,
+      "trim_interval": 100,
+      "checkpoint_interval": 50,
+      "log_interval": 10,
+      "gradient_check_interval": 10,
+      "torch_reserved_budget_gib": 4.5,
+      "session_seconds": 18000,
+      "normal_epsilon": 1e-08,
+      "depth_epsilon": 1e-06,
+      "ncc_variance_epsilon": 1e-08,
+      "optimizer": {
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.001,
+        "lambda_dssim": 0.2,
+        "densification_interval": 40,
+        "opacity_reset_interval": 120,
+        "densify_from_iter": 40,
+        "densify_until_iter": 240,
+        "densify_grad_threshold": 0.0002,
+        "scale_loss_weight": 100.0,
+        "wo_image_weight": false,
+        "single_view_weight": 0.015,
+        "single_view_weight_from_iter": 20,
+        "use_virtul_cam": false,
+        "virtul_cam_prob": 0.5,
+        "use_multi_view_trim": true,
+        "multi_view_ncc_weight": 0.15,
+        "multi_view_geo_weight": 0.03,
+        "multi_view_weight_from_iter": 20,
+        "multi_view_patch_size": 3,
+        "multi_view_sample_num": 512,
+        "multi_view_pixel_noise_th": 1.0,
+        "wo_use_geo_occ_aware": false,
+        "opacity_cull_threshold": 0.05,
+        "densify_abs_grad_threshold": 0.00015,
+        "abs_split_radii2D_threshold": 20,
+        "max_abs_split_points": 2000,
+        "max_all_points": 20000,
+        "exposure_compensation": true,
+        "random_background": false
+      }
+    },
+    "training_result": {
+      "status": "SUCCESS",
+      "iterations": 300,
+      "optimizer_steps": 299,
+      "initial_gaussians": 6000,
+      "final_gaussians": 2230,
+      "training_seconds_total": 10.461356900001192,
+      "current_segment_start_iteration": 81,
+      "current_segment_seconds": 7.798757200000182,
+      "timing_scope": "Measured PGSR segments in this run, loop/checkpoint/export; excludes setup, data qualification and any unreported interrupted tail",
+      "geometry_coverage_totals": {
+        "geometry_valid_pixels": 3696004,
+        "multi_valid_pixels": 1350482,
+        "ncc_valid_patches": 85927
+      },
+      "memory": {
+        "allocated_bytes": 19563520,
+        "reserved_bytes": 37748736,
+        "peak_allocated_bytes": 40351232,
+        "peak_reserved_bytes": 60817408
+      },
+      "device_wide_memory": {
+        "runtime_seconds": 7.798363699999754,
+        "peak_device_memory_used_mib_sampled": 199.0,
+        "vram_samples": 15,
+        "sampling_interval_seconds": 0.5,
+        "memory_scope": "device-wide sampled VRAM; includes other processes; not exact process allocation peak"
+      },
+      "export": {
+        "status": "EXPORTED_PENDING_SEPARATE_RELOAD",
+        "path": "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/point_cloud/iteration_000300/point_cloud.ply",
+        "sha256": "6ba9d13fa9982550f22aadd1d554db169d4b48c6f1a20bf37030fc2e92b1e615",
+        "gaussians": 2230,
+        "active_sh_degree": 0,
+        "reference_image_id": 5,
+        "artifact_type": "PGSR Gaussian splats, not a triangle mesh"
+      },
+      "dataset_identity": {
+        "metadata": "daabead1a0d78980486d603938efe5c4d0efcfc5c680092fd0e7a2882e54c444",
+        "split": "563bd500d630082f2a4d4db9723c8df133d2e83ab8090a125d143c74b4ca8f82"
+      },
+      "exposure_rows": 8
+    }
   }
 ]

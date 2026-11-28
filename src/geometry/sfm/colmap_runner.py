@@ -97,6 +97,11 @@ def mapper_command(config: dict, capabilities: dict, database: Path, images: Pat
     command = [capabilities["binary"], "mapper", "--database_path", str(database), "--image_path", str(images), "--output_path", str(sparse),
                choose_option(options, "Mapper.ba_local_backend"), "CASPAR", choose_option(options, "Mapper.ba_global_backend"), "CASPAR",
                choose_option(options, "Mapper.ba_gpu_index"), "0", choose_option(options, "Mapper.ba_refine_sensor_from_rig"), "0"]
+    # COLMAP's structure-less registration can invoke Ceres independently of
+    # the mapper's local/global BA backend. Keep the runtime log gate as well.
+    for option in ("Mapper.structure_less_registration_fallback", "Mapper.structure_less_registration_only"):
+        if option in options:
+            command += ["--" + option, "0"]
     if "log_level" in options:
         command += ["--log_level", "2"]
     for key in ("default_random_seed", "Mapper.random_seed"):

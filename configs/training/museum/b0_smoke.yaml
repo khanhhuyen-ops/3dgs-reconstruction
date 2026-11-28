@@ -1,0 +1,21 @@
+# The Museum handoff binds dataset to the qualified prepared-v1 artifact.
+dataset: datasets/tanks_and_temples/museum/prepared/video_v1
+output_root: outputs/tanks_and_temples/Museum/research/B0_3DGS
+method: B0_Original3DGS
+profile: smoke
+experiment: museum-video-b0-smoke
+iterations: 1200
+resolution: 4
+sh_degree: 2
+initial_point_limit: 20000
+train_view_limit: 12
+max_gaussians: 80000
+checkpoint_interval: 300
+validation_interval: 300
+validation_view_limit: 4
+log_interval: 50
+density:
+  densify_from_iter: 50
+  densify_until_iter: 700
+  densification_interval: 50
+  opacity_reset_interval: 250

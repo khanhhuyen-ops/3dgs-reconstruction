@@ -1,0 +1,316 @@
+{
+  "components": {
+    "loss_total": {
+      "initial_recorded_value": 32.86894989013672,
+      "final_recorded_value": 1.5032490491867065,
+      "minimum": 0.9827412366867065,
+      "maximum": 32.86894989013672,
+      "mean": 11.260309046506881,
+      "standard_deviation_population": 11.287433123083098,
+      "iteration_of_minimum": 240,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "loss_l1": {
+      "initial_recorded_value": 0.18576182425022125,
+      "final_recorded_value": 0.20369918644428253,
+      "minimum": 0.11412901431322098,
+      "maximum": 0.392744779586792,
+      "mean": 0.19790032828847567,
+      "standard_deviation_population": 0.07848890317891108,
+      "iteration_of_minimum": 240,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "loss_ssim": {
+      "initial_recorded_value": 0.7359602451324463,
+      "final_recorded_value": 0.6903995275497437,
+      "minimum": 0.5339876413345337,
+      "maximum": 0.9857862591743469,
+      "mean": 0.7270176351070404,
+      "standard_deviation_population": 0.10914749872790123,
+      "iteration_of_minimum": 240,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "loss_depth": {
+      "initial_recorded_value": null,
+      "final_recorded_value": null,
+      "minimum": null,
+      "maximum": null,
+      "mean": null,
+      "standard_deviation_population": null,
+      "iteration_of_minimum": null,
+      "valid_observations": 0,
+      "missing_value_count": 30,
+      "status": "NOT IMPLEMENTED AS A SEPARATE TERM",
+      "source_evidence": []
+    },
+    "loss_normal": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.4180358946323395,
+      "minimum": 0.0,
+      "maximum": 0.7761739492416382,
+      "mean": 0.42645836441467205,
+      "standard_deviation_population": 0.2542265903385606,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.030285021290183067,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_geometry": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.265494167804718,
+      "mean": 0.14909873604774476,
+      "standard_deviation_population": 0.08819406684654314,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_multiview": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.3949621617794037,
+      "mean": 0.2079997941851616,
+      "standard_deviation_population": 0.11821688498971522,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "loss_regularization": {
+      "initial_recorded_value": 0.32573145627975464,
+      "final_recorded_value": 0.011959392577409744,
+      "minimum": 0.0069650281220674515,
+      "maximum": 0.32573145627975464,
+      "mean": 0.1091451509234806,
+      "standard_deviation_population": 0.113077899054513,
+      "iteration_of_minimum": 290,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "raw_rgb": {
+      "initial_recorded_value": 0.2958015203475952,
+      "final_recorded_value": 0.30103927850723267,
+      "minimum": 0.198100745677948,
+      "maximum": 0.511353075504303,
+      "mean": 0.30372379372517266,
+      "standard_deviation_population": 0.08384910408449937,
+      "iteration_of_minimum": 240,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "weighted_rgb": {
+      "initial_recorded_value": 0.2958015203475952,
+      "final_recorded_value": 0.30103927850723267,
+      "minimum": 0.198100745677948,
+      "maximum": 0.511353075504303,
+      "mean": 0.30372379372517266,
+      "standard_deviation_population": 0.08384910408449937,
+      "iteration_of_minimum": 240,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "raw_flatten": {
+      "initial_recorded_value": 0.32573145627975464,
+      "final_recorded_value": 0.011959392577409744,
+      "minimum": 0.0069650281220674515,
+      "maximum": 0.32573145627975464,
+      "mean": 0.1091451509234806,
+      "standard_deviation_population": 0.113077899054513,
+      "iteration_of_minimum": 290,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "weighted_flatten": {
+      "initial_recorded_value": 32.573145627975464,
+      "final_recorded_value": 1.1959392577409744,
+      "minimum": 0.6965028122067451,
+      "maximum": 32.573145627975464,
+      "mean": 10.91451509234806,
+      "standard_deviation_population": 11.307789905451301,
+      "iteration_of_minimum": 290,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ]
+    },
+    "raw_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.4180358946323395,
+      "minimum": 0.0,
+      "maximum": 0.7761739492416382,
+      "mean": 0.42645836441467205,
+      "standard_deviation_population": 0.2542265903385606,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.030285021290183067,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_single": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": 0.006270538419485092,
+      "minimum": 0.0,
+      "maximum": 0.011642609238624573,
+      "mean": 0.006396875466220081,
+      "standard_deviation_population": 0.003813398855078409,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.000454275319352746,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.265494167804718,
+      "mean": 0.14909873604774476,
+      "standard_deviation_population": 0.08819406684654314,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_geo": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.00796482503414154,
+      "mean": 0.004472962081432342,
+      "standard_deviation_population": 0.0026458220053962945,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "raw_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.3949621617794037,
+      "mean": 0.2079997941851616,
+      "standard_deviation_population": 0.11821688498971522,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    },
+    "weighted_multi_ncc": {
+      "initial_recorded_value": 0.0,
+      "final_recorded_value": -0.0,
+      "minimum": 0.0,
+      "maximum": 0.05924432426691055,
+      "mean": 0.031199969127774237,
+      "standard_deviation_population": 0.01773253274845728,
+      "iteration_of_minimum": 10,
+      "valid_observations": 30,
+      "missing_value_count": 0,
+      "status": "RECORDED",
+      "source_evidence": [
+        "outputs/tanks_and_temples/Museum/research/B2_PGSR/museum-video-pgsr-smoke-ad6f30b634/training.jsonl"
+      ],
+      "activation_threshold": 20,
+      "active_range_observations": 28,
+      "active_range_minimum": 0.0,
+      "statistics_scope": "Overall statistics include recorded scheduled-inactive zeros; active-range statistics are separate"
+    }
+  },
+  "observation_count": 30,
+  "distinct_recorded_iterations": 30,
+  "target_iterations": 300,
+  "unobserved_target_iterations": 270,
+  "missing_count_scope": "Missing-value count counts empty cells among recovered rows, not all unlogged iterations",
+  "best_training_is_not_best_validation": true,
+  "smoothing": "NONE",
+  "interpolation": "NONE"
+}

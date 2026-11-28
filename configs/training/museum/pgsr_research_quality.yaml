@@ -1,0 +1,10 @@
+# The Museum handoff binds dataset to the qualified prepared-v1 artifact.
+dataset: datasets/tanks_and_temples/museum/prepared/video_v1
+output_root: outputs/tanks_and_temples/Museum/research/B2_PGSR
+experiment: museum-video-pgsr-research-quality
+variant: official_tnt_shared_fullres_guarded_v1
+resolution: 1
+ncc_scale: 1.0
+seed: 42
+iterations: 30000
+torch_reserved_budget_gib: 12.0

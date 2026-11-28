@@ -1,0 +1,26 @@
+# The Museum handoff binds dataset to the qualified prepared-v1 artifact.
+dataset: datasets/tanks_and_temples/museum/prepared/video_v1
+output_root: outputs/tanks_and_temples/Museum/research/B2_PGSR
+experiment: museum-video-pgsr-smoke
+variant: development_geometry_activation_and_resume_v1
+resolution: 8
+iterations: 300
+initial_point_limit: 6000
+train_view_limit: 8
+cpu_camera_cache: 8
+torch_reserved_budget_gib: 4.5
+checkpoint_interval: 50
+log_interval: 10
+gradient_check_interval: 10
+exposure_from_iter: 10
+trim_interval: 100
+optimizer:
+  single_view_weight_from_iter: 20
+  multi_view_weight_from_iter: 20
+  densify_from_iter: 40
+  densification_interval: 40
+  opacity_reset_interval: 120
+  densify_until_iter: 240
+  multi_view_sample_num: 512
+  max_all_points: 20000
+  max_abs_split_points: 2000

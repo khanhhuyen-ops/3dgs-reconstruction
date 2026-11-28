@@ -162,7 +162,8 @@ def train(config, run, environment, resume=False, stop_after=None):
                             model.densify_and_prune(opt.densify_grad_threshold, opt.densify_abs_grad_threshold,
                                                    opt.opacity_cull_threshold, data.extent,
                                                    20 if iteration > opt.opacity_reset_interval else None)
-                            append(run / "density.jsonl", {"iteration":iteration,"before":before,"after":len(model.get_xyz)})
+                            append(run / "density.jsonl", {"iteration":iteration,"event":"densify_and_prune",
+                                   "before":before,"after":len(model.get_xyz)})
                     if opt.use_multi_view_trim and iteration % config["trim_interval"] == 0 and iteration < opt.densify_until_iter:
                         observations = torch.zeros_like(model.get_opacity)
                         for view in data.train:
@@ -170,7 +171,10 @@ def train(config, run, environment, resume=False, stop_after=None):
                             observations[observation > 0] += 1
                         prune = (observations < 2).squeeze(-1)
                         if prune.any():
+                            before = len(model.get_xyz)
                             model.prune_points(prune)
+                            append(run / "density.jsonl", {"iteration":iteration,"event":"visibility_prune",
+                                   "before":before,"after":len(model.get_xyz),"pruned":before-len(model.get_xyz)})
                     if iteration < opt.densify_until_iter:
                         if iteration % opt.opacity_reset_interval == 0 or (config["white_background"] and iteration==opt.densify_from_iter):
                             model.reset_opacity()
@@ -209,10 +213,28 @@ def train(config, run, environment, resume=False, stop_after=None):
                                                    "exposure":bool(photometric_values["exposure_gate_used"])},
                                      "coverage":counts},
                            "gaussians":len(model.get_xyz),"active_sh_degree":model.active_sh_degree,
+                           "optimizer_steps":optimizer_steps,
+                           "learning_rates":{group["name"]:group["lr"] for group in model.optimizer.param_groups},
                            "gradient_norms":gradients,"elapsed_segment_seconds":time.perf_counter()-started,
                            "position_lr":model.optimizer.param_groups[0]["lr"],**counts,**memory()}
                     append(run / "training.jsonl", row)
-                    LOG.info("iteration %d/%d loss %.6f points %d geo %d ncc %d", iteration, config["iterations"], row["loss"], row["gaussians"], counts["multi_valid_pixels"], counts["ncc_valid_patches"])
+                    LOG.info(
+                        "iteration %d/%d loss_total %.9g raw_rgb %.9g raw_flatten %.9g "
+                        "raw_single %.9g raw_multi_geo %.9g raw_multi_ncc %.9g "
+                        "weighted_rgb %.9g weighted_flatten %.9g weighted_single %.9g "
+                        "weighted_multi_geo %.9g weighted_multi_ncc %.9g points %d "
+                        "geo_pixels %d ncc_patches %d l1_selected %.9g dssim %.9g "
+                        "l1_uncompensated %.9g l1_appearance %s exposure_gate %s",
+                        iteration, config["iterations"], row["loss"],
+                        raw_terms["rgb"], raw_terms["flatten"], raw_terms["single"],
+                        raw_terms["multi_geo"], raw_terms["multi_ncc"],
+                        weighted_terms["rgb"], weighted_terms["flatten"],
+                        weighted_terms["single"], weighted_terms["multi_geo"],
+                        weighted_terms["multi_ncc"], row["gaussians"],
+                        counts["multi_valid_pixels"], counts["ncc_valid_patches"],
+                        photometric_values["l1_selected"], photometric_values["ssim_dissimilarity"],
+                        photometric_values["l1_uncompensated"], photometric_values["l1_appearance"],
+                        photometric_values["exposure_gate_used"])
                 del package, near_package, loss, terms, photometric, rgb, gray, near_gray
                 if torch.cuda.memory_reserved() > config["torch_reserved_budget_gib"]*1024**3:
                     raise RuntimeError("BLOCKED_RESOURCE: measured reserved VRAM exceeds the declared profile")

@@ -133,4 +133,10 @@ def import_results(folder):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--results',type=Path,required=True)
-    print(import_results(parser.parse_args().results.resolve()))
+    parser.add_argument('--museum',action='store_true')
+    args=parser.parse_args()
+    if args.museum:
+        from scripts.kaggle.museum_handoff import import_run
+        print(import_run(args.results.resolve()))
+    else:
+        print(import_results(args.results.resolve()))

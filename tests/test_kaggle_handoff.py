@@ -222,6 +222,13 @@ def test_notebook_cells_parse_and_no_embedded_outputs():
             assert not cell["outputs"] and cell["execution_count"] is None
 
 
+def test_mesh_notebook_uses_open3d_supported_float_depth_color_pair():
+    source=(ROOT/"scripts/kaggle_pgsr/build_mesh_notebook.py").read_text(encoding="utf-8")
+    assert "depth_array=np.asarray(rgbd.depth).astype(np.float32" in source
+    assert "color_array=color_array.astype(np.float32)/255." in source
+    assert "matching Float32 depth and color tensors" in source
+
+
 def test_final_import_checks_metrics_and_gaussian_ply(tmp_path):
     import numpy as np
     from plyfile import PlyData, PlyElement

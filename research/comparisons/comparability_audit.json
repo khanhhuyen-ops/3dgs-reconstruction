@@ -96,6 +96,36 @@
     },
     {
       "a": "b0-kaggle-c55f001d26",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "b0-kaggle-c55f001d26",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "b0-kaggle-c55f001d26",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -196,6 +226,35 @@
     },
     {
       "a": "ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-low-memory_20261115T141109Z_8ed1c6",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -289,6 +348,40 @@
     },
     {
       "a": "ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-research-quality_20261115T222504Z_9ddaaa",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -367,6 +460,38 @@
     },
     {
       "a": "ignatius-legacy-b0-smoke_20261115T133608Z_4ef4c4",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-smoke_20261115T133608Z_4ef4c4",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-smoke_20261115T133608Z_4ef4c4",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -425,6 +550,33 @@
     },
     {
       "a": "ignatius-legacy-b0-smoke_20261115T134942Z_346824",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-smoke_20261115T134942Z_346824",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "ignatius-legacy-b0-smoke_20261115T134942Z_346824",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -469,6 +621,35 @@
     },
     {
       "a": "kaggle-pgsr-geometry-smoke",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "kaggle-pgsr-geometry-smoke",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "kaggle-pgsr-geometry-smoke",
       "b": "B1_2DGS_NOT_TRAINED",
       "rendering_comparable": false,
       "reasons": [
@@ -502,7 +683,68 @@
     },
     {
       "a": "local-smoke-v1",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "local-smoke-v1",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable split_hash",
+        "Different or unavailable evaluation_views",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "local-smoke-v1",
       "b": "B1_2DGS_NOT_TRAINED",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "pgsr-kaggle-c269454133",
+      "b": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "pgsr-kaggle-c269454133",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
       "rendering_comparable": false,
       "reasons": [
         "Different or unavailable resolution_divisor",
@@ -526,6 +768,53 @@
         "Different or unavailable split_hash",
         "Different or unavailable metric_protocol",
         "Different or unavailable completed_iterations",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "b": "museum-video-pgsr-smoke-ad6f30b634",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "museum-video-b0-smoke_20261126T150628Z_1ac0ad",
+      "b": "B1_2DGS_NOT_TRAINED",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
+        "Missing complete rendering metrics",
+        "Development schedule is not a final baseline"
+      ],
+      "performance_comparable": false,
+      "performance_reason": "GPU/segment/timing scope and workload differ; no common controlled timing benchmark"
+    },
+    {
+      "a": "museum-video-pgsr-smoke-ad6f30b634",
+      "b": "B1_2DGS_NOT_TRAINED",
+      "rendering_comparable": false,
+      "reasons": [
+        "Different or unavailable resolution_divisor",
+        "Different or unavailable split_hash",
+        "Different or unavailable metric_protocol",
+        "Different or unavailable evaluation_views",
+        "Different or unavailable completed_iterations",
+        "Different or unavailable train_view_limit",
         "Missing complete rendering metrics",
         "Development schedule is not a final baseline"
       ],

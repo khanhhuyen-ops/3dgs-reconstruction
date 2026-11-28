@@ -1,0 +1,13 @@
+# The Museum handoff binds dataset to the qualified prepared-v1 artifact.
+dataset: datasets/tanks_and_temples/museum/prepared/video_v1
+output_root: outputs/tanks_and_temples/Museum/research/B2_PGSR
+experiment: museum-video-pgsr-low-memory
+variant: development_low_memory_v1
+resolution: 4
+initial_point_limit: 40000
+cpu_camera_cache: 16
+torch_reserved_budget_gib: 4.5
+optimizer:
+  multi_view_sample_num: 8192
+  max_all_points: 350000
+  max_abs_split_points: 10000

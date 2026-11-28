@@ -9,7 +9,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[2]
 
 WORKER=r'''
-import os,sys,json,gc,hashlib,importlib.util,_codecs
+import os,sys,json,gc,hashlib,importlib.util,_codecs,time
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
@@ -19,16 +19,26 @@ from torch.torch_version import TorchVersion
 from src.common.io import sha256,read_json,write_json
 from src.pgsr.native import initialize
 from src.pgsr.data import SceneAdapter
+from scripts.kaggle.museum_handoff import VIDEO_SHA256, validate_scene
 settings=read_json(Path(sys.argv[1]));output=Path(settings['output'])
 env=initialize()
 if not o3d.core.cuda.is_available():raise RuntimeError('BLOCKED_BACKEND: Open3D CUDA unavailable; no CPU fusion fallback')
 device=o3d.core.Device('CUDA:0')
 probe=o3d.core.Tensor([1.],device=device)+1
 assert float(probe.cpu().numpy()[0])==2.
-input_root=Path('/kaggle/input');candidates=[]
+input_root=Path(settings['museum_output']);candidates=[]
+receipt=read_json(input_root/'scene.json')
+if sha256(input_root/'scene.json')!=settings['scene_receipt_sha256']:
+    raise ValueError('Museum scene receipt checksum mismatch')
+dataset_id=receipt['dataset_id']
+if Path(dataset_id).name!=dataset_id:raise ValueError('Unsafe dataset ID')
+source=input_root/'scene'/dataset_id
+if validate_scene(source,input_root/'metrics.json')!=receipt:
+    raise ValueError('Museum prepared scene verification failed')
 for config_path in input_root.rglob('resolved_config.json'):
     cfg=read_json(config_path)
     if cfg.get('method')!='B2_PGSR':continue
+    if cfg.get('dataset')!=f'datasets/tanks_and_temples/museum/prepared/video_v1/{dataset_id}':continue
     run=config_path.parent.parent if config_path.parent.name=='configs' else config_path.parent
     pointer=run/'checkpoints/latest.json'
     if pointer.exists():
@@ -37,7 +47,7 @@ for config_path in input_root.rglob('resolved_config.json'):
         if cp.is_file() and p['iteration']>300:candidates.append((p['iteration'],cp,cfg,p,run))
 if settings.get('checkpoint'):
     candidates=[x for x in candidates if str(x[1])==settings['checkpoint']]
-if not candidates:raise FileNotFoundError('Attach the extracted original PGSR notebook output (recovery/run/checkpoints and config), not B0 or a ZIP-only upload')
+if not candidates:raise FileNotFoundError('Attach the saved Museum PGSR notebook output with its run and scene directories')
 candidates.sort(key=lambda x:(-x[0],str(x[1])))
 iteration,checkpoint,cfg,pointer,run=candidates[0]
 if sha256(checkpoint)!=pointer['sha256']:raise ValueError('Checkpoint SHA256 mismatch')
@@ -56,18 +66,11 @@ if payload['identity']['config']!=fingerprint(cfg) or payload['identity']['nativ
     raise ValueError('Checkpoint configuration/native revision mismatch')
 if iteration<cfg['iterations'] and not settings['allow_partial']:raise ValueError('Partial model; ALLOW_PARTIAL must be explicit')
 dataset=Path.cwd()/cfg['dataset']
-if not dataset.exists():
-    matches=[]
-    for m in input_root.rglob('metadata.json'):
-        if sha256(m)==payload['identity']['metadata'] and (m.parent/'integrity.json').exists():matches.append(m.parent)
-    if matches:
-        dataset.parent.mkdir(parents=True,exist_ok=True);dataset.symlink_to(matches[0],target_is_directory=True)
-    else:
-        sys.path.insert(0,str(Path.cwd()/'scripts/kaggle_pgsr'))
-        from handoff import extract_scene
-        archives=list(input_root.rglob('ignatius_phase02_input_v1.bundle'))
-        if len(archives)!=1:raise FileNotFoundError('Attach existing Ignatius Phase02 prepared input dataset or the exact extracted prepared scene')
-        extract_scene(archives[0],dataset)
+if (payload['identity']['metadata']!=sha256(source/'metadata.json')
+        or payload['identity']['split']!=receipt['split_hash']):
+    raise ValueError('PGSR checkpoint was trained on a different scene or split')
+dataset.parent.mkdir(parents=True,exist_ok=True)
+dataset.symlink_to(source.resolve(),target_is_directory=True)
 data=SceneAdapter(cfg,output/'qualification')
 if data.identity!={k:payload['identity'][k] for k in ('metadata','split')}:raise ValueError('Frozen data/camera split differs')
 from scene.gaussian_model import GaussianModel
@@ -109,8 +112,16 @@ class CudaVolume:
         self.frames=0
     def integrate(self,rgbd,intrinsic,pose):
         # Native RGBD decoding is I/O; TSDF allocation/integration/extraction stay on CUDA.
-        depth=o3d.t.geometry.Image(o3d.core.Tensor(np.asarray(rgbd.depth).copy(),device=device))
-        color=o3d.t.geometry.Image(o3d.core.Tensor(np.asarray(rgbd.color).copy(),device=device))
+        depth_array=np.asarray(rgbd.depth).astype(np.float32,copy=True)
+        color_array=np.asarray(rgbd.color)
+        if color_array.dtype==np.uint8:
+            color_array=color_array.astype(np.float32)/255.
+        else:
+            color_array=color_array.astype(np.float32,copy=True)
+        depth=o3d.t.geometry.Image(o3d.core.Tensor(depth_array,device=device))
+        color=o3d.t.geometry.Image(o3d.core.Tensor(color_array,device=device))
+        if depth.as_tensor().dtype!=o3d.core.float32 or color.as_tensor().dtype!=o3d.core.float32:
+            raise TypeError('CUDA TSDF requires matching Float32 depth and color tensors')
         k=o3d.core.Tensor(intrinsic.intrinsic_matrix,o3d.core.float64)
         t=o3d.core.Tensor(pose,o3d.core.float64)
         blocks=self.grid.compute_unique_block_coordinates(depth,k,t,1.,settings['max_depth'],4.)
@@ -125,21 +136,28 @@ class CudaVolume:
 volume=CudaVolume()
 pipe=SimpleNamespace(convert_SHs_python=False,compute_cov3D_python=False,debug=False)
 bg=torch.full((3,),float(cfg['white_background']),device='cuda:0')
+started=time.perf_counter()
 with torch.no_grad():
     official.render_set(str(output),'train',iteration,data.train,None,model,pipe,bg,
         app_model=None,max_depth=settings['max_depth'],volume=volume,use_depth_filter=True)
     mesh=volume.extract()
+extraction_seconds=time.perf_counter()-started
 vertices=np.asarray(mesh.vertices);triangles=np.asarray(mesh.triangles)
 if not len(vertices) or not len(triangles) or not np.isfinite(vertices).all():raise ValueError('Empty/nonfinite reconstructed mesh')
 if triangles.min()<0 or triangles.max()>=len(vertices):raise ValueError('Invalid triangle indices')
 target=output/'mesh.ply'
 if not o3d.io.write_triangle_mesh(str(target),mesh):raise RuntimeError('Mesh export failed')
 reopened=o3d.io.read_triangle_mesh(str(target))
-if len(reopened.triangles)!=len(triangles):raise ValueError('Export reopen validation failed')
+if len(reopened.triangles)!=len(triangles) or len(reopened.vertices)!=len(vertices):
+    raise ValueError('Export reopen validation failed')
+_,components,_=reopened.cluster_connected_triangles()
 report={'status':'SUCCESS','method':'PGSR official render_set + CUDA tensor TSDF adapter',
     'native_revision':env['native_revision'],'checkpoint_sha256':pointer['sha256'],'iteration':iteration,
     'training_complete':iteration==cfg['iterations'],'training_executed':False,'environment':env,
-    'vertices':len(vertices),'triangles':len(triangles),'integrated_train_views':volume.frames,
+    'scene':'Museum','source_video_sha256':VIDEO_SHA256,'split_hash':receipt['split_hash'],
+    'vertices':len(vertices),'triangles':len(triangles),'connected_components':len(components),
+    'integrated_train_views':volume.frames,'render_and_extract_seconds':extraction_seconds,
+    'mesh_size_bytes':target.stat().st_size,
     'voxel_size':settings['voxel_size'],'sdf_trunc':4*settings['voxel_size'],
     'depth_max':settings['max_depth'],'units':'Original arbitrary monocular SfM units; no GT alignment',
     'maps':'positive axial Z, camera-frame unit normals, invalid zeros + boolean mask; K/Tcw included',
@@ -155,9 +173,9 @@ print(json.dumps(report,indent=2))
 def build() -> Path:
     buffer=io.BytesIO()
     with zipfile.ZipFile(buffer,'w',zipfile.ZIP_DEFLATED) as z:
-        for folder in ('src','scripts/kaggle','scripts/kaggle_pgsr'):
+        for folder in ('src','scripts/kaggle','scripts/kaggle_pgsr','configs'):
             for p in sorted((ROOT/folder).rglob('*')):
-                if p.is_file() and p.suffix in ('.py','.sh') and '__pycache__' not in p.parts:
+                if p.is_file() and p.suffix in ('.py','.sh','.json','.yaml') and '__pycache__' not in p.parts:
                     z.writestr(p.relative_to(ROOT).as_posix(),p.read_text(encoding='utf-8').replace('\r\n','\n'))
     blob=buffer.getvalue();encoded=base64.b64encode(blob).decode();checksum=hashlib.sha256(blob).hexdigest()
     cells=[]
@@ -165,10 +183,10 @@ def build() -> Path:
         c={'cell_type':kind,'id':f'mesh-{len(cells):02d}','metadata':{},'source':text.strip().splitlines(True)}
         if kind=='code':c.update(execution_count=None,outputs=[])
         cells.append(c)
-    cell('markdown','''# PGSR mesh reconstruction — Kaggle Run All
-Enable **GPU T4** and **Internet**. Attach the existing PGSR notebook output (extracted `phase03_results/recovery/run`) and the private `ignatius-phase02-3dgs-resume-input-v1` dataset, or the exact extracted prepared scene. No source dataset or manual clone is needed: project helpers are embedded and upstream native code is pinned.
+    cell('markdown','''# Museum PGSR mesh reconstruction
+Enable a Kaggle GPU and Internet. Attach the saved Museum PGSR notebook output, then set MUSEUM_OUTPUT to the directory containing scene.json and run/. Set the scene receipt and checkpoint SHA-256 values printed by the training notebook.
 
-No training is called. Auto-selection chooses the latest research PGSR full checkpoint; ambiguous equal-iteration models fail safely. The known recovery is **partial at21298/30000** and is accepted explicitly below. Output is a mesh of that saved state, not a claim of completed training or benchmark quality.
+The worker verifies the Museum source, GPU bundle adjustment evidence, prepared data and frozen split before loading the PGSR state. A full checkpoint is required by default. Enable partial checkpoints explicitly for an extraction labeled with the saved iteration.
 
 Upstream PGSR uses CPU legacy Open3D TSDF. To honor strict GPU policy this notebook reuses official `render.py::render_set` and replaces only its volume with CUDA tensor TSDF integration/extraction. This is a declared backend adaptation, not bitwise upstream reproduction. CPU handles I/O and mesh serialization. CUDA-unavailable builds fail without fallback. Defaults are resource presets in arbitrary SfM units; refine only as a declared extraction variant.
 ''')
@@ -177,20 +195,24 @@ import os,sys,json,base64,hashlib,io,zipfile,subprocess,shutil
 from pathlib import Path
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 PROJECT=Path('/tmp/pgsr-mesh-project')
-OUTPUT=Path('/kaggle/working/pgsr_mesh_results')
-CHECKPOINT=None  # Optional absolute mounted path when equally recent models differ.
-ALLOW_PARTIAL=True  # Explicitly accept the known 21298-step recovery without retraining.
+OUTPUT=Path('/kaggle/working/museum_pgsr_mesh')
+MUSEUM_OUTPUT=None  # Directory containing the saved Museum PGSR result.
+SCENE_RECEIPT_SHA256=''
+CHECKPOINT=None  # Optional absolute path within the specified Museum result.
+ALLOW_PARTIAL=False
 VOXEL_SIZE=0.01  # Scene units; upstream CLI default is0.002, which needs more memory.
 MAX_DEPTH=5.0  # Upstream default, arbitrary SfM units; not meters without alignment.
 BLOCK_COUNT=30000
 EXPECTED_CHECKPOINT_SHA256=None
-configuration=list(Path('/kaggle/input').rglob('pgsr_mesh_settings.json'))
+configuration=list(Path('/kaggle/input').rglob('museum_pgsr_mesh_settings.json'))
 assert len(configuration)<=1, 'Multiple extraction configuration datasets attached'
 if configuration:
     selected=json.loads(configuration[0].read_text())
     VOXEL_SIZE=selected['voxel_size'];MAX_DEPTH=selected['max_depth'];BLOCK_COUNT=selected['block_count']
     ALLOW_PARTIAL=selected['allow_partial']
     EXPECTED_CHECKPOINT_SHA256=selected.get('checkpoint_sha256')
+if MUSEUM_OUTPUT is None or not SCENE_RECEIPT_SHA256 or not EXPECTED_CHECKPOINT_SHA256:
+    raise ValueError('Set the Museum result directory, scene receipt hash and checkpoint hash')
 assert VOXEL_SIZE>0 and 0<MAX_DEPTH<65.535 and BLOCK_COUNT>0
 assert not PROJECT.exists() and not OUTPUT.exists(), 'Use a fresh session; existing results are preserved.'
 OUTPUT.mkdir(parents=True)
@@ -219,9 +241,11 @@ with (OUTPUT/'open3d_setup.log').open('w') as log:
     cell('markdown','## Locate checkpoint/data, render train views, and extract the mesh\nFloat depth/normal NPZ files and masks accompany upstream JPEG previews. All components are preserved; no largest-component-only cleaning is applied. Optimizer state stays off the GPU and is not stepped.')
     cell('code',f"worker={WORKER!r}\n(PROJECT/'mesh_worker.py').write_text(worker,encoding='utf-8')")
     cell('code',r'''
-settings={'output':str(OUTPUT),'checkpoint':CHECKPOINT,'allow_partial':ALLOW_PARTIAL,
+settings={'output':str(OUTPUT),'museum_output':str(MUSEUM_OUTPUT),
+          'scene_receipt_sha256':SCENE_RECEIPT_SHA256.strip().lower(),
+          'checkpoint':CHECKPOINT,'allow_partial':ALLOW_PARTIAL,
           'voxel_size':VOXEL_SIZE,'max_depth':MAX_DEPTH,'block_count':BLOCK_COUNT,
-          'expected_checkpoint_sha256':EXPECTED_CHECKPOINT_SHA256}
+          'expected_checkpoint_sha256':EXPECTED_CHECKPOINT_SHA256.strip().lower()}
 settings_path=OUTPUT/'extraction_config.json'
 settings_path.write_text(json.dumps(settings,indent=2))
 with (OUTPUT/'extraction.log').open('w') as log:
@@ -232,19 +256,8 @@ if result.returncode:
     raise RuntimeError('Extraction failed; logs and completed maps are preserved. No CPU fallback or retraining.')
 print((OUTPUT/'mesh_metrics.json').read_text())
 ''')
-    cell('markdown','## Preserve available historical evaluation and package essential results\nNo new rendering-quality or GT geometry benchmark is invented. Historical metrics remain labeled with their original provenance. The ZIP excludes checkpoints, environments and dataset copies.')
+    cell('markdown','## Package Museum mesh and provenance\nThe ZIP contains the mesh, depth and normal maps, logs, extraction parameters and checksums. Geometry scores require a qualified Museum reference.')
     cell('code',r'''
-historical=OUTPUT/'historical_metrics';historical.mkdir()
-records=[]
-for p in Path('/kaggle/input').rglob('rendering_metrics*.json'):
-    # Only copy PGSR records with explicit method provenance.
-    try:d=json.loads(p.read_text())
-    except (ValueError,OSError):continue
-    if d.get('method')!='B2_PGSR':continue
-    name=hashlib.sha256(str(p).encode()).hexdigest()[:10]+'_'+p.name
-    shutil.copyfile(p,historical/name)
-    records.append({'source':str(p),'copied_as':name,'scope':'Previously recorded; may be a different iteration/profile; not an evaluation of the newly extracted mesh'})
-(historical/'provenance.json').write_text(json.dumps(records,indent=2))
 manifest={}
 for p in OUTPUT.rglob('*'):
     if p.is_file():
@@ -256,7 +269,7 @@ for p in OUTPUT.rglob('*'):
 size=sum(p.stat().st_size for p in OUTPUT.rglob('*') if p.is_file())
 if size>8*1024**3 or shutil.disk_usage(OUTPUT.parent).free<size*1.05:
     raise RuntimeError('ZIP safety budget exceeded; files remain available individually. Use a declared coarser extraction profile in a fresh session.')
-archive=Path(shutil.make_archive('/kaggle/working/pgsr_mesh_results','zip',OUTPUT))
+archive=Path(shutil.make_archive('/kaggle/working/museum_pgsr_mesh','zip',OUTPUT))
 from IPython.display import FileLink,display
 display(FileLink(str(archive)))
 print('Download:',archive,'bytes:',archive.stat().st_size)

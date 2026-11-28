@@ -75,7 +75,12 @@ def evaluate(config, run: Path, environment: dict):
             rows.append({"image_id":iid, **values})
             image(output / "test_rgb" / f"{iid:06d}.png", prediction.permute(1,2,0).cpu().numpy())
             del prediction, target
-        if len(rows) != 33 or any(r["psnr"] is None for r in rows):
+        expected_ids = data.split["image_ids"]["test"]
+        if [row["image_id"] for row in rows] != expected_ids or any(
+            row[key] is None or not np.isfinite(row[key])
+            for row in rows
+            for key in ("psnr", "ssim", "lpips")
+        ):
             raise ValueError("Incomplete/nonfinite frozen held-out evaluation")
         report = {"status":"SUCCESS", "method":"B2_PGSR", "iterations":result["iterations"],
                   "count":len(rows),"split":"test","resolution_divisor":config["resolution"],

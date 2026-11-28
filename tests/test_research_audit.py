@@ -7,6 +7,7 @@ import pytest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts/research"))
 import analyze
 import cleanup
+import print_losses
 from discover import digest,write_json
 from assets import ply_header
 
@@ -56,6 +57,35 @@ def test_summary_never_inserts_missing_zero():
     assert summary["components"]["loss_l1"]["missing_value_count"]==2
     assert summary["components"]["loss_total"]["iteration_of_minimum"]==10
     assert summary["distinct_recorded_iterations"]==2
+
+
+def test_direct_loss_output_preserves_unavailable_values(tmp_path,monkeypatch):
+    monkeypatch.setattr(print_losses,"RESEARCH",tmp_path/"research")
+    metrics=tmp_path/"research/metrics/run-a";metrics.mkdir(parents=True)
+    write_json(tmp_path/"research/metadata/experiment_registry.json",[{
+        "experiment_id":"run-a","model":"B2_PGSR","training_status":"INTERRUPTED",
+        "actual_observed_completed_iteration":20,"target_iterations":30,"loss_observations":1}])
+    write_json(metrics/"loss_summary.json",{"components":{
+        "loss_total":{"status":"RECORDED","initial_recorded_value":1.0,"final_recorded_value":.5,
+                      "minimum":.5,"iteration_of_minimum":20,"mean":.75,
+                      "standard_deviation_population":.25,"valid_observations":2,"missing_value_count":0},
+        "loss_l1":{"status":"NOT RECORDED","initial_recorded_value":None,"final_recorded_value":None,
+                   "minimum":None,"iteration_of_minimum":None,"mean":None,
+                   "standard_deviation_population":None,"valid_observations":0,"missing_value_count":2}}})
+    (metrics/"loss_history.csv").write_text("iteration,loss_total,loss_l1\n20,0.5,\n",encoding="utf-8")
+    rendered=print_losses.render([],True)
+    assert "loss_l1 | NOT RECORDED | N/A" in rendered
+    assert "history[run-a] rows=1" in rendered
+    assert "20 | 0.5" in rendered
+
+
+def test_live_training_logs_name_raw_and_weighted_loss_components():
+    b0=(Path(__file__).resolve().parents[1]/"src/gaussian_splatting/runner.py").read_text(encoding="utf-8")
+    pgsr=(Path(__file__).resolve().parents[1]/"src/pgsr/runner.py").read_text(encoding="utf-8")
+    assert "loss_total %.9g loss_l1 %.9g" in b0
+    assert "weighted_l1 %.9g weighted_ssim %.9g" in b0
+    assert "raw_rgb %.9g raw_flatten %.9g" in pgsr
+    assert "weighted_multi_geo %.9g weighted_multi_ncc %.9g" in pgsr
 
 
 @pytest.mark.parametrize("relative",["datasets/raw/__pycache__/x.pyc","external/library/__pycache__/x.pyc",".tools/pgsr_env/Lib/site-packages/x.pyc",".git/__pycache__/x.pyc","outputs/scene/checkpoint.pth"])
